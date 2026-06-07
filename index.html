@@ -1,0 +1,1153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>e in Nature, i in Life — Imaginary Symbols That Are Utterly Real</title>
+
+<!-- ═══════════════════════════════════════════════════
+     SEO & DISCOVERY
+     Update the two placeholder URLs below before publishing:
+       1. <link rel="canonical">  →  your actual page URL
+       2. og:url                  →  same URL
+       3. og:image                →  URL of a cover image (1200×630 px recommended)
+     ═══════════════════════════════════════════════════ -->
+
+<!-- Primary SEO -->
+<meta name="description"
+  content="Derive e and Euler's formula step by step — no prior calculus needed. From cooling coffee and radioactive decay to how your phone works. A free guide by Kung-Chu Ho, MD, PhD.">
+<meta name="keywords"
+  content="natural number e, imaginary number i, Euler's formula, e to the i pi, complex numbers, calculus explained, high school math, popular mathematics, what is e in math, imaginary numbers explained">
+<meta name="author" content="Kung-Chu Ho, MD, PhD">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kungchuho.github.io/e-and-i/">
+
+<!-- Open Graph — controls how this page looks when shared on
+     Facebook, LinkedIn, WhatsApp, Slack, iMessage, etc. -->
+<meta property="og:type"        content="book">
+<meta property="og:title"       content="e in Nature, i in Life — Imaginary Symbols That Are Utterly Real">
+<meta property="og:description" content="Derive e and Euler's formula step by step — no prior calculus needed. From cooling coffee and radioactive decay to how your phone works. Free.">
+<meta property="og:url"         content="https://kungchuho.github.io/e-and-i/">
+<meta property="og:image"       content="https://kungchuho.github.io/e-and-i/cover_og.png">
+<meta property="og:image:alt"   content="Cover of e in Nature, i in Life — a logarithmic spiral with the formula e^(iθ) = cos θ + i sin θ">
+<meta property="og:locale"      content="en_US">
+<meta property="og:site_name"   content="e in Nature, i in Life">
+<meta property="book:author"    content="Kung-Chu Ho, MD, PhD">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="e in Nature, i in Life">
+<meta name="twitter:description" content="Why is e = 2.718…? Why does √−1 run your phone? Derived from first principles, step by step. Free, no calculus required.">
+<meta name="twitter:image"       content="https://kungchuho.github.io/e-and-i/cover_og.png">
+
+<!-- JSON-LD Structured Data — helps Google understand this as
+     an educational book and may generate rich search results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "e in Nature, i in Life",
+  "alternativeHeadline": "Imaginary Symbols That Are Utterly Real",
+  "description": "A step-by-step derivation of the natural constant e and the imaginary unit i — from twelve natural phenomena to Euler's formula and its applications in technology and medicine. No prior calculus required.",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "url": "https://kungchuho.github.io/e-and-i/",
+  "author": {
+    "@type": "Person",
+    "name": "Kung-Chu Ho",
+    "honorificSuffix": "MD, PhD",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Chang Gung Memorial Hospital, Taiwan"
+    }
+  },
+  "educationalLevel": ["high school", "undergraduate"],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "student"
+  },
+  "learningResourceType": "self-study guide",
+  "teaches": [
+    "the natural constant e",
+    "imaginary numbers",
+    "Euler's formula",
+    "complex numbers",
+    "derivatives and limits",
+    "Fourier transform",
+    "applications of complex numbers"
+  ],
+  "about": [
+    { "@type": "Thing", "name": "Euler's number" },
+    { "@type": "Thing", "name": "imaginary unit" },
+    { "@type": "Thing", "name": "Euler's formula" },
+    { "@type": "Thing", "name": "complex numbers" },
+    { "@type": "Thing", "name": "calculus" },
+    { "@type": "Thing", "name": "Fourier transform" }
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+</script>
+
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)']], displayMath: [['$$','$$']], processEscapes: true },
+    svg: { fontCache: 'global' },
+    options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+  };
+</script>
+<script id="MathJax-script" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js"></script>
+
+<style>
+  :root{
+    --paper:#f6f1e7; --paper-2:#fbf8f1; --ink:#24211c; --ink-soft:#4a463d;
+    --teal:#0f5f59; --teal-deep:#0a423e; --amber:#b1701f; --sepia:#9a7b3f;
+    --rule:#d9cfba;
+    --shadow:0 1px 0 rgba(0,0,0,.04), 0 18px 40px -28px rgba(20,16,8,.5);
+    --serif:"Iowan Old Style","Palatino Linotype","Palatino","Book Antiqua","Georgia","Times New Roman",serif;
+    --cjk:"Inter","Helvetica Neue","Segoe UI",Helvetica,Arial,system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 80% -10%, #fff8ec 0%, transparent 60%),
+      radial-gradient(900px 500px at -10% 110%, #eef3ec 0%, transparent 55%),
+      var(--paper);
+    color:var(--ink); font-family:var(--cjk); line-height:1.95; font-size:18px;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ── Body text: justified like a journal ── */
+  p { text-align:justify; hyphens:auto; -webkit-hyphens:auto; }
+  /* Override: keep these left-aligned (labels, captions, UI elements) */
+  .label, .cap, .h1sub, .eyebrow, .byline, .part-tag,
+  figcaption, caption, .hero p, nav p, footer p,
+  .dl-bar, td, th { text-align:left; hyphens:none; }
+
+  /* ── PDF download bar ── */
+  .dl-bar{
+    border:1px solid var(--rule);
+    border-radius:12px;
+    background:var(--paper-2);
+    margin:40px 0 0;
+    padding:14px 20px;
+  }
+  .dl-bar-inner{
+    display:flex; align-items:center; gap:16px;
+  }
+  .dl-icon{
+    width:32px; height:32px; flex-shrink:0;
+    color:var(--teal);
+  }
+  .dl-info{
+    flex:1; min-width:0;
+    display:flex; flex-direction:column; gap:2px;
+  }
+  .dl-label{
+    font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--ink-soft); font-weight:700;
+  }
+  .dl-title{
+    font-size:14px; color:var(--ink);
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+  .dl-btn{
+    display:inline-flex; align-items:center; gap:6px;
+    flex-shrink:0;
+    padding:8px 18px;
+    border-radius:8px;
+    border:1.5px solid var(--teal);
+    background:transparent;
+    color:var(--teal);
+    font-size:14px; font-weight:700; letter-spacing:.06em;
+    text-decoration:none;
+    transition:background .15s, color .15s;
+  }
+  .dl-btn:hover{ background:var(--teal); color:#fff; }
+  .wrap{max-width:880px;margin:0 auto;padding:64px 26px 120px}
+
+  .hero{border:1px solid var(--rule);border-radius:18px;
+    background:linear-gradient(180deg,var(--paper-2),#f3ecdd);
+    padding:48px 40px 42px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .hero .eyebrow{font-size:13px;letter-spacing:.32em;color:var(--amber);text-transform:uppercase;font-weight:700;margin-bottom:14px}
+  .hero h1{font-family:var(--serif);font-weight:700;font-size:44px;line-height:1.3;margin:0 0 8px;color:var(--teal-deep);letter-spacing:.02em}
+  .hero h1 .e{font-style:italic;color:var(--amber)}
+  .hero .h1sub{font-family:var(--serif);font-size:20px;color:var(--ink-soft);margin:0 0 18px;font-style:italic}
+  .hero p.sub{margin:0;color:var(--ink-soft);font-size:16.5px;max-width:62ch}
+  .hero .orb{position:absolute;right:-70px;top:-70px;width:230px;height:230px;border-radius:50%;
+    background:radial-gradient(circle at 35% 35%, #1c8079, #0a423e 70%);opacity:.10}
+  .hero .coverart{display:flex;justify-content:center;margin:22px 0 10px}
+  .hero .coverart svg{width:280px;height:280px;max-width:64%}
+  .hero .byline{margin-top:24px;padding-top:16px;border-top:1px solid var(--rule);font-family:var(--serif);color:var(--ink-soft);font-size:15.5px;line-height:1.75}
+  .hero .byline .en{display:block;font-style:italic;font-size:12.5px;color:#8a8369;margin-top:4px;letter-spacing:.01em}
+  .preface .who{font-family:var(--serif);font-style:italic;color:var(--sepia)}
+  .reading{border:1px solid var(--rule);border-radius:13px;background:var(--paper-2);padding:18px 24px}
+  .reading li{margin:10px 0}
+  .reading .bk{font-family:var(--serif);font-style:italic;color:var(--teal-deep)}
+  .coda{margin-top:64px;text-align:center}
+  .coda .theend{font-family:var(--serif);font-style:italic;color:var(--sepia);letter-spacing:.3em;margin-top:20px}
+
+  nav.toc{margin:34px 0 8px;border:1px solid var(--rule);border-radius:14px;background:var(--paper-2);padding:22px 26px}
+  nav.toc h2{font-family:var(--serif);font-size:17px;margin:0 0 12px;color:var(--teal-deep);letter-spacing:.04em}
+  nav.toc ul{margin:0;padding-left:0;list-style:none;columns:2;column-gap:34px}
+  nav.toc li{margin:5px 0;break-inside:avoid;display:flex;align-items:baseline}
+  nav.toc li.part{display:block}
+  nav.toc .pg{margin-left:auto;padding-left:8px;color:var(--sepia);font-family:var(--serif);font-style:italic;font-size:13px;flex:none}
+  nav.toc li .nm{color:var(--amber);font-family:var(--serif);font-style:italic;margin-right:6px}
+  nav.toc a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid transparent}
+  nav.toc a:hover{color:var(--teal);border-bottom-color:var(--teal)}
+  nav.toc .part{font-weight:700;color:var(--amber);margin-top:12px;font-size:14px;letter-spacing:.05em}
+  @media(max-width:640px){nav.toc ul{columns:1}}
+
+  section{margin-top:60px}
+  .part-divider{text-align:center;margin:74px 0 0;padding-bottom:4px}
+  .part-divider + section{margin-top:30px}
+  .part-divider .pp{font-family:var(--serif);font-style:italic;color:var(--amber);letter-spacing:.22em;font-size:18px}
+  .part-divider .pt{font-family:var(--serif);font-size:34px;color:var(--teal-deep);margin-top:10px;line-height:1.35}
+  .part-tag{display:inline-block;font-family:var(--serif);font-style:italic;color:var(--amber);font-size:15px;letter-spacing:.1em;margin-bottom:6px}
+  h2.sec{font-family:var(--serif);font-size:26px;color:var(--teal-deep);margin:0 0 8px;line-height:1.4;font-weight:700;display:flex;align-items:baseline;gap:14px}
+  h2.sec .no{font-style:italic;color:var(--amber);font-size:21px;flex:none}
+  h3{font-family:var(--serif);font-size:20px;color:var(--teal-deep);margin:34px 0 6px}
+  p{margin:14px 0}
+  .lead{color:var(--ink-soft)}
+  strong{color:var(--teal-deep)}
+  em.term{font-style:normal;font-weight:700;color:var(--amber)}
+  hr.div{border:none;border-top:1px solid var(--rule);margin:52px 0}
+
+  .box{border-radius:13px;padding:20px 24px;margin:24px 0;border:1px solid var(--rule);background:var(--paper-2)}
+  .box .label{font-size:12.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .intuition{background:linear-gradient(180deg,#eef5f1,#e8f1ec);border-color:#bcd8cd}
+  .intuition .label{color:var(--teal)}
+  .experiment{background:linear-gradient(180deg,#fbf2e1,#f7ead2);border-color:#e7cfa3}
+  .experiment .label{color:var(--amber)}
+  .detective{background:#23211c;color:#f1ebdc;border-color:#23211c}
+  .detective .label{color:#e6b25e}
+  .detective strong{color:#f6d99a}
+  .pitfall{background:#fbeeec;border-color:#e7c2bb}
+  .pitfall .label{color:#a8442f}
+  .history{background:linear-gradient(180deg,#f7efe0,#f1e6d0);border-color:#dcc9a3;border-left:5px solid var(--sepia)}
+  .history .label{color:var(--sepia)}
+  .history .who{font-family:var(--serif);font-style:italic;color:#6a4f1f}
+
+  .keyeq{border:1px solid var(--teal);border-left:5px solid var(--teal);
+    background:linear-gradient(180deg,#ffffff,#f3f7f4);border-radius:12px;padding:6px 22px;margin:26px 0;
+    box-shadow:0 14px 30px -26px rgba(15,95,89,.7)}
+  .keyeq .cap{font-size:12.5px;letter-spacing:.16em;color:var(--amber);font-weight:800;text-transform:uppercase;margin:14px 0 -4px}
+
+  .tbl-wrap{overflow-x:auto;margin:22px 0}
+  table{border-collapse:collapse;width:100%;font-size:15.5px;background:var(--paper-2)}
+  caption{caption-side:top;text-align:left;font-size:13px;color:var(--ink-soft);margin-bottom:8px;font-style:italic}
+  th,td{border:1px solid var(--rule);padding:9px 12px;text-align:center}
+  td.field{text-align:left}
+  td.hot{color:var(--amber);font-weight:700}
+  thead th{background:var(--teal-deep);color:#f3ecdd;font-weight:600;letter-spacing:.02em}
+  tbody tr:nth-child(even){background:#f1ead9}
+
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto}
+  figcaption{font-size:13.5px;color:var(--ink-soft);margin-top:10px;font-style:italic}
+  .figcard{border:1px solid var(--rule);border-radius:13px;background:var(--paper-2);padding:18px}
+
+  ol.steps{counter-reset:s;list-style:none;padding:0;margin:22px 0}
+  ol.steps>li{position:relative;padding:4px 0 4px 52px;margin:18px 0}
+  ol.steps>li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:2px;width:34px;height:34px;border-radius:50%;
+    background:var(--teal);color:#fff;font-family:var(--serif);font-style:italic;display:flex;align-items:center;justify-content:center;font-size:17px}
+  ol.steps>li b{color:var(--teal-deep)}
+
+  .timeline{border-left:3px solid var(--rule);margin:24px 0 24px 8px;padding-left:22px}
+  .timeline .t{position:relative;margin:16px 0}
+  .timeline .t::before{content:"";position:absolute;left:-30px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 3px var(--paper)}
+  .timeline .yr{font-family:var(--serif);font-style:italic;color:var(--amber);font-weight:700;margin-right:8px}
+
+  footer{margin-top:80px;border-top:1px solid var(--rule);padding-top:24px;color:var(--ink-soft);font-size:14px;text-align:center}
+
+  @page{ size:A4; margin:14mm 14mm 16mm; }
+  @media print{
+    body{background:#fff;font-size:12.2pt;line-height:1.78}
+    .wrap{max-width:100%;padding:0}
+    .hero,.box,.keyeq,nav.toc,table,.figcard{box-shadow:none}
+    .hero{break-after:page}
+    #preface{break-after:page}
+    .orb{display:none}
+    .part-divider{break-before:page;break-after:page;break-inside:avoid;display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:235mm;margin:0;padding:0}
+    .part-divider + section{margin-top:0}
+    .coda{break-inside:avoid;margin-top:36px}
+    #reading{break-before:page}
+    h2.sec,h3{break-after:avoid}
+    figure,.keyeq,.box,table,.tbl-wrap{break-inside:avoid}
+    nav.toc{break-after:page}
+    a{color:inherit}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="orb"></div>
+    <div class="eyebrow">A mathematical story three centuries in the making</div>
+    <h1>The <span class="e">e</span> in Nature, the <span class="e">i</span> in Life</h1>
+    <p class="h1sub">Imaginary symbols that turn out to be utterly real</p>
+    <div class="coverart">
+      <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logarithmic spiral: e and i as one">
+        <circle cx="150" cy="150" r="120" fill="none" stroke="#e3d7bd" stroke-width="1"/>
+        <line x1="22" y1="150" x2="278" y2="150" stroke="#e3d7bd" stroke-width="1"/>
+        <line x1="150" y1="22" x2="150" y2="278" stroke="#e3d7bd" stroke-width="1"/>
+        <polyline points="159.5,150.0 159.6,149.4 159.6,148.8 159.6,148.3 159.5,147.7 159.5,147.1 159.3,146.5 159.2,145.9 159.0,145.3 158.7,144.8 158.5,144.2 158.2,143.7 157.8,143.1 157.5,142.6 157.1,142.1 156.6,141.6 156.2,141.2 155.7,140.8 155.1,140.4 154.6,140.0 154.0,139.7 153.4,139.4 152.8,139.1 152.1,138.9 151.5,138.7 150.8,138.5 150.1,138.4 149.4,138.3 148.7,138.3 148.0,138.3 147.3,138.4 146.6,138.5 145.8,138.6 145.1,138.8 144.4,139.0 143.7,139.3 143.0,139.6 142.4,140.0 141.7,140.4 141.1,140.8 140.5,141.3 139.9,141.8 139.4,142.4 138.8,143.0 138.4,143.6 137.9,144.3 137.5,145.0 137.1,145.7 136.8,146.5 136.5,147.2 136.2,148.0 136.0,148.9 135.9,149.7 135.8,150.5 135.7,151.4 135.7,152.3 135.8,153.2 135.9,154.0 136.1,154.9 136.3,155.8 136.6,156.6 136.9,157.5 137.3,158.3 137.7,159.1 138.2,159.9 138.7,160.7 139.3,161.5 139.9,162.2 140.6,162.8 141.3,163.5 142.1,164.1 142.9,164.7 143.7,165.2 144.6,165.6 145.5,166.1 146.5,166.4 147.4,166.7 148.4,167.0 149.4,167.2 150.5,167.3 151.5,167.4 152.6,167.4 153.7,167.3 154.7,167.2 155.8,167.0 156.8,166.8 157.9,166.5 158.9,166.1 160.0,165.6 161.0,165.1 161.9,164.5 162.9,163.9 163.8,163.2 164.7,162.4 165.5,161.6 166.3,160.8 167.1,159.8 167.7,158.9 168.4,157.8 169.0,156.8 169.5,155.7 169.9,154.5 170.3,153.3 170.6,152.1 170.9,150.9 171.1,149.6 171.2,148.4 171.2,147.1 171.1,145.8 171.0,144.5 170.8,143.2 170.5,141.9 170.1,140.6 169.7,139.3 169.1,138.1 168.5,136.9 167.9,135.7 167.1,134.5 166.2,133.4 165.3,132.3 164.4,131.3 163.3,130.3 162.2,129.4 161.0,128.5 159.8,127.7 158.5,127.0 157.2,126.4 155.8,125.8 154.3,125.3 152.9,124.9 151.4,124.6 149.8,124.4 148.3,124.2 146.7,124.2 145.1,124.2 143.6,124.4 142.0,124.6 140.4,124.9 138.8,125.4 137.3,125.9 135.7,126.5 134.2,127.3 132.8,128.1 131.4,129.0 130.0,130.0 128.7,131.1 127.4,132.3 126.2,133.5 125.1,134.9 124.0,136.3 123.0,137.8 122.1,139.4 121.3,141.0 120.6,142.7 120.0,144.4 119.5,146.2 119.1,148.0 118.8,149.9 118.6,151.7 118.5,153.6 118.6,155.6 118.7,157.5 119.0,159.4 119.4,161.4 119.9,163.3 120.5,165.2 121.3,167.0 122.1,168.9 123.1,170.7 124.2,172.4 125.4,174.1 126.7,175.7 128.1,177.3 129.7,178.8 131.3,180.2 133.0,181.5 134.8,182.7 136.7,183.8 138.6,184.8 140.7,185.7 142.8,186.4 144.9,187.1 147.2,187.6 149.4,188.0 151.7,188.3 154.0,188.4 156.4,188.3 158.7,188.2 161.1,187.9 163.4,187.4 165.8,186.8 168.1,186.1 170.4,185.2 172.6,184.2 174.8,183.0 176.9,181.7 179.0,180.3 181.0,178.7 182.9,177.0 184.7,175.1 186.5,173.2 188.1,171.1 189.6,168.9 190.9,166.7 192.2,164.3 193.3,161.8 194.3,159.3 195.1,156.6 195.7,154.0 196.2,151.2 196.6,148.4 196.8,145.6 196.8,142.8 196.6,139.9 196.2,137.0 195.7,134.2 195.0,131.3 194.2,128.5 193.1,125.7 191.9,122.9 190.5,120.2 188.9,117.6 187.2,115.1 185.3,112.6 183.3,110.3 181.1,108.0 178.7,105.9 176.2,103.9 173.6,102.1 170.8,100.4 167.9,98.8 164.9,97.5 161.9,96.3 158.7,95.2 155.4,94.4 152.1,93.7 148.7,93.3 145.3,93.0 141.8,93.0 138.3,93.2 134.8,93.5 131.3,94.1 127.8,94.9 124.4,96.0 121.0,97.2 117.6,98.6 114.3,100.3 111.1,102.2 108.0,104.2 105.0,106.5 102.1,109.0 99.3,111.6 96.7,114.5 94.3,117.5 92.0,120.7 89.9,124.0 88.0,127.5 86.2,131.1 84.7,134.9 83.4,138.7 82.4,142.7 81.5,146.7 81.0,150.8 80.6,155.0 80.5,159.2 80.7,163.5 81.1,167.7 81.8,172.0 82.7,176.3 83.9,180.5 85.3,184.7 87.1,188.8 89.0,192.8 91.3,196.7 93.8,200.5 96.5,204.2 99.5,207.8 102.7,211.2 106.1,214.4 109.7,217.4 113.6,220.2 117.6,222.8 121.8,225.2 126.2,227.3 130.7,229.2 135.4,230.9 140.2,232.2 145.1,233.3 150.1,234.0 155.2,234.5 160.3,234.7 165.5,234.6 170.7,234.1 175.9,233.4 181.1,232.3 186.2,230.9 191.3,229.1 196.4,227.1 201.3,224.8 206.1,222.1 210.8,219.1 215.3,215.8 219.7,212.3 223.8,208.4 227.8,204.3 231.5,199.9 235.0,195.3 238.2,190.4 241.2,185.3 243.8,180.0 246.2,174.5 248.2,168.8 249.9,163.0 251.3,157.1 252.3,151.0 252.9,144.8 253.2,138.6 253.1,132.2 252.7,125.9 251.8,119.6 250.5,113.2 248.9,107.0 246.9,100.7 244.5,94.6 241.7,88.6 238.5,82.7 234.9,76.9 231.0,71.4 226.7,66.0 222.1,60.9 217.1,56.1 211.8,51.5 206.2,47.2 200.3,43.2 194.2,39.5 187.8,36.2" fill="none" stroke="#0f5f59" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="187.8" cy="36.2" r="5.5" fill="#b1701f"/>
+        <text x="262" y="143" font-size="20" fill="#b1701f" font-style="italic" font-family="var(--serif)">e</text>
+        <text x="158" y="40" font-size="20" fill="#b1701f" font-style="italic" font-family="var(--serif)">i</text>
+        <text x="150" y="166" text-anchor="middle" font-size="12" fill="#9a917e" font-style="italic" font-family="var(--serif)">e<tspan font-size="8" dy="-5">iθ</tspan></text>
+      </svg>
+    </div>
+    <p class="sub">There are two symbols almost everyone has met in a classroom, yet almost no one truly knows: one is \(e\), the other is \(i\). They get treated as abstract, baffling, even "imaginary" things. But in truth, \(e\) is hiding in every radioactive decay, every cooling cup of coffee, every multiplying colony of bacteria; and \(i\) is spinning, right now, inside every phone in your hand and every wireless message you send. This little book does not begin with definitions. It begins with the <strong>real phenomena of nature</strong>, and walks you — step by step, never skipping a single step — through deriving these two "imaginary symbols" with your own hands. By the end, you will see that they are not imaginary at all, but the most real language this world has.</p>
+    <div class="byline">
+      Kung-Chu Ho, MD
+    </div>
+  </header>
+
+  <section id="preface" class="preface">
+    <span class="part-tag">How It Began</span>
+    <h2 class="sec">A Child's Question</h2>
+    <p>One day my son — then in the sixth grade — asked me: "Dad, why did people invent imaginary numbers? If they don't exist in the real world, what was the point of inventing them?"</p>
+    <p>I gave him the textbook answer: "With imaginary numbers, engineering calculations get easier, and that pushed technology forward." The moment I said it, I knew the answer rang hollow. His curiosity never lit up; he just gave a polite "oh."</p>
+    <p>So I went hunting through popular books on the imaginary number \(i\), and that was when I realized: to explain \(i\) clearly you first have to explain \(e\) — and \(e\) is even harder for a child. My own grasp of \(e\) had mostly stopped at "you need it for radioactive decay" and "it makes calculus simpler." As a nuclear-medicine physician, I had never even noticed that \(e\) governs far more than decay — that it is, in fact, a <strong>universal rule</strong> of nature, found everywhere. Even during my PhD, I had treated the \(i\) in MRI \(k\)-space as nothing more than a handy way to keep track of phase.</p>
+    <p>The real problem was not that I didn't understand it, but that everything I understood came in <strong>scattered fragments</strong> — a bit of radiation here, a bit of imaging there, a formula somewhere else — never strung into one <strong>complete story</strong> I could tell a child. I looked through more popular books, and they always felt either too deep or only half the picture. Not one walked, from start to finish without skipping a step, through why these two symbols exist, where they came from, and how they run the world — told plainly to someone willing to think. Since I couldn't find that book, I decided to put one together myself.</p>
+    <p>This little book is the answer I wrote for that question. I hope it can help the curious <strong>schoolchild</strong>, the <strong>high-schooler</strong> lost in the syllabus, the <strong>college student</strong> drawn to the history of science — and the <strong>grown-up</strong> who, like me, wants to finally piece scattered understanding into one whole picture. If, after reading it, you can answer a child's question with a smile, this little book will have been worth it.</p>
+    <p style="text-align:right;font-family:var(--serif);font-style:italic;color:var(--sepia);margin-top:16px;line-height:1.65">
+      — Kung-Chu Ho, MD, PhD<br>
+      <span style="font-size:13px">Department of Nuclear Medicine<br>Chang Gung Memorial Hospital, Taiwan</span>
+    </p>
+  </section>
+
+  <nav class="toc">
+    <h2>Contents</h2>
+    <ul>
+      <li class="part">Front Matter</li>
+      <li><a href="#preface">How It Began: A Child's Question</a><span class="pg">2</span></li>
+      <li class="part">Prologue</li>
+      <li><a href="#intro">Two Misunderstood Symbols</a><span class="pg">4</span></li>
+      <li class="part">Part One · Nature's Secret Language: the e in Nature</li>
+      <li><span class="nm">1.1</span><a href="#s1">Twelve Phenomena, One Law</a><span class="pg">6</span></li>
+      <li><span class="nm">1.2</span><a href="#s2">Everything in One Equation</a><span class="pg">7</span></li>
+      <li><span class="nm">1.3</span><a href="#s3">What Is a Rate of Change?</a><span class="pg">8</span></li>
+      <li><span class="nm">1.4</span><a href="#s4">The Detective's Case: Slope = Height</a><span class="pg">10</span></li>
+      <li><span class="nm">1.5</span><a href="#s5">Deriving the Exponential's Derivative</a><span class="pg">11</span></li>
+      <li><span class="nm">1.6</span><a href="#s6">Feynman's Numerical Experiment</a><span class="pg">12</span></li>
+      <li><span class="nm">1.7</span><a href="#s7">The Birth of e and the Logarithm</a><span class="pg">13</span></li>
+      <li><span class="nm">1.8</span><a href="#s8">Pinning Down e: Bernoulli's Compound Interest</a><span class="pg">15</span></li>
+      <li><span class="nm">1.9</span><a href="#s9">The e in Nature: Each Phenomenon</a><span class="pg">17</span></li>
+      <li class="part">Part Two · When Mathematics Grows i Wings</li>
+      <li><span class="nm">2.1</span><a href="#s10">The Imaginary Number and the Complex Plane</a><span class="pg">21</span></li>
+      <li><span class="nm">2.2</span><a href="#s11">Swap k for i</a><span class="pg">22</span></li>
+      <li><span class="nm">2.3</span><a href="#s12">Two Solutions: Exponential vs. Trig</a><span class="pg">24</span></li>
+      <li><span class="nm">2.4</span><a href="#s13">The Derivatives of sin and cos</a><span class="pg">25</span></li>
+      <li><span class="nm">2.5</span><a href="#s14">A Rigorous Proof of Euler's Formula</a><span class="pg">26</span></li>
+      <li><span class="nm">2.6</span><a href="#s15">Euler's Identity and Its Two Alter Egos</a><span class="pg">27</span></li>
+      <li class="part">Part Three · Running the World with Math: the i in Life</li>
+      <li><span class="nm">3.1</span><a href="#s16">The Tool: Phasors and Spinning Arrows</a><span class="pg">29</span></li>
+      <li><span class="nm">3.2</span><a href="#s17">Alternating Current: Impedance Is Complex</a><span class="pg">30</span></li>
+      <li><span class="nm">3.3</span><a href="#s18">Vibration and Stability: Complex Roots</a><span class="pg">31</span></li>
+      <li><span class="nm">3.4</span><a href="#s19">Fourier and Compression</a><span class="pg">32</span></li>
+      <li><span class="nm">3.5</span><a href="#s20">Mobile Messaging (Full Walkthrough)</a><span class="pg">33</span></li>
+      <li><span class="nm">3.6</span><a href="#s21">Medical Imaging: k-Space</a><span class="pg">34</span></li>
+      <li><span class="nm">3.7</span><a href="#s22">Quantum Mechanics: the i in Nature</a><span class="pg">35</span></li>
+      <li class="part">Finale · Closing</li>
+      <li><a href="#finale">Finale: The Fusion You Didn't Notice</a><span class="pg">36</span></li>
+      <li><a href="#end">Closing Words and a Technology Timeline</a><span class="pg">38</span></li>
+      <li><a href="#reading">On the Shoulders of Giants: Further Reading</a><span class="pg">42</span></li>
+    </ul>
+  </nav>
+
+  <!-- PDF download bar -->
+  <div class="dl-bar">
+    <div class="dl-bar-inner">
+      <svg class="dl-icon" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.8"
+           stroke-linecap="round" stroke-linejoin="round"
+           aria-hidden="true">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="12" y1="18" x2="12" y2="12"/>
+        <polyline points="9 15 12 18 15 15"/>
+      </svg>
+      <div class="dl-info">
+        <span class="dl-label">Full text</span>
+        <span class="dl-title">e in Nature, i in Life — Imaginary Symbols That Are Utterly Real</span>
+      </div>
+      <a class="dl-btn" href="e-in-Nature_i-in-Life_EN.pdf" download
+         title="Download PDF">
+        PDF
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
+             stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+             width="13" height="13" aria-hidden="true">
+          <line x1="8" y1="2" x2="8" y2="11"/>
+          <polyline points="4 8 8 12 12 8"/>
+          <line x1="2" y1="14" x2="14" y2="14"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+
+  <section id="intro">
+    <span class="part-tag">Prologue</span>
+    <h2 class="sec">Two Misunderstood Symbols</h2>
+    <p>In mathematics there are two symbols with a very bad reputation.</p>
+    <p>One is \(e\), often called the "natural constant," roughly equal to \(2.718\). For most people it lives in memory as some odd number to be memorized and then forgotten the moment the exam is over. The other has it even worse — it is \(i\), the "imaginary number." The word "imaginary" alone makes it feel fake: something mathematicians conjured out of thin air, with no existence in the real world.</p>
+    <p>But this is an enormous misunderstanding.</p>
+    <p>In fact, \(e\) has been sitting quietly in every corner of nature all along: the decay of a lump of uranium ore, the cooling of a cup of coffee, the multiplying of a bacterial colony, the interest on a bank deposit — every one of them takes its orders from \(e\). And \(i\), that "imaginary" symbol, is spinning at high speed inside the phone in your pocket at this very moment; without it, you couldn't send a single message.</p>
+    <p>This little book sets out to clear the names of these two misunderstood symbols. We will not start from textbook definitions (which are exactly what scare people off). Instead we start from the <strong>real phenomena of nature</strong> and, like detectives, derive \(e\) and \(i\) by hand — step by step, <strong>never skipping a single step</strong> — then watch how they run the entire modern world. By the end, you will confirm with your own eyes the claim:</p>
+    <div class="box intuition">
+      <div class="label">▸ The one thing this book sets out to prove</div>
+      <p style="margin:0;font-size:19px"><strong>"The \(e\) in Nature, the \(i\) in Life — these seemingly imaginary symbols are real beyond measure."</strong></p>
+    </div>
+    <div class="box intuition">
+      <div class="label">▸ How to read this book</div>
+      <p style="margin:0">What runs through this little book is a <strong>story</strong> (with a little history of mathematics mixed in); what asks you to slow down and look closely are the <strong>equations</strong>. Each line follows from the one before, and <strong>no step is ever skipped</strong> — once you understand the previous line, you can always work out the next. If you get stuck, go back to the previous box; the missing piece is surely there. You do not need to have studied calculus first — only the willingness to follow along, one step at a time.</p>
+    </div>
+  </section>
+
+  <!-- ===================== Part 1 ===================== -->
+  <div class="part-divider"><div class="pp">PART ONE</div><div class="pt">Nature's Secret Language: the <span style="font-style:italic;color:var(--amber)">e</span> in Nature</div></div>
+
+  <section id="s1">
+    <h2 class="sec"><span class="no">§1.1</span>Twelve Phenomena, One Law</h2>
+    <p class="lead">Forget the mathematics for a moment. Let's first play the observer and look at these seemingly unrelated phenomena across physics, biology, chemistry, and economics — and ask what they secretly have in common.</p>
+    <p>The point of observation is not "what the current value is," but <strong>how "the current state" determines "the change in the next instant"</strong>. Apply this lens to the twelve phenomena below, and one plain sentence runs through them all:</p>
+    <div class="box intuition">
+      <div class="label">▸ A universal truth (in plain words)</div>
+      <p style="margin:0;font-size:19px"><strong>"The more a system has right now, the faster it changes."</strong></p>
+    </div>
+    <div class="tbl-wrap">
+    <table>
+      <caption>Table 1 | Twelve phenomena and their equations (\(y_0\) is the initial value; \(k,r,\alpha\) are proportionality constants)</caption>
+      <thead><tr><th>Field</th><th>Phenomenon</th><th>Equation</th></tr></thead>
+      <tbody>
+        <tr><td class="field">Quantum physics</td><td class="field">Radioactive decay</td><td>\(N(t)=N_0e^{-kt}\)</td></tr>
+        <tr><td class="field">Epidemiology</td><td class="field">Early-outbreak spread</td><td>\(I(t)=I_0e^{kt}\)</td></tr>
+        <tr><td class="field">Pharmacology</td><td class="field">Drug clearance from blood</td><td>\(C(t)=C_0e^{-kt}\)</td></tr>
+        <tr><td class="field">Optics / Oceanography</td><td class="field">Light attenuation through water</td><td>\(I(d)=I_0e^{-\alpha d}\)</td></tr>
+        <tr><td class="field">Thermodynamics</td><td class="field">Newton's cooling (coffee cooling down)</td><td>\(\Delta T(t)=\Delta T_0\,e^{-kt}\)</td></tr>
+        <tr><td class="field">Earth science</td><td class="field">Atmospheric pressure vs. altitude</td><td>\(P(h)=P_0e^{-\frac{Mgh}{RT}}\)</td></tr>
+        <tr><td class="field">Microbiology</td><td class="field">Bacterial division</td><td>\(N(t)=N_0e^{rt}\)</td></tr>
+        <tr><td class="field">Electronics</td><td class="field">Capacitor discharge</td><td>\(V(t)=V_0e^{-t/RC}\)</td></tr>
+        <tr><td class="field">Wave physics</td><td class="field">Sound / seismic-wave attenuation</td><td>\(A(x)=A_0e^{-\alpha x}\)</td></tr>
+        <tr><td class="field">Chemical kinetics</td><td class="field">First-order reaction</td><td>\([A]_t=[A]_0\,e^{-kt}\)</td></tr>
+        <tr><td class="field">Finance / Investing</td><td class="field">Principal growth under continuous compounding</td><td>\(A(t)=A_0\,e^{rt}\)</td></tr>
+        <tr><td class="field">Ecology</td><td class="field">Unconstrained population growth</td><td>\(P(t)=P_0e^{rt}\)</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>See it? All twelve phenomena have the same shape: some quantity times \(e\) raised to a power. The same \(e\), the same structure, turning up again and again across fields as unrelated as quantum physics, life science, chemistry, earth science, finance — even sociology. This is no coincidence; it strongly hints that all these phenomena share the same underlying equation. In the next section, we write it down.</p>
+  </section>
+
+  <hr class="div">
+
+  <section id="s2">
+    <h2 class="sec"><span class="no">§1.2</span>Boiling Everything Down to a Single Equation</h2>
+    <p>Let \(y\) stand for a phenomenon's "total amount / concentration / intensity" at this instant, \(t\) for time, and \(\dfrac{dy}{dt}\) for "the instantaneous rate at which \(y\) changes with \(t\)" (the precise meaning of this symbol is made clear in §1.3; for now, just read it as "rate of change"). "The rate of change is proportional to the amount present" becomes, in symbols:</p>
+    <div class="keyeq">
+      <div class="cap">Nature's core equation (the master equation)</div>
+      $$\frac{dy}{dt}=k\,y$$
+    </div>
+    <p>\(k\) is set by the physics: \(k\gt 0\) means it grows faster as it grows (bacteria, an epidemic); \(k\lt 0\) means less and less remains (decay, cooling). This is called a <em class="term">differential equation</em> — an equation that contains a rate of change. In plain words: "where the system goes next, and how fast, is determined completely and solely by how much it has accumulated right now." All of Part One answers a single question: <strong>what kind of function \(y=f(t)\) satisfies "its own rate of change equals \(k\) times itself"?</strong></p>
+    <div class="box history">
+      <div class="label">◷ History in the making: the triumph of a notation</div>
+      <p style="margin:0"><span class="who">Newton vs. Leibniz, late 17th century</span> The elegant symbol \(\dfrac{dy}{dt}\) comes from Leibniz, one of the two co-inventors of calculus. He and Newton created calculus at almost the same time but independently, and their two camps then waged a decades-long, cross-Channel feud over "who invented it first" — the most famous priority dispute in the history of science. Newton's notation was clumsy (a dot for the rate of change), whereas Leibniz's \(\dfrac{dy}{dt}\) wore its meaning on its face: "a tiny change in \(y\) divided by a tiny change in \(t\)." The upshot: although Britain, in backing Newton, kept his notation and fell nearly a century behind the Continent in mathematics, <strong>Leibniz's notation won out in the end and has stood unchanged for three hundred years</strong> — it gave "change" a written language for the first time.</p>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section id="s3">
+    <h2 class="sec"><span class="no">§1.3</span>What Exactly Is a Rate of Change?</h2>
+    <p class="lead">This section is the foundation of the whole book. Master it, and every derivation that follows becomes easy.</p>
+    <h3>From "Average Speed" to "Instantaneous Speed"</h3>
+    <p>Let some quantity be a function of time, \(f(t)\). Over the stretch from \(t\) to \(t+h\) (a span of time "of length \(h\)"), it changes from \(f(t)\) to \(f(t+h)\). The <strong>average rate of change</strong> over this interval is just "change in value ÷ length of time":</p>
+    $$\text{average rate}=\frac{f(t+h)-f(t)}{h}$$
+    <p>But this is only an "average over an interval." What we want is the rate "right at the instant \(t\)." The trick is to keep shrinking the time window \(h\) until it approaches 0. This "let \(h\) tend toward 0" is written \(\displaystyle\lim_{h\to 0}\). The instantaneous rate of change is therefore defined as:</p>
+    <div class="keyeq">
+      <div class="cap">Definition of the derivative (the instantaneous rate of change)</div>
+      $$f'(t)=\frac{dy}{dt}=\lim_{h\to 0}\frac{f(t+h)-f(t)}{h}$$
+    </div>
+    <p>This \(f'(t)\) is called the <em class="term">derivative</em> of \(f\), and it carries two identical meanings: from the <strong>change</strong> point of view, it is the instantaneous rate of change; from the <strong>geometric</strong> point of view, it is the <strong>slope of the tangent line</strong> to the graph at that point. The figure below shows why the two are the same:</p>
+    <figure class="figcard">
+      <svg viewBox="0 0 620 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="secant approaching tangent">
+        <line x1="60" y1="250" x2="590" y2="250" stroke="#b9ad94" stroke-width="1.5"/>
+        <line x1="80" y1="30" x2="80" y2="270" stroke="#b9ad94" stroke-width="1.5"/>
+        <text x="595" y="255" font-size="13" fill="#6b6453" font-style="italic">t</text>
+        <text x="64" y="28" font-size="13" fill="#6b6453" font-style="italic">y</text>
+        <path d="M90,245 Q300,235 430,150 T560,55" fill="none" stroke="#0f5f59" stroke-width="3"/>
+        <line x1="250" y1="206" x2="520" y2="78" stroke="#b1701f" stroke-width="2" stroke-dasharray="6 5" opacity=".75"/>
+        <line x1="170" y1="255" x2="360" y2="180" stroke="#b1701f" stroke-width="2.5"/>
+        <circle cx="250" cy="206" r="5.5" fill="#23211c"/><text x="232" y="198" font-size="13">P</text>
+        <circle cx="520" cy="78" r="5.5" fill="#23211c"/><text x="528" y="74" font-size="13">Q</text>
+        <line x1="250" y1="262" x2="520" y2="262" stroke="#6b6453" stroke-width="1"/>
+        <text x="375" y="280" font-size="13" fill="#6b6453" text-anchor="middle">time window h (let it → 0; Q slides to P)</text>
+        <text x="208" y="160" font-size="12.5" fill="#b1701f">secant</text>
+        <text x="300" y="220" font-size="12.5" fill="#b1701f">tangent</text>
+      </svg>
+      <figcaption>The slope of the secant through P and Q is the average rate of change over that interval; as \(h\to 0\), Q slides toward P and the secant becomes the tangent at P — and the tangent's slope is exactly the instantaneous rate of change \(f'\).</figcaption>
+    </figure>
+    <h3>Try It by Hand: Feeling the Limit Through Numbers</h3>
+    <p>In the spirit of Feynman's "work it out by hand," take \(f(t)=t^2\) at \(t=3\) and shrink \(h\) smaller and smaller:</p>
+    <div class="tbl-wrap">
+    <table>
+      <caption>Table 2 | Average rate of change of \(f(t)=t^2\) at \(t=3\) (\(f(3)=9\))</caption>
+      <thead><tr><th>\(h\)</th><th>\((3+h)^2\)</th><th>\(\dfrac{(3+h)^2-9}{h}\)</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>16</td><td>7</td></tr>
+        <tr><td>0.1</td><td>9.61</td><td>6.1</td></tr>
+        <tr><td>0.01</td><td>9.0601</td><td>6.01</td></tr>
+        <tr><td>0.001</td><td>9.006001</td><td>6.001</td></tr>
+        <tr><td>→ 0</td><td>→ 9</td><td class="hot">→ 6</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>The numbers converge to \(6=2\times3\). In the next section we'll prove \(f'(t)=2t\) with pure algebra; this table is just to let you see, with your own eyes, that the limit really does converge.</p>
+  </section>
+
+  <hr class="div">
+
+  <section id="s4">
+    <h2 class="sec"><span class="no">§1.4</span>The Detective's Case: Find a Function Whose Slope Equals Its Height</h2>
+    <p>Back to the master equation: take the simplest case \(k=1\), so the function we seek satisfies \(f'(x)=f(x)\). Geometrically: on this function's graph, <strong>the tangent slope at any point exactly equals the height (the \(y\)-value) at that point</strong>. At height 100, the slope is 100.</p>
+    <figure class="figcard">
+      <svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="slope equals height">
+        <line x1="50" y1="210" x2="570" y2="210" stroke="#b9ad94" stroke-width="1.5"/>
+        <line x1="70" y1="20" x2="70" y2="228" stroke="#b9ad94" stroke-width="1.5"/>
+        <path d="M80,206 Q280,198 400,130 T540,30" fill="none" stroke="#0f5f59" stroke-width="3"/>
+        <line x1="320" y1="210" x2="320" y2="172" stroke="#b1701f" stroke-width="2"/>
+        <circle cx="320" cy="172" r="5" fill="#23211c"/>
+        <text x="300" y="230" font-size="12.5" fill="#b1701f" text-anchor="middle">height = y</text>
+        <line x1="250" y1="200" x2="392" y2="143" stroke="#b1701f" stroke-width="2.5"/>
+        <text x="400" y="148" font-size="12.5" fill="#b1701f">tangent slope = y</text>
+      </svg>
+      <figcaption>The "perfect function" we're after: at every point, the steepness of the tangent is exactly equal to the height there.</figcaption>
+    </figure>
+    <p>There's no ready-made answer, so — like a detective — we'll haul in the candidate functions one by one for questioning.</p>
+    <h3>Suspect One: Polynomials (Alibi Confirmed — Not Guilty)</h3>
+    <p>Interrogating \(f(x)=x^2\). Compute straight from the definition:</p>
+    $$f'(x)=\lim_{h\to 0}\frac{(x+h)^2-x^2}{h}=\lim_{h\to 0}\frac{2xh+h^2}{h}=\lim_{h\to 0}(2x+h)=2x$$
+    <p>(This confirms Table 2.) But \(f'(x)=2x\neq x^2=f(x)\). Each differentiation drops the highest power by one degree, so a polynomial is doomed to "get shorter the more you differentiate it" — it can never equal itself after differentiation. The whole family is out.</p>
+    <h3>Suspect Two: Trigonometric Functions (So Close)</h3>
+    <p>Interrogating \(f(x)=\sin x\). Its derivative is \(f'(x)=\cos x\) (rigorously proved in §2.4). But \(\cos x\) is just \(\sin x\) shifted by 90°, so the values never line up: \(\dfrac{d}{dx}\sin x=\cos x\neq\sin x\). Disqualified — but hold the thought; it makes a spectacular return in Part Two.</p>
+    <h3>Suspect Three: Exponentials (Prime Suspect)</h3>
+    <p>Interrogating \(f(x)=a^x\). It has a soul that smells just like the master equation: <strong>take a fixed step forward, and the whole value multiplies by a fixed factor</strong> (for example, \(2^x\) doubles with every \(+1\)). "The larger it is now, the larger the absolute increase on the next step" — that is exactly \(\dfrac{dy}{dt}\propto y\). The hunch is right; the next section drags it into the interrogation room.</p>
+  </section>
+
+  <hr class="div">
+
+  <section id="s5">
+    <h2 class="sec"><span class="no">§1.5</span>The Key Derivation: the Derivative of an Exponential</h2>
+    <p>Substitute \(f(x)=a^x\) into the definition of the derivative:</p>
+    $$f'(x)=\lim_{h\to 0}\frac{a^{x+h}-a^{x}}{h}$$
+    <p><strong>Step 1 — split it using the law of exponents.</strong> Since \(a^{x+h}=a^{x}\cdot a^{h}\), factor out \(a^x\):</p>
+    $$f'(x)=\lim_{h\to 0}\frac{a^{x}\!\left(a^{h}-1\right)}{h}$$
+    <p><strong>Step 2 — pull whatever doesn't involve \(h\) out of the limit.</strong> The limit is taken as \(h\to0\), and \(a^x\) contains no \(h\) at all, so as far as the limit is concerned it is just a constant and can be moved outside:</p>
+    <div class="keyeq">
+      <div class="cap">The general formula for an exponential's derivative</div>
+      $$f'(x)=a^{x}\cdot\underbrace{\lim_{h\to 0}\frac{a^{h}-1}{h}}_{\textstyle L(a)}$$
+    </div>
+    <div class="box intuition">
+      <div class="label">▸ The detective's big discovery</div>
+      <p style="margin:0">The derivative of any exponential \(a^x\) <strong>equals itself times a constant \(L(a)\)</strong>, that is, \(f'(x)=L(a)\cdot f(x)\). So an exponential <strong>automatically satisfies \(\dfrac{dy}{dx}\propto y\)</strong> — it is precisely a solution of the master equation! Only one question remains: what does that proportionality constant \(L(a)\) equal?</p>
+    </div>
+    <p>Give it its own name, \(L(a)=\displaystyle\lim_{h\to0}\frac{a^h-1}{h}\). It depends only on the base \(a\). Our task becomes wonderfully concrete: <strong>find a base \(a\) for which \(L(a)=1\)</strong>; then \(f'(x)=1\cdot a^x=a^x=f(x)\) — case closed!</p>
+  </section>
+
+  <hr class="div">
+
+  <section id="s6">
+    <h2 class="sec"><span class="no">§1.6</span>Feynman's Numerical Experiment</h2>
+    <p>We can't read off \(L(a)\) at a glance, so let's compute it: shrink \(h\) step by step and watch where it converges.</p>
+    <div class="tbl-wrap">
+    <table>
+      <caption>Table 3 | Numerical convergence of \(L(2)\) and \(L(3)\)</caption>
+      <thead><tr><th>\(h\)</th><th>\(\dfrac{2^h-1}{h}\)</th><th>\(\dfrac{3^h-1}{h}\)</th></tr></thead>
+      <tbody>
+        <tr><td>0.1</td><td>0.7177</td><td>1.1612</td></tr>
+        <tr><td>0.01</td><td>0.6956</td><td>1.1047</td></tr>
+        <tr><td>0.001</td><td>0.6934</td><td>1.0992</td></tr>
+        <tr><td>→ 0</td><td class="hot">→ 0.6931 (&lt;1)</td><td class="hot">→ 1.0986 (&gt;1)</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>\(L(2)\approx0.69\lt1\) (the slope of \(2^x\) is "not steep enough"), while \(L(3)\approx1.10\gt1\) (the slope of \(3^x\) is "too steep"). As \(a\) grows, \(L(a)\) climbs continuously from below 1 to above 1. By the <em class="term">intermediate value theorem</em> (a continuous curve rising from 0.69 to 1.10 must pass exactly through 1 somewhere along the way), there <strong>must be a unique base between 2 and 3 for which \(L(a)=1\)</strong>. We call it \(e\).</p>
+    <figure class="figcard">
+      <svg viewBox="0 0 600 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="intermediate value theorem">
+        <line x1="60" y1="190" x2="560" y2="190" stroke="#b9ad94" stroke-width="1.5"/>
+        <line x1="90" y1="25" x2="90" y2="208" stroke="#b9ad94" stroke-width="1.5"/>
+        <text x="565" y="195" font-size="13" fill="#6b6453" font-style="italic">a</text>
+        <text x="60" y="24" font-size="13" fill="#6b6453">L(a)</text>
+        <line x1="90" y1="112" x2="560" y2="112" stroke="#b1701f" stroke-width="1.5" stroke-dasharray="6 5"/>
+        <text x="64" y="116" font-size="12" fill="#b1701f">1</text>
+        <path d="M120,175 Q260,155 330,112 T540,52" fill="none" stroke="#0f5f59" stroke-width="3"/>
+        <circle cx="230" cy="142" r="5" fill="#23211c"/><text x="218" y="162" font-size="12">a=2</text>
+        <circle cx="400" cy="86" r="5" fill="#23211c"/><text x="392" y="78" font-size="12">a=3</text>
+        <circle cx="330" cy="112" r="6" fill="#b1701f"/><text x="320" y="100" font-size="13" fill="#b1701f" font-style="italic">a = e</text>
+      </svg>
+      <figcaption>\(L(a)\) climbs continuously from \(a=2\) (below the dashed line) to \(a=3\) (above it), so somewhere in between it must cross \(L=1\). That crossing point is what we call \(e\).</figcaption>
+    </figure>
+  </section>
+
+  <hr class="div">
+
+  <section id="s7">
+    <h2 class="sec"><span class="no">§1.7</span>The Birth of e, and the True Face of the Logarithm</h2>
+    <p>Let us officially name that perfect base \(e\). Its <strong>definition</strong> is simply "the base for which \(L=1\)":</p>
+    <div class="keyeq">
+      <div class="cap">The defining property of the natural constant e</div>
+      $$L(e)=\lim_{h\to 0}\frac{e^{h}-1}{h}=1$$
+    </div>
+    <p>Substitute \(L(e)=1\) back into the general formula from §1.5, and a small miracle happens:</p>
+    <div class="keyeq">
+      <div class="cap">The single most important identity in calculus</div>
+      $$\frac{d}{dx}\,e^{x}=e^{x}\cdot L(e)=e^{x}\cdot 1=e^{x}$$
+    </div>
+    <p>Found it! \(y=e^x\) is the perfect function that "equals itself after differentiation," the unique function whose "slope always equals its height," the one "fixed point" that the act of differentiation leaves untouched.</p>
+
+    <h3>A Bonus Payoff: The True Face of the Logarithm</h3>
+    <p>We tailor-made \(L(e)=1\) for \(e\); but for any other base \(a\), what is \(L(a)\)? To answer, we first need to be clear about what a "logarithm" is. The <strong>natural logarithm \(\ln a\)</strong> means "to what power must \(e\) be raised to get \(a\)," i.e. \(e^{\ln a}=a\). In other words, \(\ln\) is the inverse operation of \(e^x\). With it, we can rewrite any base in terms of \(e\): \(a^{h}=\left(e^{\ln a}\right)^{h}=e^{\,h\ln a}\). Substitute into \(L(a)\):</p>
+    $$L(a)=\lim_{h\to 0}\frac{a^{h}-1}{h}=\lim_{h\to 0}\frac{e^{\,h\ln a}-1}{h}$$
+    <p>Let \(u=h\ln a\) (as \(h\to0\), \(u\to0\), and \(h=\dfrac{u}{\ln a}\)):</p>
+    $$L(a)=\lim_{u\to 0}\frac{e^{u}-1}{\,u/\ln a\,}=\ln a\cdot\lim_{u\to 0}\frac{e^{u}-1}{u}=\ln a\cdot 1=\ln a$$
+    <p>That mysterious constant \(L(a)\) that has dogged us all along turns out, in its true form, to be nothing other than the logarithm:</p>
+    <div class="keyeq">
+      <div class="cap">Exponentials, logarithms, and calculus meet on one line</div>
+      $$\frac{d}{dx}\,a^{x}=a^{x}\,\ln a\qquad\Big(\text{i.e. }L(a)=\ln a\Big)$$
+    </div>
+    <p>\(\ln a\) is not a symbol invented out of nowhere; it is "the growth rate of the base-\(a\) exponential relative to itself." Hold this ruler back up to Table 3: \(\ln2\approx0.69\), \(\ln3\approx1.10\), and \(\ln e=1\) — \(e\) is special precisely because its growth rate is exactly 1, neither too fast nor too slow.</p>
+    <div class="box history">
+      <div class="label">◷ History in the making: how the logarithm's lineage came to light</div>
+      <p style="margin:0 0 10px"><span class="who">Napier, 1614</span> Logarithms were actually born before calculus. The Scottish nobleman John Napier spent twenty years building logarithm tables, with a very practical goal: in his day, astronomy and navigation required multiplying enormous numbers, which was slow and error-prone; logarithms turned "multiplication into addition," slashing the workload at a stroke — they were said to have "doubled the lifespan" of astronomers. Yet he had no idea that what he had touched was, at its core, "the inverse of the exponential," a "growth rate."</p>
+      <p style="margin:0 0 8px"><span class="who">How was this lineage finally brought to light? In three steps:</span></p>
+      <p style="margin:0 0 8px">① <strong>1647 — Saint-Vincent's purely geometric proof.</strong> The Belgian Jesuit mathematician Grégoire de Saint-Vincent, in his <em>Opus Geometricum</em>, gave a rigorous proof — using an Archimedes-style method of exhaustion — that under the hyperbola \(y=\tfrac1x\), when the horizontal coordinates form a <strong>geometric sequence</strong>, the corresponding areas are <strong>equal</strong>. But he treated it merely as a geometric result, and <strong>never</strong> connected it to the logarithms that already existed in his time.</p>
+      <p style="margin:0 0 8px">② <strong>1649 — de Sarasa builds the bridge.</strong> Two years later, his student de Sarasa, answering a challenge from Mersenne, saw that this area had the property of "turning multiplication into addition" — area \((1\!\to\!ab)=\) area \((1\!\to\!a)+\) area \((1\!\to\!b)\). For the first time, the logarithm rose from a navigational calculating tool to an object of analysis tied to "area, accumulation, change."</p>
+      <p style="margin:0 0 8px">③ <strong>1668 — Mercator names it and supplies a series.</strong> In his <em>Logarithmotechnia</em>, Mercator gave the infinite series \(\ln(1+x)=x-\tfrac{x^2}{2}+\tfrac{x^3}{3}-\cdots\) (now called the Mercator series), letting logarithms be computed quickly by algebra; he also coined the term <strong>"natural logarithm,"</strong> meaning the logarithm with \(e\) as its implicit base, matched to the area under the hyperbola.</p>
+      <p style="margin:0">④ <strong>The 18th century — Euler closes the net.</strong> Euler tied it all together: he proved that the area under that curve is precisely the base-\(e\) logarithm; that is, \(\ln\) is the inverse of \(e^x\), and \(\dfrac{d}{dx}\ln x=\dfrac1x\). The seed Napier had planted took well over a century to be recognized as part of the same tree as \(e\) — exactly the \(L(a)=\ln a\) we derived in the three lines above.</p>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section id="s8">
+    <h2 class="sec"><span class="no">§1.8</span>Pinning Down the Value of e: Bernoulli's Compound Interest</h2>
+    <p>We know \(e\) is wedged between 2 and 3, but we still don't know its value. Start from its defining property: when \(h\) is small, \(\dfrac{e^h-1}{h}\approx1\).</p>
+    <p><strong>Step 1:</strong> multiply the denominator across: \(e^{h}-1\approx h\). <strong>Step 2:</strong> rearrange: \(e^{h}\approx 1+h\). <strong>Step 3:</strong> raise both sides to the power \(\tfrac1h\) to cancel the \(h\) in the exponent (the left side becomes \(\left(e^h\right)^{1/h}=e\)):</p>
+    $$e\approx (1+h)^{\frac{1}{h}}\quad\xrightarrow{\;\text{add the limit}\;}\quad e=\lim_{h\to 0}(1+h)^{\frac{1}{h}}$$
+    <p><strong>Step 4:</strong> dress it in a more familiar form: let \(n=\dfrac1h\), so as \(h\to0^+\) we have \(n\to\infty\), and \(h=\dfrac1n\):</p>
+    <div class="keyeq">
+      <div class="cap">The limit definition of e = the continuous-compounding formula</div>
+      $$e=\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^{n}$$
+    </div>
+    <div class="tbl-wrap">
+    <table>
+      <caption>Table 4 | Convergence of \(\left(1+\tfrac1n\right)^n\)</caption>
+      <thead><tr><th>\(n\)</th><th>1</th><th>2</th><th>10</th><th>100</th><th>1000</th><th>→ ∞</th></tr></thead>
+      <tbody><tr><td>Value</td><td>2</td><td>2.25</td><td>2.5937</td><td>2.7048</td><td>2.7169</td><td class="hot">2.71828…</td></tr></tbody>
+    </table>
+    </div>
+    <div class="box history">
+      <div class="label">◷ History in the making: how an uncomputable number was tamed</div>
+      <p style="margin:0 0 10px"><span class="who">Bernoulli, 1683</span> This limit was first stumbled upon by Jacob Bernoulli while studying "continuous compound interest": with a principal of 1 dollar, an annual rate of 100%, and compounding \(n\) times a year, as \(n\to\infty\) the total approaches a fixed number. He could tell it was stuck between 2 and 3, but <strong>could not work out exactly what it was</strong>, so he had to set it aside.</p>
+      <p style="margin:0 0 10px"><span class="who">Euler, 18th century</span> Half a century later, Leonhard Euler took over and did three things that fully tamed this number:</p>
+      <p style="margin:0 0 8px">① <strong>Gave it a name.</strong> In a letter, Euler referred to it by the letter \(e\) (perhaps for the first letter of "exponential"), and the notation has been universal ever since.</p>
+      <p style="margin:0 0 8px">② <strong>Computed its value.</strong> Rather than rely on the sluggish \((1+\tfrac1n)^n\), he used the fast-converging series \(e=1+\tfrac1{1!}+\tfrac1{2!}+\tfrac1{3!}+\cdots\) and computed it, in one go, to more than a dozen decimal places: \(2.718281828\ldots\)</p>
+      <p style="margin:0">③ <strong>Saw through to its nature.</strong> Euler proved \(e\) is <strong>irrational</strong> (its decimals never repeat); more than a century later Hermite (1873) further proved it is <strong>transcendental</strong> (not the root of any polynomial equation with integer coefficients). So \(e\) is both the language of nature's "continuous change" and the limit of finance's "continuous compounding" — one number, two worlds, a single source.</p>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section id="s9">
+    <h2 class="sec"><span class="no">§1.9</span>The e in Nature: Seeing Each Phenomenon Clearly</h2>
+    <p>§1.7 solved only the simplest case, \(k=1\). In the real world \(k\) can be any number, so we need the general \(\dfrac{dy}{dt}=ky\). First, one more result: differentiate \(e^{kt}\).</p>
+    $$\frac{d}{dt}e^{kt}=\lim_{h\to0}\frac{e^{kt}(e^{kh}-1)}{h}=e^{kt}\lim_{h\to0}\frac{e^{kh}-1}{h}\;\xrightarrow{\,u=kh\,}\;e^{kt}\cdot k\cdot 1=k\,e^{kt}$$
+    <p>We therefore claim the solution is \(y=y_0e^{kt}\) (setting \(t=0\) gives \(y_0\)). Differentiating confirms it: \(\dfrac{dy}{dt}=y_0\cdot ke^{kt}=k\,y\ \checkmark\).</p>
+    <div class="keyeq">
+      <div class="cap">Part One's master key</div>
+      $$\frac{dy}{dt}=k\,y\quad\Longrightarrow\quad y=y_0\,e^{kt}$$
+    </div>
+    <p>Now let's go back and look at the phenomena in the §1.1 table <strong>one by one</strong>. You'll find they are not twelve separate formulas, but twelve doors opened by the same key. The phrase "the \(e\) in Nature" starts, right here, to become concrete.</p>
+
+    <h3>The Decay Family (Less and Less Remains)</h3>
+    <p style="color:var(--ink-soft);font-size:15px">A small note: here we follow the usual physics convention of taking the <strong>decay constant \(k\) as positive</strong> and putting the <strong>minus sign in explicitly</strong> (as in \(-kN\)). This corresponds exactly to the \(k<0\) decay case of the general rule \(\dot y=ky\) from §1.2 — we have just moved the minus sign out front, so that in the general solution \(N=N_0e^{-kt}\) the \(k\) in the exponent is already positive.</p>
+    <p><strong>Radioactive decay.</strong> When any single nucleus decays is purely random, but in a macroscopic sample the number decaying per unit time is proportional to the number of nuclei present, \(N\):</p>
+    $$\frac{dN}{dt}=-kN\;\Longrightarrow\;N=N_0e^{-kt}$$
+    <p><strong>Newton's cooling (your cup of coffee).</strong> Coffee doesn't cool at a fixed rate; the rate is proportional to the <strong>temperature difference</strong> \(\Delta T\) between it and the room: hottest and fastest-cooling the moment it's served, ever slower as it nears room temperature.</p>
+    $$\frac{d(\Delta T)}{dt}=-k\,\Delta T\;\Longrightarrow\;\Delta T=\Delta T_0\,e^{-kt}$$
+    <p>(Forensic examiners use it in reverse: measure the temperature difference still left in a body to estimate the time of death.)</p>
+    <p><strong>Drug metabolism.</strong> The liver and kidneys filter a fixed volume of blood each minute, so the amount of drug cleared is proportional to the blood concentration \(C\):</p>
+    $$\frac{dC}{dt}=-kC\;\Longrightarrow\;C=C_0e^{-kt}$$
+    <p><strong>Light penetration (the Beer–Lambert law).</strong> Here "time" is replaced by "depth" \(x\): for each meter the light goes down, the amount absorbed is proportional to the light intensity \(I\) still remaining, which is why the deep sea plunges quickly into darkness:</p>
+    $$\frac{dI}{dx}=-\alpha I\;\Longrightarrow\;I=I_0e^{-\alpha x}$$
+    <p><strong>Capacitor discharge.</strong> The more charge a capacitor stores and the higher its voltage \(V\), the larger the discharge current, so the voltage falls in proportion to itself:</p>
+    $$\frac{dV}{dt}=-\frac{1}{RC}\,V\;\Longrightarrow\;V=V_0e^{-t/RC}$$
+
+    <h3>The Growth Family (\(k\gt 0\): more means faster)</h3>
+    <p><strong>Bacterial division.</strong> With unlimited nutrients, every bacterium divides, so the number of new cells is proportional to the total present, \(N\):</p>
+    $$\frac{dN}{dt}=rN\;\Longrightarrow\;N=N_0e^{rt}$$
+    <p><strong>The early stage of an epidemic.</strong> Before immunity has built up, each infected person passes it on with a fixed probability; the more current infections \(I\), the more new cases each day — this is the early exponential explosion:</p>
+    $$\frac{dI}{dt}=kI\;\Longrightarrow\;I=I_0e^{kt}$$
+    <p><strong>Continuous compounding (Bernoulli's money).</strong> The interest is proportional to the principal \(A\), and the interest then rolls back into the principal: this is the true identity of the very equation that squeezed out \(e\) in §1.8.</p>
+    $$\frac{dA}{dt}=rA\;\Longrightarrow\;A=A_0e^{rt}$$
+    <p><strong>Malthusian population.</strong> Without resource limits, every healthy individual is a unit of reproduction, so the net growth is proportional to the total population \(P\):</p>
+    $$\frac{dP}{dt}=rP\;\Longrightarrow\;P=P_0e^{rt}$$
+
+    <div class="box intuition">
+      <div class="label">▸ See the pattern now?</div>
+      <p style="margin:0">Coffee, uranium ore, bacteria, deep-sea light, your savings — on the surface they have nothing to do with one another, yet their skeleton is identical: <strong>rate of change \(=k\times\) amount present</strong>, with the solution always \(y_0e^{kt}\). The only differences are the sign of \(k\) (growth or decay) and its size (fast or slow). This is "the \(e\) in Nature": not some weird number to memorize from a textbook, but the one letter nature reaches for whenever it describes "change."</p>
+    </div>
+
+    <h3>The Logarithm Strikes Back: Half-Life and Doubling Time</h3>
+    <p>With these solutions in hand, a natural question follows: how long until it decays to half? Set \(N=\tfrac12N_0\):</p>
+    $$N_0e^{-kt_{1/2}}=\tfrac12N_0\;\Longrightarrow\;e^{-kt_{1/2}}=\tfrac12$$
+    <p>\(t\) is trapped up in the exponent, and freeing it is exactly the logarithm's job — take \(\ln\) of both sides (since \(\ln e^{x}=x\)):</p>
+    $$-k\,t_{1/2}=\ln\tfrac12=-\ln2\;\Longrightarrow\;\boxed{\,t_{1/2}=\dfrac{\ln 2}{k}\,}$$
+    <p>Symmetrically, the "doubling time" for the growth family (bacteria doubling, principal doubling, population doubling) is \(t_{\text{double}}=\dfrac{\ln 2}{r}\). This is why \(\ln2\approx0.693\) shows up in every book on radioactive dating, drug half-lives, and even the financial "rule of 72." In one short derivation we used exponentials (the phenomenon), calculus (solving for \(e^{-kt}\)), and logarithms (pulling time down out of the exponent) all at once — in a real problem, they were always meant to be used together.</p>
+  </section>
+
+  <!-- ===================== Part 2 ===================== -->
+  <div class="part-divider"><div class="pp">PART TWO</div><div class="pt">When Mathematics Grows <span style="font-style:italic;color:var(--amber)">i</span> Wings</div><div style="font-family:var(--serif);font-style:italic;color:var(--ink-soft);font-size:15px;margin-top:4px">It is this i that turns e into Euler's formula</div></div>
+
+  <section id="s10">
+    <h2 class="sec"><span class="no">§2.1</span>The Story of the Imaginary Number, and the Complex Plane</h2>
+    <p>Part One dealt with "one-directional growth or decay." But nature has another whole class of phenomena: <strong>"back-and-forth oscillation"</strong> — springs, AC voltage, light waves, quantum wavefunctions. To describe oscillation, we must expand the number system from a single real line into an entire <em class="term">complex plane</em>.</p>
+    <div class="box history">
+      <div class="label">◷ History in the making: a scorned number's near-300-year redemption</div>
+      <p style="margin:0 0 10px"><span class="who">Cardano 1545 → Bombelli 1572 → Descartes 1637</span> While solving a cubic equation, the Italian Cardano was forced, midway through, to write down "the square root of a negative number" — absurd-looking at the time, and he himself called it "sophistry." Bombelli gritted his teeth and laid out rules for working with it, and found that as long as you tolerated it along the way, you could in the end arrive at the correct real answer. But Descartes still found it too ethereal and dismissively named it <strong>"imaginary"</strong> — a disparaging label that stuck for centuries and led countless later students to think it was "fake."</p>
+      <p style="margin:0 0 8px"><span class="who">So how did it later "become real"? Two things were key:</span></p>
+      <p style="margin:0 0 8px">① <strong>1799–1831 — giving it a place to live.</strong> Wessel, Argand, and above all Gauss pointed out: if you draw the real numbers as a horizontal line, then \(i\) lives in <strong>the perpendicular direction</strong>. Multiplying by \(i\) is no magic trick — it is "a 90° rotation" (see the figure below). Once you have this <strong>complex plane</strong>, \(i\) is as concrete as "one step north" on a map. Gauss lamented that, had these numbers originally been called <strong>"lateral numbers"</strong> rather than "imaginary," no one would ever have found them mysterious.</p>
+      <p style="margin:0">② <strong>1833–1837 — turning it from philosophy into algebra.</strong> Hamilton went further: in 1833 he proposed to the Royal Irish Academy that we simply <strong>define</strong> a complex number as a pair of real numbers \((a,b)\), with prescribed rules for adding and multiplying them (the multiplication rule gives \((0,1)\times(0,1)=(-1,0)\), which is exactly \(i^2=-1\)); inspired by Kant, in 1835 he wrote "Algebra as the Science of Pure Time," and published the full theory in 1837. With that, \(i\) needs no "belief that it exists" at all — it is merely a pair of real numbers with agreed-upon rules. The mystique evaporated completely. Below, let's see what Gauss meant by "lateral."</p>
+    </div>
+    <h3>The Imaginary Unit and the Complex Plane</h3>
+    <p>No real number has a negative square, so we define a new number \(i\):</p>
+    $$i=\sqrt{-1}\qquad\text{that is}\qquad i^{2}=-1$$
+    <p>This \(i^2=-1\) is the detonator that will set off all the miracles to come, so commit it to memory. A complex number is written \(z=x+iy\) and drawn as the point \((x,y)\) in the plane: the horizontal axis is the real part, the vertical axis the imaginary part. Every complex number is a <strong>position vector</strong>.</p>
+    <h3>The Crucial Move: Multiplying by i = a 90° Counter-clockwise Turn</h3>
+    <p>Let's check what "multiplying by \(i\)" does to a vector. Take \(1\) on the horizontal axis and multiply by \(i\) again and again:</p>
+    $$1\;\xrightarrow{\times i}\;i\;\xrightarrow{\times i}\;i^{2}=-1\;\xrightarrow{\times i}\;-i\;\xrightarrow{\times i}\;-i^{2}=1$$
+    <figure class="figcard">
+      <svg viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="multiplying by i equals a 90-degree rotation">
+        <defs><marker id="rot1" markerWidth="9" markerHeight="9" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#b1701f"/></marker></defs>
+        <line x1="40" y1="150" x2="340" y2="150" stroke="#b9ad94" stroke-width="1.5"/>
+        <line x1="190" y1="30" x2="190" y2="270" stroke="#b9ad94" stroke-width="1.5"/>
+        <text x="330" y="168" font-size="12" fill="#6b6453">Re</text>
+        <text x="198" y="42" font-size="12" fill="#6b6453">Im</text>
+        <g stroke="#0f5f59" stroke-width="2.5" fill="none">
+          <line x1="190" y1="150" x2="300" y2="150"/><line x1="190" y1="150" x2="190" y2="50"/>
+          <line x1="190" y1="150" x2="80" y2="150"/><line x1="190" y1="150" x2="190" y2="250"/>
+        </g>
+        <circle cx="300" cy="150" r="4" fill="#23211c"/><text x="300" y="142" font-size="13">1</text>
+        <circle cx="190" cy="50" r="4" fill="#b1701f"/><text x="198" y="52" font-size="13" fill="#b1701f" font-style="italic">i</text>
+        <circle cx="80" cy="150" r="4" fill="#23211c"/><text x="60" y="142" font-size="13">−1</text>
+        <circle cx="190" cy="250" r="4" fill="#23211c"/><text x="198" y="262" font-size="13">−i</text>
+        <path d="M278,124 A42 42 0 0 0 214 70" fill="none" stroke="#b1701f" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#rot1)"/>
+        <text x="236" y="96" font-size="12" fill="#b1701f">×i: turn 90°</text>
+      </svg>
+      <figcaption>Multiplying by a real number stretches or shrinks; multiplying by the imaginary \(i\) <strong>rotates the vector 90° counter-clockwise</strong>. At its heart, the imaginary number is rotation.</figcaption>
+    </figure>
+  </section>
+
+  <hr class="div">
+
+  <section id="s11">
+    <h2 class="sec"><span class="no">§2.2</span>Swap k for i: The Shock of One Equation</h2>
+    <p>Let's do something bold: in the master equation \(\dfrac{dy}{dt}=ky\), replace the real \(k\) with the pure imaginary \(i\):</p>
+    <div class="keyeq"><div class="cap">The master equation of the oscillating world</div>$$\frac{dy}{dt}=i\,y$$</div>
+    <p>Reading it word for word (\(y\) is now a moving point on the complex plane):</p>
+    <ol class="steps">
+      <li>\(y\) is the moving point's <b>position vector</b> at this instant.</li>
+      <li>\(\dfrac{dy}{dt}\) is its <b>velocity vector</b>.</li>
+      <li>The equation says: velocity \(=i\times\) position; and multiplying by \(i\) is a 90° turn, so <strong>the velocity is always perpendicular to the position</strong>.</li>
+    </ol>
+    <p>Motion in which "velocity is always perpendicular to position" is something you've seen in physics — a stone whirled on a string: the position points along the string, the velocity runs along the tangent to the circle, exactly perpendicular. This is <strong>uniform circular motion</strong>.</p>
+    <figure class="figcard">
+      <svg viewBox="0 0 360 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="velocity perpendicular to position">
+        <defs><marker id="vel" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#b1701f"/></marker></defs>
+        <line x1="30" y1="150" x2="330" y2="150" stroke="#b9ad94" stroke-width="1.2"/>
+        <line x1="180" y1="20" x2="180" y2="290" stroke="#b9ad94" stroke-width="1.2"/>
+        <circle cx="180" cy="150" r="105" fill="none" stroke="#cdbf9f" stroke-width="1.5" stroke-dasharray="3 4"/>
+        <line x1="180" y1="150" x2="248" y2="70" stroke="#0f5f59" stroke-width="2.6"/>
+        <circle cx="248" cy="70" r="5" fill="#23211c"/>
+        <text x="248" y="52" text-anchor="middle" font-size="13" fill="#0f5f59">position y</text>
+        <line x1="248" y1="70" x2="306" y2="119" stroke="#b1701f" stroke-width="2.6" marker-end="url(#vel)"/>
+        <text x="314" y="126" font-size="13" fill="#b1701f">velocity</text>
+        <polyline points="258,78 250,88 240,80" fill="none" stroke="#0f5f59" stroke-width="1.3"/>
+        <circle cx="285" cy="150" r="4.5" fill="#23211c"/><text x="285" y="170" text-anchor="middle" font-size="12">(1,0)</text>
+      </svg>
+      <figcaption>\(\dfrac{dy}{dt}=iy\) describes exactly uniform circular motion: a fixed radius, with velocity always perpendicular to position.</figcaption>
+    </figure>
+  </section>
+
+  <hr class="div">
+
+  <section id="s12">
+    <h2 class="sec"><span class="no">§2.3</span>Two Solutions: Exponential vs. Trigonometric</h2>
+    <p>For the same motion \(\dfrac{dy}{dt}=iy\), let the point start at \(1\) on the horizontal axis (initial condition \(y(0)=1\)), and describe it with two different tools.</p>
+    <p><strong>Tool 1 | Algebra:</strong> from §1.9, the solution of \(\dfrac{dy}{dt}=ky\) is \(y=y_0e^{kt}\). The rule doesn't care whether \(k\) is real or imaginary, so apply it as is: with \(k=i,\;y_0=1\), we get \(y_{\text{alg}}(t)=e^{it}\).</p>
+    <p><strong>Tool 2 | Geometry:</strong> from §2.2, this is motion on the unit circle starting at \((1,0)\) with angular speed 1; after time \(t\), the point projects to \(\cos t\) on the real part and \(\sin t\) on the imaginary part, so \(y_{\text{geo}}(t)=\cos t+i\sin t\).</p>
+    <p>The same motion and the same initial condition — the two tools ought to describe the same thing:</p>
+    $$e^{it}\;\overset{?}{=}\;\cos t+i\sin t$$
+    <div class="box pitfall">
+      <div class="label">✕ "It ought to be equal" is not a proof</div>
+      <p style="margin:0">However strong, intuition is not a mathematical proof. §2.4 supplies the one missing tool (the derivatives of sin and cos), and §2.5 then uses calculus to prove this equality line by line, without skipping a thing.</p>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section id="s13">
+    <h2 class="sec"><span class="no">§2.4</span>The Derivatives of sin and cos (a Geometric Proof)</h2>
+    <p>Let's <strong>read them straight off</strong> the circular motion of §2.2. The point's position is \(\big(\cos t,\sin t\big)\), with angular speed 1. The velocity vector: its magnitude \(=\) radius × angular speed \(=1\); its direction \(=\) the position vector turned 90° counter-clockwise. And "turning \((x,y)\) by 90°" gives \((-y,x)\) (check: \((1,0)\) on the right, turned 90°, should point straight up to \((0,1)\); the formula gives \((-0,1)=(0,1)\) ✓). Substituting the position:</p>
+    $$\text{velocity}=\big(-\sin t,\ \cos t\big)=\left(\frac{d}{dt}\cos t,\ \frac{d}{dt}\sin t\right)$$
+    <p>Matching component by component (horizontal with horizontal, vertical with vertical):</p>
+    <div class="keyeq"><div class="cap">The derivatives of the trig functions (no memorizing — we derived them)</div>
+      $$\frac{d}{dt}\cos t=-\sin t,\qquad \frac{d}{dt}\sin t=\cos t$$
+    </div>
+    <p>While we're at it, differentiate the trigonometric solution once, for direct use in §2.5:</p>
+    $$\frac{d}{dt}\big(\cos t+i\sin t\big)=-\sin t+i\cos t$$
+  </section>
+
+  <hr class="div">
+
+  <section id="s14">
+    <h2 class="sec"><span class="no">§2.5</span>A Rigorous Proof of Euler's Formula</h2>
+    <p class="lead">We'll use one of calculus's most elegant moves — "prove the derivative is identically zero." The strategy: build a test function and prove it stays equal to the constant 1 from start to finish.</p>
+    <p><strong>Step 1: build the test function.</strong> Suppose \(e^{it}=\cos t+i\sin t\) holds; multiplying both sides by \(e^{-it}\) (the left side becomes 1) means the right side ought to equal 1 too. So define:</p>
+    $$f(t)=e^{-it}\big(\cos t+i\sin t\big),\qquad\text{Goal: prove }f(t)\equiv 1.$$
+    <p><strong>Step 2: find \(f'\) using the product rule \((uv)'=u'v+uv'\).</strong> Let \(u=e^{-it}\) and \(v=\cos t+i\sin t\). From §1.9 (taking \(k=-i\)) and §2.4:</p>
+    $$u'=-i\,e^{-it},\qquad v'=-\sin t+i\cos t$$
+    $$f'(t)=\big(-i\,e^{-it}\big)\big(\cos t+i\sin t\big)+e^{-it}\big(-\sin t+i\cos t\big)$$
+    <p><strong>Step 3: factor out \(e^{-it}\), expand, and detonate \(i^2=-1\).</strong></p>
+    $$f'(t)=e^{-it}\Big[\,-i\cos t-i^{2}\sin t-\sin t+i\cos t\,\Big]$$
+    <p>Since \(-i^2\sin t=+\sin t\):</p>
+    $$f'(t)=e^{-it}\Big[\,\underbrace{(-i\cos t+i\cos t)}_{0}+\underbrace{(\sin t-\sin t)}_{0}\,\Big]=e^{-it}\cdot 0=0$$
+    <p><strong>Step 4: finish.</strong> The derivative is identically zero \(\Rightarrow f(t)=C\) (a constant). Set \(t=0\) (using \(e^0=1,\cos0=1,\sin0=0\)):</p>
+    $$f(0)=e^{0}(1+i\cdot0)=1\;\Longrightarrow\;C=1\;\Longrightarrow\;e^{-it}\big(\cos t+i\sin t\big)=1$$
+    <p>Multiply both sides by \(e^{it}\), and Euler's formula emerges from the clouds:</p>
+    <div class="keyeq"><div class="cap">★ Euler's formula</div>$$e^{it}=\cos t+i\sin t$$</div>
+    <div class="box history">
+      <div class="label">◷ History in the making: the birth and the controversy of the most beautiful formula</div>
+      <p style="margin:0 0 10px"><span class="who">Cotes 1714 → Euler 1748</span> In fact the Englishman Roger Cotes had already touched an equivalent relation (in logarithmic form) as early as 1714, but he died young and never developed it. Newton sighed, "Had Cotes lived, we should have known something." The one who truly wrote it in today's beautiful form and championed it was Euler, in his 1748 <em>Introductio in analysin infinitorum</em>. With a single stroke he connected the two seemingly unrelated worlds of "the exponential" and "the trigonometric."</p>
+      <p style="margin:0">Later generations have regarded \(e^{i\pi}+1=0\) with both reverence and dread: the 19th-century mathematician Benjamin Peirce, having proved it in class, told his students that the formula "is utterly counter-intuitive and we cannot understand what it means, but since it has been proved, we must accept it as truth." The physicist Feynman simply called Euler's formula "our jewel, the most remarkable formula in all of mathematics." And you have just <strong>derived that jewel with your own hands</strong> — not by memorizing, but line by line, without skipping a single step.</p>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section id="s15">
+    <h2 class="sec"><span class="no">§2.6</span>Euler's Identity, and Its Two Alter Egos</h2>
+    <p>Euler's formula holds for any \(t\). Take \(t=\pi\) (using \(\cos\pi=-1,\sin\pi=0\)):</p>
+    $$e^{i\pi}=\cos\pi+i\sin\pi=-1\;\Longrightarrow\;\boxed{\,e^{i\pi}+1=0\,}$$
+    <p>In one line, the five great constants of mathematics — \(e,i,\pi,1,0\) — share the stage. But what matters more for Part Three are Euler's formula's two "alter egos." Replace \(t\) with \(-t\) (\(\cos\) is even, \(\sin\) is odd):</p>
+    $$e^{-it}=\cos t-i\sin t$$
+    <p>Add this to, and subtract it from, \(e^{it}=\cos t+i\sin t\):</p>
+    <div class="keyeq"><div class="cap">Two alter egos: translating trig functions into exponentials</div>
+      $$\cos t=\frac{e^{it}+e^{-it}}{2},\qquad \sin t=\frac{e^{it}-e^{-it}}{2i}$$
+    </div>
+    <p>These two formulas are the <strong>universal translator</strong> for every application in Part Three: any \(\sin\) or \(\cos\) (any oscillation) can be rewritten in terms of \(e^{\pm it}\). And working with exponentials is far simpler than working with trig — this is the root reason engineers say "whenever something oscillates, use complex numbers."</p>
+  </section>
+
+  <!-- ===================== Part 3 ===================== -->
+  <div class="part-divider"><div class="pp">PART THREE</div><div class="pt">Running the World with Math: the <span style="font-style:italic;color:var(--amber)">i</span> in Life</div></div>
+
+  <section id="s16">
+    <h2 class="sec"><span class="no">§3.1</span>The Tool: the Phasor — Oscillation Is a Spinning Arrow's Shadow</h2>
+    <div class="box intuition">
+      <div class="label">▸ How to read Part Three</div>
+      <p style="margin:0">The applications of complex numbers are too many to list. We will give a complete mathematical walkthrough of just one — the example you <strong>use every waking moment yet understand least</strong>: <strong>mobile messaging (§3.5)</strong>. For the rest (AC, vibration, Fourier, imaging, quantum) we give only a <strong>representative equation</strong> each, just enough to let you see that "it really is written with complex numbers," without wandering off topic. First, let's prepare their common weapon: the phasor.</p>
+    </div>
+    <p>The most familiar things in daily life — sound, light, electricity, vibration — are all, at heart, <strong>back-and-forth oscillation</strong>. Euler's formula gives a new way of seeing oscillation: a wave going up and down is the shadow, cast on the real axis, of an arrow \(e^{i\omega t}\) spinning at constant speed on the complex plane:</p>
+    $$\cos\omega t=\operatorname{Re}\!\big(e^{i\omega t}\big)$$
+    <figure class="figcard">
+      <svg viewBox="0 0 640 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="a spinning arrow projecting a cosine wave">
+        <circle cx="115" cy="140" r="78" fill="none" stroke="#cdbf9f" stroke-width="1.5" stroke-dasharray="3 4"/>
+        <line x1="30" y1="140" x2="205" y2="140" stroke="#b9ad94" stroke-width="1.2"/>
+        <line x1="115" y1="55" x2="115" y2="225" stroke="#b9ad94" stroke-width="1.2"/>
+        <line x1="115" y1="140" x2="179" y2="95" stroke="#0f5f59" stroke-width="3"/>
+        <polygon points="179,95 169,97 175,105" fill="#0f5f59"/>
+        <circle cx="179" cy="95" r="4" fill="#23211c"/>
+        <text x="150" y="80" font-size="13" fill="#0f5f59" font-style="italic">e^(iωt)</text>
+        <line x1="179" y1="95" x2="179" y2="140" stroke="#b1701f" stroke-width="1.6" stroke-dasharray="4 4"/>
+        <circle cx="179" cy="140" r="4.5" fill="#b1701f"/><text x="150" y="160" font-size="12" fill="#b1701f">shadow</text>
+        <line x1="179" y1="140" x2="250" y2="140" stroke="#cdbf9f" stroke-width="1" stroke-dasharray="2 5"/>
+        <line x1="240" y1="140" x2="618" y2="140" stroke="#b9ad94" stroke-width="1.2"/>
+        <polygon points="618,140 609,136 609,144" fill="#b9ad94"/><text x="600" y="160" font-size="12" fill="#6b6453">time →</text>
+        <polyline points="250.0,88.0 253.0,88.4 256.0,89.6 259.0,91.7 262.0,94.4 265.0,97.9 268.0,102.1 271.0,106.9 274.0,112.1 277.0,117.9 280.0,123.9 283.0,130.3 286.0,136.7 289.0,143.3 292.0,149.7 295.0,156.1 298.0,162.1 301.0,167.9 304.0,173.1 307.0,177.9 310.0,182.1 313.0,185.6 316.0,188.3 319.0,190.4 322.0,191.6 325.0,192.0 328.0,191.6 331.0,190.4 334.0,188.3 337.0,185.6 340.0,182.1 343.0,177.9 346.0,173.1 349.0,167.9 352.0,162.1 355.0,156.1 358.0,149.7 361.0,143.3 364.0,136.7 367.0,130.3 370.0,123.9 373.0,117.9 376.0,112.1 379.0,106.9 382.0,102.1 385.0,97.9 388.0,94.4 391.0,91.7 394.0,89.6 397.0,88.4 400.0,88.0 403.0,88.4 406.0,89.6 409.0,91.7 412.0,94.4 415.0,97.9 418.0,102.1 421.0,106.9 424.0,112.1 427.0,117.9 430.0,123.9 433.0,130.3 436.0,136.7 439.0,143.3 442.0,149.7 445.0,156.1 448.0,162.1 451.0,167.9 454.0,173.1 457.0,177.9 460.0,182.1 463.0,185.6 466.0,188.3 469.0,190.4 472.0,191.6 475.0,192.0 478.0,191.6 481.0,190.4 484.0,188.3 487.0,185.6 490.0,182.1 493.0,177.9 496.0,173.1 499.0,167.9 502.0,162.1 505.0,156.1 508.0,149.7 511.0,143.3 514.0,136.7 517.0,130.3 520.0,123.9 523.0,117.9 526.0,112.1 529.0,106.9 532.0,102.1 535.0,97.9 538.0,94.4 541.0,91.7 544.0,89.6 547.0,88.4 550.0,88.0 553.0,88.4 556.0,89.6 559.0,91.7 562.0,94.4 565.0,97.9 568.0,102.1 571.0,106.9 574.0,112.1 577.0,117.9 580.0,123.9 583.0,130.3 586.0,136.7 589.0,143.3 592.0,149.7 595.0,156.1 598.0,162.1 601.0,167.9 604.0,173.1 607.0,177.9 610.0,182.1" fill="none" stroke="#0f5f59" stroke-width="2.6"/>
+        <text x="430" y="78" font-size="13" fill="#0f5f59" font-style="italic">cos(ωt)</text>
+      </svg>
+      <figcaption>As the arrow \(e^{i\omega t}\) makes one turn, its shadow swings back and forth once, tracing a cosine wave. "Rotation" and "oscillation" are two views of the same thing.</figcaption>
+    </figure>
+    <p>Why go to the trouble of drawing an arrow? Because a real wave carries two more pieces of information: how strong it is (amplitude \(A\)) and where it has turned to right now (phase \(\phi\)). A single complex number packages both:</p>
+    <div class="keyeq"><div class="cap">The phasor: amplitude and phase packed into one complex number</div>
+      $$A\cos(\omega t+\phi)=\operatorname{Re}\!\Big(\underbrace{Ae^{i\phi}}_{\text{phasor}}\cdot e^{i\omega t}\Big)$$
+    </div>
+    <p>This complex number \(Ae^{i\phi}\) is called a <em class="term">phasor</em>. Together with the two alter-ego formulas from §2.6, it is the common weapon behind every application below: it turns hard-to-compute oscillations (trig, differentiation) into easy-to-compute complex numbers (exponentials, algebra).</p>
+  </section>
+
+  <hr class="div">
+
+  <section id="s17">
+    <h2 class="sec"><span class="no">§3.2</span>Alternating Current: Impedance Is Really a Complex Number</h2>
+    <p>The outlet in your home carries alternating current (AC), whose voltage oscillates 50–60 times a second, like \(\cos(\omega t)\). For the capacitors and inductors in a circuit, current and voltage are <strong>90° out of phase</strong> — and as §2.1 told us, being 90° apart is "multiplying by \(i\)." So engineers write a component's "resistance" to AC directly as a complex number, called <em class="term">impedance \(Z\)</em>:</p>
+    $$Z_R=R,\qquad Z_L=i\omega L,\qquad Z_C=\frac{1}{i\omega C}$$
+    <p>The impedances of capacitors and inductors are pure imaginary numbers, and that \(i\) is precisely the mathematical identity of the 90° phase difference. Impedances add in series, and the AC circuit then reduces to the middle-school Ohm's law \(V=IZ\):</p>
+    $$Z=R+i\!\left(\omega L-\frac{1}{\omega C}\right)$$
+    <p>When the imaginary part vanishes (\(\omega L=\tfrac{1}{\omega C}\)), the circuit responds most strongly to that frequency, giving the <strong>resonant frequency</strong> \(\omega_0=\dfrac{1}{\sqrt{LC}}\) — tuning a radio or selecting a phone's band is just adjusting \(L\) and \(C\) so that \(\omega_0\) lines up with the station you want. <strong>Without complex numbers, there would be no outlet on your wall.</strong></p>
+    <div class="box history">
+      <div class="label">◷ History in the making: the man who tamed alternating current</div>
+      <p style="margin:0"><span class="who">Steinmetz, 1893</span> In the late-19th-century "War of the Currents," Edison pushed direct current (DC), while Tesla and Westinghouse bet on alternating current (AC). AC was efficient and could be sent over long distances, but it had a fatal flaw: voltage and current oscillated constantly and carried an annoying phase difference, so computing anything meant solving a heap of differential equations. Engineers could barely keep up, and AC was nearly abandoned over it. At this moment the German-American immigrant Charles Steinmetz — small in stature and with a curved spine, yet stunningly gifted — proposed using <strong>complex phasors</strong> to represent AC quantities: voltage, current, and impedance all written as complex numbers, so the differential equations collapsed in an instant into the simple algebra \(V=IZ\) above. From then on, AC "could be done with pencil and paper," and the entire modern power grid could be laid across the world. An \(i\) once dismissed as "imaginary" became the key to lighting up the whole planet.</p>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section id="s18">
+    <h2 class="sec"><span class="no">§3.3</span>Vibration and Stability: Complex Roots Decide Life or Death</h2>
+    <p>This is the <strong>grand reunion</strong> of Part One's "birth and death" and Part Two's "oscillation." A car's suspension, a building in an earthquake, a plucked guitar string — all obey the same "spring + damping" equation \(m\ddot{x}+c\dot{x}+kx=0\). Carrying over the intuition from Part One, we guess \(x=e^{\lambda t}\); substituting gives the characteristic equation, which we solve for two roots:</p>
+    $$m\lambda^{2}+c\lambda+k=0\;\Longrightarrow\;\lambda=\frac{-c\pm\sqrt{c^{2}-4mk}}{2m}$$
+    <p>The key is inside the square root: when the damping is not large (as it usually is in reality), the quantity under the root is negative, <strong>complex numbers step onto the stage</strong>, and the roots become \(\lambda=-\gamma\pm i\omega_d\). Substitute back into \(x=e^{\lambda t}\) and unpack with Euler's formula:</p>
+    <div class="keyeq"><div class="cap">Damped oscillation: Part One × Part Two</div>
+      $$x(t)=e^{-\gamma t}\big(\underbrace{\cos\omega_d t}_{\text{oscillation}}+\cdots\big),\quad\text{i.e. }e^{(a+bi)t}\text{ made real}$$
+    </div>
+    <p>The <strong>real part</strong> of the complex root becomes \(e^{-\gamma t}\), controlling the decaying envelope that makes the swing "shrink with each pass"; the <strong>imaginary part</strong> \(\omega_d\) controls the frequency of the swing. A plucked guitar string fading away, or a suspension settling down after a speed bump — drawn out, it looks like this:</p>
+    <figure class="figcard">
+      <svg viewBox="0 0 640 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="damped oscillation">
+        <line x1="55" y1="148" x2="610" y2="148" stroke="#b9ad94" stroke-width="1.2"/>
+        <line x1="72" y1="40" x2="72" y2="240" stroke="#b9ad94" stroke-width="1.2"/>
+        <polyline points="72.0,64.0 75.0,65.2 78.0,66.4 81.0,67.5 84.0,68.7 87.0,69.8 90.0,70.9 93.0,72.0 96.0,73.1 99.0,74.1 102.0,75.2 105.0,76.2 108.0,77.2 111.0,78.2 114.0,79.2 117.0,80.2 120.0,81.2 123.0,82.1 126.0,83.0 129.0,84.0 132.0,84.9 135.0,85.8 138.0,86.7 141.0,87.5 144.0,88.4 147.0,89.2 150.0,90.1 153.0,90.9 156.0,91.7 159.0,92.5 162.0,93.3 165.0,94.1 168.0,94.8 171.0,95.6 174.0,96.3 177.0,97.1 180.0,97.8 183.0,98.5 186.0,99.2 189.0,99.9 192.0,100.6 195.0,101.2 198.0,101.9 201.0,102.6 204.0,103.2 207.0,103.8 210.0,104.5 213.0,105.1 216.0,105.7 219.0,106.3 222.0,106.9 225.0,107.5 228.0,108.0 231.0,108.6 234.0,109.2 237.0,109.7 240.0,110.3 243.0,110.8 246.0,111.3 249.0,111.8 252.0,112.4 255.0,112.9 258.0,113.4 261.0,113.8 264.0,114.3 267.0,114.8 270.0,115.3 273.0,115.7 276.0,116.2 279.0,116.7 282.0,117.1 285.0,117.5 288.0,118.0 291.0,118.4 294.0,118.8 297.0,119.2 300.0,119.6 303.0,120.0 306.0,120.4 309.0,120.8 312.0,121.2 315.0,121.6 318.0,122.0 321.0,122.3 324.0,122.7 327.0,123.1 330.0,123.4 333.0,123.8 336.0,124.1 339.0,124.4 342.0,124.8 345.0,125.1 348.0,125.4 351.0,125.8 354.0,126.1 357.0,126.4 360.0,126.7 363.0,127.0 366.0,127.3 369.0,127.6 372.0,127.9 375.0,128.2 378.0,128.4 381.0,128.7 384.0,129.0 387.0,129.3 390.0,129.5 393.0,129.8 396.0,130.0 399.0,130.3 402.0,130.5 405.0,130.8 408.0,131.0 411.0,131.3 414.0,131.5 417.0,131.8 420.0,132.0 423.0,132.2 426.0,132.4 429.0,132.7 432.0,132.9 435.0,133.1 438.0,133.3 441.0,133.5 444.0,133.7 447.0,133.9 450.0,134.1 453.0,134.3 456.0,134.5 459.0,134.7 462.0,134.9 465.0,135.1 468.0,135.3 471.0,135.4 474.0,135.6 477.0,135.8 480.0,136.0 483.0,136.1 486.0,136.3 489.0,136.5 492.0,136.6 495.0,136.8 498.0,137.0 501.0,137.1 504.0,137.3 507.0,137.4 510.0,137.6 513.0,137.7 516.0,137.9 519.0,138.0 522.0,138.1 525.0,138.3 528.0,138.4 531.0,138.6 534.0,138.7 537.0,138.8 540.0,139.0 543.0,139.1 546.0,139.2 549.0,139.3 552.0,139.5 555.0,139.6 558.0,139.7 561.0,139.8 564.0,139.9 567.0,140.0 570.0,140.2 573.0,140.3 576.0,140.4 579.0,140.5 582.0,140.6 585.0,140.7 588.0,140.8" fill="none" stroke="#b1701f" stroke-width="1.6" stroke-dasharray="5 5" opacity=".85"/>
+        <polyline points="72.0,232.0 75.0,230.8 78.0,229.6 81.0,228.5 84.0,227.3 87.0,226.2 90.0,225.1 93.0,224.0 96.0,222.9 99.0,221.9 102.0,220.8 105.0,219.8 108.0,218.8 111.0,217.8 114.0,216.8 117.0,215.8 120.0,214.8 123.0,213.9 126.0,213.0 129.0,212.0 132.0,211.1 135.0,210.2 138.0,209.3 141.0,208.5 144.0,207.6 147.0,206.8 150.0,205.9 153.0,205.1 156.0,204.3 159.0,203.5 162.0,202.7 165.0,201.9 168.0,201.2 171.0,200.4 174.0,199.7 177.0,198.9 180.0,198.2 183.0,197.5 186.0,196.8 189.0,196.1 192.0,195.4 195.0,194.8 198.0,194.1 201.0,193.4 204.0,192.8 207.0,192.2 210.0,191.5 213.0,190.9 216.0,190.3 219.0,189.7 222.0,189.1 225.0,188.5 228.0,188.0 231.0,187.4 234.0,186.8 237.0,186.3 240.0,185.7 243.0,185.2 246.0,184.7 249.0,184.2 252.0,183.6 255.0,183.1 258.0,182.6 261.0,182.2 264.0,181.7 267.0,181.2 270.0,180.7 273.0,180.3 276.0,179.8 279.0,179.3 282.0,178.9 285.0,178.5 288.0,178.0 291.0,177.6 294.0,177.2 297.0,176.8 300.0,176.4 303.0,176.0 306.0,175.6 309.0,175.2 312.0,174.8 315.0,174.4 318.0,174.0 321.0,173.7 324.0,173.3 327.0,172.9 330.0,172.6 333.0,172.2 336.0,171.9 339.0,171.6 342.0,171.2 345.0,170.9 348.0,170.6 351.0,170.2 354.0,169.9 357.0,169.6 360.0,169.3 363.0,169.0 366.0,168.7 369.0,168.4 372.0,168.1 375.0,167.8 378.0,167.6 381.0,167.3 384.0,167.0 387.0,166.7 390.0,166.5 393.0,166.2 396.0,166.0 399.0,165.7 402.0,165.5 405.0,165.2 408.0,165.0 411.0,164.7 414.0,164.5 417.0,164.2 420.0,164.0 423.0,163.8 426.0,163.6 429.0,163.3 432.0,163.1 435.0,162.9 438.0,162.7 441.0,162.5 444.0,162.3 447.0,162.1 450.0,161.9 453.0,161.7 456.0,161.5 459.0,161.3 462.0,161.1 465.0,160.9 468.0,160.7 471.0,160.6 474.0,160.4 477.0,160.2 480.0,160.0 483.0,159.9 486.0,159.7 489.0,159.5 492.0,159.4 495.0,159.2 498.0,159.0 501.0,158.9 504.0,158.7 507.0,158.6 510.0,158.4 513.0,158.3 516.0,158.1 519.0,158.0 522.0,157.9 525.0,157.7 528.0,157.6 531.0,157.4 534.0,157.3 537.0,157.2 540.0,157.0 543.0,156.9 546.0,156.8 549.0,156.7 552.0,156.5 555.0,156.4 558.0,156.3 561.0,156.2 564.0,156.1 567.0,156.0 570.0,155.8 573.0,155.7 576.0,155.6 579.0,155.5 582.0,155.4 585.0,155.3 588.0,155.2" fill="none" stroke="#b1701f" stroke-width="1.6" stroke-dasharray="5 5" opacity=".85"/>
+        <polyline points="72.0,64.0 75.0,66.2 78.0,70.3 81.0,76.2 84.0,83.6 87.0,92.4 90.0,102.3 93.0,113.0 96.0,124.2 99.0,135.7 102.0,147.2 105.0,158.4 108.0,169.0 111.0,178.8 114.0,187.6 117.0,195.2 120.0,201.4 123.0,206.1 126.0,209.4 129.0,211.0 132.0,211.1 135.0,209.7 138.0,206.8 141.0,202.5 144.0,197.1 147.0,190.7 150.0,183.4 153.0,175.4 156.0,167.0 159.0,158.4 162.0,149.8 165.0,141.3 168.0,133.3 171.0,125.9 174.0,119.2 177.0,113.4 180.0,108.5 183.0,104.8 186.0,102.2 189.0,100.8 192.0,100.6 195.0,101.5 198.0,103.6 201.0,106.6 204.0,110.5 207.0,115.3 210.0,120.7 213.0,126.6 216.0,132.9 219.0,139.3 222.0,145.8 225.0,152.1 228.0,158.2 231.0,163.8 234.0,169.0 237.0,173.4 240.0,177.1 243.0,180.1 246.0,182.1 249.0,183.3 252.0,183.6 255.0,183.0 258.0,181.6 261.0,179.4 264.0,176.5 267.0,173.1 270.0,169.1 273.0,164.7 276.0,160.0 279.0,155.2 282.0,150.3 285.0,145.6 288.0,141.0 291.0,136.7 294.0,132.8 297.0,129.4 300.0,126.5 303.0,124.2 306.0,122.6 309.0,121.6 312.0,121.3 315.0,121.7 318.0,122.6 321.0,124.2 324.0,126.3 327.0,128.8 330.0,131.8 333.0,135.0 336.0,138.5 339.0,142.1 342.0,145.7 345.0,149.3 348.0,152.8 351.0,156.1 354.0,159.0 357.0,161.6 360.0,163.9 363.0,165.6 366.0,166.9 369.0,167.7 372.0,168.0 375.0,167.8 378.0,167.2 381.0,166.0 384.0,164.5 387.0,162.7 390.0,160.5 393.0,158.1 396.0,155.5 399.0,152.8 402.0,150.1 405.0,147.4 408.0,144.7 411.0,142.3 414.0,140.0 417.0,138.0 420.0,136.3 423.0,134.9 426.0,133.9 429.0,133.3 432.0,133.0 435.0,133.1 438.0,133.5 441.0,134.3 444.0,135.4 447.0,136.8 450.0,138.4 453.0,140.2 456.0,142.1 459.0,144.1 462.0,146.2 465.0,148.2 468.0,150.2 471.0,152.0 474.0,153.8 477.0,155.3 480.0,156.6 483.0,157.7 486.0,158.5 489.0,159.0 492.0,159.2 495.0,159.2 498.0,158.9 501.0,158.3 504.0,157.6 507.0,156.6 510.0,155.4 513.0,154.1 516.0,152.6 519.0,151.1 522.0,149.6 525.0,148.1 528.0,146.6 531.0,145.2 534.0,143.9 537.0,142.7 540.0,141.7 543.0,140.9 546.0,140.2 549.0,139.8 552.0,139.6 555.0,139.6 558.0,139.8 561.0,140.2 564.0,140.7 567.0,141.5 570.0,142.3 573.0,143.3 576.0,144.4 579.0,145.5 582.0,146.6 585.0,147.8 588.0,148.9" fill="none" stroke="#0f5f59" stroke-width="2.6"/>
+        <text x="118" y="58" font-size="12.5" fill="#b1701f" font-style="italic">envelope ±e^(−γt)</text>
+        <text x="438" y="135" font-size="13" fill="#0f5f59" font-style="italic">e^(−γt)·cos(ω_d t)</text>
+      </svg>
+      <figcaption>Damped oscillation: the swing is wrapped in a shrinking envelope \(e^{-\gamma t}\), getting smaller and smaller until it dies away.</figcaption>
+    </figure>
+    <div class="box intuition">
+      <div class="label">▸ Engineering's safety valve: just watch the sign of the complex root's real part</div>
+      <p style="margin:0">Write \(\lambda\) in the general form \(a+bi\), and the solution is \(e^{at}(\cos bt+i\sin bt)\). Whether a structure is safe depends entirely on the real part \(a\):<br>
+      · \(a\lt0\): the vibration damps itself out → <strong>safe</strong> (good suspension, earthquake-resistant buildings, stable self-driving).<br>
+      · \(a\gt0\): the vibration grows wilder until it tears itself apart → <strong>disaster</strong>. The 1940 collapse of the Tacoma Narrows Bridge in high wind is a living lesson: the wind kept pumping in energy, driving the effective damping negative and pushing \(a\) positive. When engineers design bridges, aircraft, and control systems, what they are really doing is watching the sign of this \(a\) on the complex plane to judge life or death.</p>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section id="s19">
+    <h2 class="sec"><span class="no">§3.4</span>Fourier and Compression: The Math Behind MP3 and JPEG</h2>
+    <p>Fourier discovered something incredible: <strong>any signal can be written as a superposition of spinning arrows \(e^{in\omega_0 t}\)</strong>, each arrow carrying a complex coefficient \(c_n\) (its magnitude is the strength of that frequency, its angle the phase):</p>
+    $$f(t)=\sum_{n}c_n\,e^{in\omega_0 t}$$
+    <p>Computers use the discrete version (the DFT), turning \(N\) samples \(x_n\) into \(N\) complex numbers \(X_k\):</p>
+    <div class="keyeq"><div class="cap">The Discrete Fourier Transform (your phone runs it millions of times a second)</div>
+      $$X_k=\sum_{n=0}^{N-1}x_n\,e^{-i\,2\pi kn/N}$$
+    </div>
+    <p>Each \(X_k\) is a complex number. <strong>The secret of compression hides right here:</strong> the vast majority of the \(|X_k|\) are tiny (inaudible to the ear, invisible to the eye), so we set them to 0, keep only the few large ones, and reconstruct with the inverse transform — <strong>MP3</strong> throws away frequencies you can't hear, <strong>JPEG</strong> throws away high frequencies your eyes aren't sensitive to, and the file shrinks tenfold in an instant. When Fourier (1822) claimed that "any function can be decomposed into sine waves," even Lagrange didn't believe him; over a century later, Cooley and Tukey's fast algorithm (the FFT, 1965) became the engine of the entire digital revolution.</p>
+  </section>
+
+  <hr class="div">
+
+  <section id="s20">
+    <h2 class="sec"><span class="no">§3.5</span>Mobile Messaging: Writing Your Data Into a Complex Number [Full Walkthrough]</h2>
+    <p>This is the one application this little book walks through in full — because it is the thing you <strong>use almost every second yet fewest people understand</strong>. Every message and every photo you send is rewritten as a point on the complex plane before being broadcast out. Let's walk through the whole thing, start to finish, with the mathematics.</p>
+    <h3>Step 1: Turn the Data Into a Complex Number</h3>
+    <p>The 0/1 data you want to send is first encoded into a complex <em>symbol</em>:</p>
+    $$s=I+iQ=A\,e^{i\phi}\qquad(I:\text{in-phase},\ Q:\text{quadrature})$$
+    <p>You can read it as "real part \(I\) plus imaginary part \(Q\)," or as "length \(A\), angle \(\phi\)" — exactly the phasor from §3.1. The data lies in where this complex number lands.</p>
+    <h3>Step 2: Load It Onto a Radio Wave and Send It Out</h3>
+    <p>Multiply the symbol \(s\) by a spinning arrow \(e^{i\omega t}\) of frequency \(\omega\), take the real part, and you have the actual radio wave that goes out:</p>
+    $$x(t)=\operatorname{Re}\!\big(s\,e^{i\omega t}\big)=\operatorname{Re}\!\big[(I+iQ)(\cos\omega t+i\sin\omega t)\big]=I\cos\omega t-Q\sin\omega t$$
+    <p>Expanded, it's crystal clear: you are <strong>sending two carriers 90° apart at the same time</strong> — one cosine (weighted by \(I\)) and one sine (weighted by \(Q\)). These are exactly the real and imaginary axes of the complex plane; because they are "90° apart" (the multiply-by-\(i\) of §2.1) they don't interfere, so a single wave can carry two pieces of data at once.</p>
+    <h3>Step 3: The Receiver Decodes the Data</h3>
+    <p>The receiver multiplies the incoming \(x(t)\) by \(\cos\omega t\) and by \(\sin\omega t\) separately, then averages (integrates). Because \(\cos\) and \(\sin\) are orthogonal (they cancel out on averaging), this cleanly separates and recovers \(I\) and \(Q\):</p>
+    $$\langle x(t)\cos\omega t\rangle=\tfrac{1}{2}I,\qquad \langle x(t)\sin\omega t\rangle=-\tfrac{1}{2}Q$$
+    <p>And so \(s=I+iQ\) is fully recovered, and your message is read back out.</p>
+    <h3>Step 4: The Constellation — Density of Data Is Speed</h3>
+    <p>Plot all the "allowed values of \(s\)" on the complex plane and you get a <em class="term">constellation diagram</em>. QPSK, for instance, uses the four points \(\dfrac{\pm1\pm i}{\sqrt2}\), each representing 2 bits. In general, if a constellation has \(M\) points, the number of bits each symbol can carry is:</p>
+    <div class="keyeq"><div class="cap">Denser points, faster transmission</div>
+      $$\text{bits per symbol}=\log_2 M$$
+    </div>
+    <p>So 16-QAM carries 4 bits and 256-QAM carries 8. <strong>4G, 5G, and WiFi getting faster with each generation is, at heart, just packing more and denser points onto the complex plane.</strong> Your phone's chip performs hundreds of millions of these complex rotations and additions every second — watch a video, send a photo, and behind it Euler's formula is running at high speed for you. Next time it feels "obvious," remember: it is anything but obvious. It is \(e\) and \(i\) at work.</p>
+  </section>
+
+  <hr class="div">
+
+  <section id="s21">
+    <h2 class="sec"><span class="no">§3.6</span>Medical Imaging: An MRI Picture Is Computed From Complex Numbers</h2>
+    <p>This application sits closest to radiology. During an MRI scan, the raw signal the machine receives is <strong>not an image, but a pile of complex numbers</strong>. A hydrogen nucleus precesses at a frequency proportional to the <strong>magnetic field strength</strong> it sits in (the Larmor relation \(\omega=\gamma B\)); MRI applies a spatially varying <strong>gradient field</strong>, so a hydrogen nucleus at position \(x\) precesses at a frequency proportional to \(x\). The total measured signal is the superposition of the contributions from every position — and it is exactly the Fourier transform of the tissue density \(\rho(x)\) (with \(k\) the spatial frequency):</p>
+    <div class="keyeq"><div class="cap">The measured signal = the Fourier transform of the image</div>
+      $$s(k)=\int \rho(x)\,e^{-i\,2\pi k x}\,dx$$
+    </div>
+    <p>So the pile of complex numbers the machine collects (held in so-called \(k\)-space) is the frequency version of the body's image; the crisp cross-section the physician sees is recovered by the computer applying an <strong>inverse Fourier transform</strong> \(\rho(x)=\int s(k)e^{i2\pi kx}dk\). CT and PET reconstruction also live in the frequency domain. The images radiologists and nuclear-medicine physicians read every day have, as their <strong>underlying language, complex numbers and Euler's formula</strong>.</p>
+  </section>
+
+  <hr class="div">
+
+  <section id="s22">
+    <h2 class="sec"><span class="no">§3.7</span>Quantum Mechanics: The i Hidden in Nature's Deepest Layer</h2>
+    <p>In Part One we replaced \(k\) with \(i\) and got "rotation." Remarkably, at its most microscopic level, nature really does operate by this very rule. At the heart of quantum mechanics, the Schrödinger equation carves \(i\) right at the front; and the wavefunction \(\psi\) that describes a particle is itself complex:</p>
+    $$i\hbar\,\frac{\partial \psi}{\partial t}=\hat{H}\psi\qquad\xrightarrow{\ \text{steady state}\ }\qquad \psi(t)=\psi_0\,e^{-i\,E t/\hbar}$$
+    <p>The stationary-state solution is exactly the pure phase rotation of §2.2 — rearranging the time-dependent Schrödinger equation for a stationary state of energy \(E\) gives precisely \(\dot\psi=-i\dfrac{E}{\hbar}\psi\) (the same shape as Part One's master equation \(\dot y=ky\), except the proportionality constant is now the pure imaginary \(-i\dfrac{E}{\hbar}\), so it rotates rather than grows or decays). Because rotation doesn't change length, probability is conserved, \(|\psi|^2=|\psi_0|^2\); and the cross term \(2\operatorname{Re}(\psi_1^{*}\psi_2)\) that appears when different phases superpose grows bright and dim with the phase difference — this is the interference fringe.</p>
+    <div class="box detective">
+      <div class="label">◆ Just how large are the consequences</div>
+      <p style="margin:0">Transistors, semiconductors, lasers, LEDs, solar panels — all are built on quantum mechanics. The tens of billions of transistors in your phone, the LED light in your room, the laser in an optical fiber — they exist because humanity learned to <strong>describe nature with complex numbers</strong>. \(i\) is no ornament — it is the very letter with which nature writes itself at its deepest level.</p>
+    </div>
+  </section>
+
+  <!-- ===================== Finale ===================== -->
+  <div class="part-divider"><div class="pp">FINALE</div><div class="pt">Without Realizing It, You've Put It All Together</div></div>
+
+  <section id="finale">
+    <h2 class="sec"><span class="no"></span>Did You Notice They Were One All Along?</h2>
+    <p class="lead">This journey has reached its end. Let me ask you to pause and look back at the road you've walked — did you notice that, almost <strong>without realizing it</strong>, we have quietly fused several once-separate things into one complete idea?</p>
+    <p>Along the way, we never deliberately sat down for "a trigonometry lesson" or "a logarithm lesson." And yet:</p>
+    <ul>
+      <li>To find the function whose "rate of change equals itself," we <strong>took a rate of change</strong> — that is <strong>calculus</strong>.</li>
+      <li>That function forced out \(e\), and along the way dropped out a "growth rate," \(\ln a\) — that is <strong>logarithms and exponentials</strong>.</li>
+      <li>Replacing the growth rate with \(i\), straight-line birth-and-death turned on the spot into circular rotation — that is <strong>imaginary numbers</strong>.</li>
+      <li>And the shadow that rotation casts on the real axis is precisely \(\cos\) and \(\sin\) — that is <strong>trigonometric functions</strong>.</li>
+    </ul>
+    <p>Trigonometry, logarithms, imaginary numbers, calculus — in a textbook they are four separate units, four separate exams. But in this story you were <strong>learning a single thing from beginning to end</strong>, and they grew together on their own. And in the end they all collapse into one line that you proved with your own hands:</p>
+    <div class="keyeq"><div class="cap">On one line, all the old friends gather</div>$$e^{i\theta}=\cos\theta+i\sin\theta$$</div>
+    <p>Read it softly once: that \(e\) is <strong>nature's growth</strong> (exponentials and logarithms); that \(i\) is <strong>rotation</strong> (imaginary numbers); the \(\cos\theta\) and \(\sin\theta\) on the right are <strong>the shadows that rotation leaves behind</strong> (trigonometric functions).</p>
+    <div class="box intuition">
+      <div class="label">▸ So where is the calculus?</div>
+      <p style="margin:0">You might ask: there seems to be no calculus in this line? Quite right — <strong>calculus is not "a symbol" in the formula; it is "the hand" that wrote the equals sign</strong>. It was differentiation (that "derivative is identically zero" proof in §2.5) that truly drew the equality between the two sides. It is not one of the things being connected, but <strong>the very act that connects the other three</strong>. That is why it should not be a fourth unit standing alongside them.</p>
+    </div>
+
+    <h3>Their Real Value Was Never on an Exam</h3>
+    <p>These "old friends" were invented and treasured by humanity not to make you solve homework, but to solve the real problems of Part Three. Lay out the work each of them shoulders:</p>
+    <div class="tbl-wrap">
+    <table>
+      <caption>Table 5 | What these "textbook units" actually do in the real world</caption>
+      <thead><tr><th>What the textbook calls it</th><th>What it really is</th><th>What it does in the real world (sections)</th></tr></thead>
+      <tbody>
+        <tr><td class="field">Trig functions</td><td class="field">The shadow of rotation on the real axis</td><td class="field">AC waveforms, communication carriers, Fourier (§3.2, §3.4, §3.5)</td></tr>
+        <tr><td class="field">Logarithms / Exponentials</td><td class="field">The growth rate \(\ln a\) and its inverse</td><td class="field">Decay and half-life, vibration damping, signals (§1.9, §3.3)</td></tr>
+        <tr><td class="field">Imaginary numbers</td><td class="field">The act of "rotating 90°"</td><td class="field">Impedance, stability, phone QAM, quantum phase (§3.2, §3.3, §3.5, §3.7)</td></tr>
+        <tr><td class="field">Calculus</td><td class="field">The verb that ties it all together (taking rates of change)</td><td class="field">Every equation is solved with it; the whole book</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>So, the next time you — or someone near you — feels that some unit is "pointless to memorize," the answer is in the last column: it is working for the electricity in your home, the phone in your hand, the instruments in the hospital, the particles in the deepest reaches of the universe. Those symbols that seem imaginary, that seem to exist only for exams, have in fact been turning quietly and truly beneath the surface of this world all along.</p>
+
+  </section>
+
+  <hr class="div">
+
+  <section id="end">
+    <span class="part-tag">In Closing</span>
+    <h2 class="sec">A Core Summary for Every Reader</h2>
+    <ol class="steps">
+      <li><b>The truth about change.</b> Nature's deepest logic is "the speed of change depends on the amount present right now," i.e. \(\dfrac{dy}{dt}=ky\), whose solution is always \(y=y_0e^{kt}\).</li>
+      <li><b>The true origin of e.</b> In seeking the perfect function with \(f'=f\), we found that every exponential's derivative is \(a^x\ln a\), which forced out the unique base making \(\ln e=1\): \(e\approx2.71828\). It is the native language of continuous change.</li>
+      <li><b>From birth-and-death to coming full circle.</b> Replace \(k\) with \(i\), and \(e^{kt}\) becomes Euler's formula \(e^{it}=\cos t+i\sin t\); loosen it further to \(k=a+bi\), and \(e^{(a+bi)t}=e^{at}(\cos bt+i\sin bt)\) — birth-and-death and oscillation merge into one, exactly the solution of the spring equation in §3.3.</li>
+      <li><b>The imaginary number isn't imaginary at all.</b> What it describes is utterly real: phase, rotation, waves. Without it there would be no power grid, no phones, no MRI, no computers, no LEDs.</li>
+      <li><b>Mathematics is never split into subjects.</b> Trigonometry, logarithms, imaginary numbers, calculus — four exam units in a textbook, but a single thing on this journey, all written, in the end, into the one line \(e^{i\theta}=\cos\theta+i\sin\theta\).</li>
+    </ol>
+
+    <h3>First Half: A Three-Century Relay to Understand e and i</h3>
+    <div class="timeline">
+      <div class="t"><span class="yr">1545</span>Solving a cubic, Cardano is forced to write down "the square root of a negative number," calling it mere "sophistry."</div>
+      <div class="t"><span class="yr">1614</span>Napier publishes logarithms, turning multiplication into addition and easing astronomical calculation.</div>
+      <div class="t"><span class="yr">1637</span>Descartes dismissively names \(\sqrt{-1}\) "imaginary."</div>
+      <div class="t"><span class="yr">1647/1649</span>Saint-Vincent then de Sarasa, in relay: Saint-Vincent finds that under \(y=\tfrac1x\) equal areas correspond to geometric intervals (pure geometry); de Sarasa points out this is a logarithmic property — the first link between logarithms and "accumulation, change."</div>
+      <div class="t"><span class="yr">1683</span>Studying continuous compounding, Bernoulli stumbles on the limit \(\left(1+\tfrac1n\right)^n\) — but cannot compute its value.</div>
+      <div class="t"><span class="yr">1748</span>Euler names the constant \(e\), computes its value, and writes down Euler's formula \(e^{it}=\cos t+i\sin t\).</div>
+      <div class="t"><span class="yr">1799–1831</span>Wessel, Argand, and Gauss give the imaginary number a "home" — the complex plane — clearing its bad name.</div>
+      <div class="t"><span class="yr">1822</span>Fourier claims any signal can be decomposed into a sum of \(e^{i\omega t}\) terms.</div>
+      <div class="t"><span class="yr">1843</span>Hamilton generalizes complex numbers into quaternions to describe 3-D rotation (later relied on by video games and spacecraft alike).</div>
+    </div>
+
+    <h3>Second Half: How e and i Ignited the Technology Explosion</h3>
+    <p>Once they were understood, these two "imaginary symbols" began to rewrite the world. Note: the signal transmission in your phone was already laid down back in the <strong>age of radio</strong> — and all of it began with an electromagnetic-wave equation written in complex numbers.</p>
+    <div class="timeline">
+      <div class="t"><span class="yr">1865</span><strong>Maxwell</strong> predicts electromagnetic waves with his equations — and the wave solution takes exactly the complex form \(e^{i(kx-\omega t)}\).</div>
+      <div class="t"><span class="yr">1887</span><strong>Hertz</strong> actually generates and detects electromagnetic waves in the lab; radio is born.</div>
+      <div class="t"><span class="yr">1893</span>Steinmetz tames alternating current with complex phasors → the modern power grid.</div>
+      <div class="t"><span class="yr">1901</span><strong>Marconi</strong> sends a wireless telegraph across the Atlantic — humanity's first wireless message.</div>
+      <div class="t"><span class="yr">1920s–30s</span>AM and FM broadcasting spread; modulating and filtering signals rely entirely on phasors and Fourier.</div>
+      <div class="t"><span class="yr">1940s</span>Radar takes shape in WWII — using phase differences to measure range and speed.</div>
+      <div class="t"><span class="yr">1947</span>The transistor arrives (built on quantum mechanics, whose core is the Schrödinger equation carrying \(i\)).</div>
+      <div class="t"><span class="yr">1948</span>Shannon founds information theory, laying the mathematical foundation of all digital communication.</div>
+      <div class="t"><span class="yr">1965</span>Cooley and Tukey's FFT algorithm makes Fourier computable in real time, igniting the digital revolution.</div>
+      <div class="t"><span class="yr">1970s</span>CT and MRI appear — images reconstructed by an inverse Fourier transform of complex \(k\)-space data.</div>
+      <div class="t"><span class="yr">1980s</span>The first generation (1G) of analog mobile phones reaches the market.</div>
+      <div class="t"><span class="yr">1990s</span>2G digital phones, JPEG (1992), MP3 (1993) — data encoded into complex numbers and compressed with Fourier.</div>
+      <div class="t"><span class="yr">2010s–now</span>4G/5G use OFDM + QAM to pack data into thousands of points on the complex plane; the phone you're scrolling right now does hundreds of millions of complex operations every second.</div>
+    </div>
+    <p>From a scorned oddity and a constant memorized only for exams, to the power grid, radio, mobile phones, medical imaging, and the entire digital world — this is the story of \(e\) and \(i\). Next time you watch coffee go cold, hear bass carry farther, scroll your phone for a video, or run into \(e^{i\pi}+1=0\), you will know: those symbols that seem imaginary are real beyond measure, and have been working quietly at your side all along.</p>
+  </section>
+
+  <section id="coda" class="coda">
+        <figure class="figcard">
+          <svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="two worlds, one formula">
+            <defs><marker id="fa" markerWidth="9" markerHeight="9" refX="5" refY="3" orient="auto"><path d="M0,0 L5,3 L0,6 Z" fill="#c3b896"/></marker></defs>
+            <!-- left: e in Nature -->
+            <text x="120" y="40" text-anchor="middle" font-size="16" fill="#0a423e">The <tspan font-style="italic" fill="#b1701f">e</tspan> in Nature</text>
+            <text x="120" y="59" text-anchor="middle" font-size="11.5" fill="#9a917e">Growth and Decay</text>
+            <line x1="55" y1="78" x2="55" y2="172" stroke="#cdbf9f" stroke-width="1.2"/>
+            <line x1="50" y1="150" x2="248" y2="150" stroke="#cdbf9f" stroke-width="1.2"/>
+            <polyline points="55.0,148.7 58.0,148.6 61.0,148.5 64.0,148.4 67.0,148.3 70.0,148.2 73.0,148.1 76.0,148.0 79.0,147.8 82.0,147.7 85.0,147.5 88.0,147.3 91.0,147.2 94.0,147.0 97.0,146.7 100.0,146.5 103.0,146.3 106.0,146.0 109.0,145.8 112.0,145.5 115.0,145.1 118.0,144.8 121.0,144.5 124.0,144.1 127.0,143.7 130.0,143.2 133.0,142.8 136.0,142.3 139.0,141.7 142.0,141.2 145.0,140.5 148.0,139.9 151.0,139.2 154.0,138.4 157.0,137.7 160.0,136.8 163.0,135.9 166.0,134.9 169.0,133.9 172.0,132.8 175.0,131.6 178.0,130.3 181.0,129.0 184.0,127.5 187.0,125.9 190.0,124.3 193.0,122.5 196.0,120.6 199.0,118.6 202.0,116.4 205.0,114.1 208.0,111.6 211.0,109.0 214.0,106.2 217.0,103.2 220.0,99.9 223.0,96.5 226.0,92.8 229.0,88.8 232.0,84.6 235.0,80.1 238.0,75.3" fill="none" stroke="#1c8079" stroke-width="2.4"/>
+            <polyline points="55.0,74.0 58.0,78.6 61.0,82.9 64.0,87.0 67.0,90.8 70.0,94.4 73.0,97.8 76.0,100.9 79.0,103.9 82.0,106.7 85.0,109.3 88.0,111.8 91.0,114.1 94.0,116.3 97.0,118.3 100.0,120.2 103.0,122.0 106.0,123.7 109.0,125.3 112.0,126.8 115.0,128.2 118.0,129.5 121.0,130.8 124.0,131.9 127.0,133.0 130.0,134.1 133.0,135.0 136.0,135.9 139.0,136.8 142.0,137.6 145.0,138.3 148.0,139.1 151.0,139.7 154.0,140.3 157.0,140.9 160.0,141.5 163.0,142.0 166.0,142.5 169.0,142.9 172.0,143.4 175.0,143.8 178.0,144.1 181.0,144.5 184.0,144.8 187.0,145.1 190.0,145.4 193.0,145.7 196.0,146.0 199.0,146.2 202.0,146.4 205.0,146.7 208.0,146.9 211.0,147.1 214.0,147.2 217.0,147.4 220.0,147.6 223.0,147.7 226.0,147.8 229.0,148.0 232.0,148.1 235.0,148.2 238.0,148.3" fill="none" stroke="#86bcae" stroke-width="2.4"/>
+            <!-- center: Euler's formula (circle) -->
+            <text x="340" y="62" text-anchor="middle" font-size="13" fill="#0f5f59" font-style="italic">e<tspan font-size="9" dy="-5">iθ</tspan></text>
+            <circle cx="340" cy="150" r="58" fill="none" stroke="#0f5f59" stroke-width="2"/>
+            <line x1="278" y1="150" x2="402" y2="150" stroke="#e3d7bd" stroke-width="1"/>
+            <line x1="340" y1="88" x2="340" y2="212" stroke="#e3d7bd" stroke-width="1"/>
+            <line x1="340" y1="150" x2="381" y2="109" stroke="#b1701f" stroke-width="2.6"/>
+            <circle cx="381" cy="109" r="4.5" fill="#b1701f"/>
+            <line x1="381" y1="109" x2="381" y2="150" stroke="#b1701f" stroke-width="1" stroke-dasharray="3 3"/>
+            <!-- right: i in Life -->
+            <text x="545" y="40" text-anchor="middle" font-size="16" fill="#0a423e">The <tspan font-style="italic" fill="#b1701f">i</tspan> in Life</text>
+            <text x="545" y="59" text-anchor="middle" font-size="11.5" fill="#9a917e">Rotation · Oscillation · Waves</text>
+            <line x1="432" y1="150" x2="652" y2="150" stroke="#cdbf9f" stroke-width="1.2"/>
+            <polyline points="440.0,150.0 443.0,142.7 446.0,135.6 449.0,128.9 452.0,123.1 455.0,118.1 458.0,114.2 461.0,111.5 464.0,110.2 467.0,110.2 470.0,111.5 473.0,114.2 476.0,118.1 479.0,123.1 482.0,128.9 485.0,135.6 488.0,142.7 491.0,150.0 494.0,157.3 497.0,164.4 500.0,171.1 503.0,176.9 506.0,181.9 509.0,185.8 512.0,188.5 515.0,189.8 518.0,189.8 521.0,188.5 524.0,185.8 527.0,181.9 530.0,176.9 533.0,171.1 536.0,164.4 539.0,157.3 542.0,150.0 545.0,142.7 548.0,135.6 551.0,128.9 554.0,123.1 557.0,118.1 560.0,114.2 563.0,111.5 566.0,110.2 569.0,110.2 572.0,111.5 575.0,114.2 578.0,118.1 581.0,123.1 584.0,128.9 587.0,135.6 590.0,142.7 593.0,150.0 596.0,157.3 599.0,164.4 602.0,171.1 605.0,176.9 608.0,181.9 611.0,185.8 614.0,188.5 617.0,189.8 620.0,189.8 623.0,188.5 626.0,185.8 629.0,181.9 632.0,176.9 635.0,171.1 638.0,164.4 641.0,157.3 644.0,150.0" fill="none" stroke="#b1701f" stroke-width="2.4"/>
+            <!-- connecting arrows -->
+            <path d="M252,118 C266,120 270,140 276,144" fill="none" stroke="#c3b896" stroke-width="1.6" marker-end="url(#fa)"/>
+            <path d="M404,144 C414,140 420,150 430,150" fill="none" stroke="#c3b896" stroke-width="1.6" marker-end="url(#fa)"/>
+            <!-- formula and tagline -->
+            <text x="340" y="258" text-anchor="middle" font-size="22" fill="#23211c" font-style="italic">e<tspan font-size="14" dy="-9">iθ</tspan><tspan dy="9" font-size="22"> = cos θ + i sin θ</tspan></text>
+            <text x="340" y="296" text-anchor="middle" font-size="13.5" fill="#6b6453">Symbols that seem imaginary — one world, one formula.</text>
+          </svg>
+          <figcaption>On the left, <span style="font-style:italic">e</span> is nature's growth and decay; on the right, <span style="font-style:italic">i</span> is rotation, oscillation, and waves. The circle in the middle — Euler's formula — joins the two worlds into one.</figcaption>
+        </figure>
+    <p class="theend">— The End —</p>
+  </section>
+
+  <hr class="div">
+
+  <section id="reading">
+    <span class="part-tag">Further Reading</span>
+    <h2 class="sec">Standing on the Shoulders of Giants</h2>
+    <p class="lead">This little book stands on the shoulders of many who came before. If you finish it still wanting more, the works below are deeper, broader vistas along the same road — offered here in tribute, and recommended to you.</p>
+    <ul class="reading">
+      <li><span class="bk">Eli Maor, <em>e: The Story of a Number</em></span> (Princeton University Press, 1994). A history-driven biography of \(e\) written for readers without a deep math background, running from logarithms and limits all the way to calculus and differential equations, hung on a string of historical figures. For the history of \(e\), this is the classic.</li>
+      <li><span class="bk">Paul J. Nahin, <em>An Imaginary Tale: The Story of √−1</em></span> (1998) and its sequel <span class="bk"><em>Dr. Euler's Fabulous Formula</em></span> (2006). The former tells the life story of the imaginary \(i\) in detail; the latter follows history to carry Euler's formula all the way to Fourier and engineering electronics. The author is himself an electrical-engineering professor — kindred in spirit to this book's "a physician writes mathematics" crossover. (The math demands run a little higher, roughly first- or second-year college.)</li>
+      <li><span class="bk">J. Callahan et al., <em>Calculus in Context</em></span> (The Five College Calculus Project, a free open textbook). Written by five renowned American colleges with NSF support, it develops calculus around "dynamical systems / differential equations," opening its very first chapter with modeling the spread of an epidemic — the institutional-grade textbook closest in spirit to this book's "differential equations first" approach.</li>
+      <li><span class="bk">Kalid Azad, BetterExplained</span> (betterexplained.com). An intuition-first math explainer site whose takes on \(e\), \(i\), and Euler's formula ("imaginary numbers aren't imaginary at all," "Euler's formula is two ways of going around a circle") resonate strongly with the spirit of this little book.</li>
+      <li><span class="bk">Video companions</span>: on YouTube, <span class="bk">3Blue1Brown</span> (famous for its visual intuition) and <span class="bk">Welch Labs' <em>Imaginary Numbers Are Real</em></span> are both wonderful works that explain \(e\) and \(i\) beautifully and clearly.</li>
+    </ul>
+    <p>What sets this little book apart from them is not its subject but its design: it compresses \(e\), \(i\), Euler's formula, and their modern applications into <strong>a little book that assumes no prior calculus and skips no step</strong>, starting from twelve natural phenomena, with history woven through. If it offers any modest novelty, it lies there.</p>
+  </section>
+<footer>
+  <p>
+    <strong>Kung-Chu Ho, MD, PhD</strong> &nbsp;·&nbsp;
+    Department of Nuclear Medicine, Chang Gung Memorial Hospital, Taiwan
+  </p>
+  <p>
+    Licensed under
+    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">
+      Creative Commons CC BY 4.0
+    </a>
+    — free to read, share, and adapt with attribution.
+  </p>
+</footer>
+
+</div>
+</body>
+</html>
