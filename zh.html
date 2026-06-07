@@ -1,0 +1,1114 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>自然界的 e，生活中的 i：虛幻的符號，其實很真實</title>
+
+<!-- ═══════════════════════════════════════════════════
+     SEO & DISCOVERY — 中文版
+     ═══════════════════════════════════════════════════ -->
+
+<!-- hreflang：告訴 Google 英文版與中文版是同一本書的不同語言 -->
+<link rel="alternate" hreflang="en"      href="https://kungchuho.github.io/e-and-i/">
+<link rel="alternate" hreflang="zh-Hant" href="https://kungchuho.github.io/e-and-i/zh.html">
+<link rel="alternate" hreflang="x-default" href="https://kungchuho.github.io/e-and-i/">
+<link rel="canonical" href="https://kungchuho.github.io/e-and-i/zh.html">
+
+<!-- Primary SEO -->
+<meta name="description"
+  content="一本以「自然現象」為起點的數學科普小書，帶你一步不跳地推導出 e 與 i，再看它們如何運轉手機、電網、MRI 與量子力學。不需預備微積分知識。免費閱讀。">
+<meta name="keywords"
+  content="自然常數e, 虛數i, 歐拉公式, 複數平面, 數學科普, 高中數學, e的意義, 虛數的真實意義, 歐拉恆等式, e的推導, 微積分入門">
+<meta name="author" content="何恭之醫師 Kung-Chu Ho, MD">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type"        content="book">
+<meta property="og:title"       content="自然界的 e，生活中的 i：虛幻的符號，其實很真實">
+<meta property="og:description" content="一步不跳地推導 e 與歐拉公式——從放射衰變與咖啡降溫出發，到手機訊號、MRI、量子力學。不需預備微積分。免費。">
+<meta property="og:url"         content="https://kungchuho.github.io/e-and-i/zh.html">
+<meta property="og:image"       content="https://kungchuho.github.io/e-and-i/cover_og.png">
+<meta property="og:image:alt"   content="自然界的 e，生活中的 i — 對數螺線封面">
+<meta property="og:locale"      content="zh_TW">
+<meta property="og:site_name"   content="自然界的 e，生活中的 i">
+<meta property="book:author"    content="何恭之醫師">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="自然界的 e，生活中的 i">
+<meta name="twitter:description" content="為什麼 e = 2.718…？為什麼虛數 i 讓你的手機能傳訊？一步一步親手推導，免費，不需先學微積分。">
+<meta name="twitter:image"       content="https://kungchuho.github.io/e-and-i/cover_og.png">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "自然界的 e，生活中的 i",
+  "alternativeHeadline": "虛幻的符號，其實很真實",
+  "description": "一本以十二個自然現象為起點的數學科普小書，帶領讀者一步不跳地推導自然常數 e 與虛數 i，再看它們如何運轉手機、電網、MRI 與量子力學。不需預備微積分知識。",
+  "inLanguage": "zh-Hant",
+  "isAccessibleForFree": true,
+  "url": "https://kungchuho.github.io/e-and-i/zh.html",
+  "author": {
+    "@type": "Person",
+    "name": "何恭之",
+    "honorificSuffix": "醫師",
+    "alternateName": "Kung-Chu Ho, MD",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "長庚紀念醫院 核子醫學科，台灣"
+    }
+  },
+  "educationalLevel": ["高中生", "大學生"],
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "student"
+  },
+  "teaches": ["自然常數e", "虛數i", "歐拉公式", "複數", "微積分入門", "傅立葉轉換"],
+  "license": "https://creativecommons.org/licenses/by/4.0/"
+}
+</script>
+
+
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)']], displayMath: [['$$','$$']], processEscapes: true },
+    svg: { fontCache: 'global' },
+    options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+  };
+</script>
+<script id="MathJax-script" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js"></script>
+
+<style>
+  :root{
+    --paper:#f6f1e7; --paper-2:#fbf8f1; --ink:#24211c; --ink-soft:#4a463d;
+    --teal:#0f5f59; --teal-deep:#0a423e; --amber:#b1701f; --sepia:#9a7b3f;
+    --rule:#d9cfba;
+    --shadow:0 1px 0 rgba(0,0,0,.04), 0 18px 40px -28px rgba(20,16,8,.5);
+    --serif:"Noto Serif CJK TC","Songti TC","STSong","Iowan Old Style","Palatino Linotype","Georgia",serif;
+    --cjk:"Noto Sans CJK TC","PingFang TC","Noto Sans TC","Microsoft JhengHei","Heiti TC",sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 80% -10%, #fff8ec 0%, transparent 60%),
+      radial-gradient(900px 500px at -10% 110%, #eef3ec 0%, transparent 55%),
+      var(--paper);
+    color:var(--ink); font-family:var(--cjk); line-height:1.95; font-size:18px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:64px 26px 120px}
+
+  .hero{border:1px solid var(--rule);border-radius:18px;
+    background:linear-gradient(180deg,var(--paper-2),#f3ecdd);
+    padding:48px 40px 42px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .hero .eyebrow{font-size:13px;letter-spacing:.32em;color:var(--amber);text-transform:uppercase;font-weight:700;margin-bottom:14px}
+  .hero h1{font-family:var(--serif);font-weight:700;font-size:44px;line-height:1.3;margin:0 0 8px;color:var(--teal-deep);letter-spacing:.02em}
+  .hero h1 .e{font-style:italic;color:var(--amber)}
+  .hero .h1sub{font-family:var(--serif);font-size:20px;color:var(--ink-soft);margin:0 0 18px;font-style:italic}
+  .hero p.sub{margin:0;color:var(--ink-soft);font-size:16.5px;max-width:62ch}
+  .hero .orb{position:absolute;right:-70px;top:-70px;width:230px;height:230px;border-radius:50%;
+    background:radial-gradient(circle at 35% 35%, #1c8079, #0a423e 70%);opacity:.10}
+  .hero .coverart{display:flex;justify-content:center;margin:22px 0 10px}
+  .hero .coverart svg{width:280px;height:280px;max-width:64%}
+  .hero .byline{margin-top:24px;padding-top:16px;border-top:1px solid var(--rule);font-family:var(--serif);color:var(--ink-soft);font-size:15.5px;line-height:1.75}
+  .hero .byline .en{display:block;font-style:italic;font-size:12.5px;color:#8a8369;margin-top:4px;letter-spacing:.01em}
+  .preface .who{font-family:var(--serif);font-style:italic;color:var(--sepia)}
+  .reading{border:1px solid var(--rule);border-radius:13px;background:var(--paper-2);padding:18px 24px}
+  .reading li{margin:10px 0}
+  .reading .bk{font-family:var(--serif);font-style:italic;color:var(--teal-deep)}
+  .coda{margin-top:64px;text-align:center}
+  .coda .theend{font-family:var(--serif);font-style:italic;color:var(--sepia);letter-spacing:.3em;margin-top:20px}
+
+  nav.toc{margin:34px 0 8px;border:1px solid var(--rule);border-radius:14px;background:var(--paper-2);padding:22px 26px}
+  nav.toc h2{font-family:var(--serif);font-size:17px;margin:0 0 12px;color:var(--teal-deep);letter-spacing:.04em}
+  nav.toc ul{margin:0;padding-left:0;list-style:none;columns:2;column-gap:34px}
+  nav.toc li{margin:5px 0;break-inside:avoid;display:flex;align-items:baseline}
+  nav.toc li.part{display:block}
+  nav.toc .pg{margin-left:auto;padding-left:8px;color:var(--sepia);font-family:var(--serif);font-style:italic;font-size:13px;flex:none}
+  nav.toc li .nm{color:var(--amber);font-family:var(--serif);font-style:italic;margin-right:6px}
+  nav.toc a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid transparent}
+  nav.toc a:hover{color:var(--teal);border-bottom-color:var(--teal)}
+  nav.toc .part{font-weight:700;color:var(--amber);margin-top:12px;font-size:14px;letter-spacing:.05em}
+  @media(max-width:640px){nav.toc ul{columns:1}}
+
+  section{margin-top:60px}
+  .part-divider{text-align:center;margin:74px 0 0;padding-bottom:4px}
+  .part-divider + section{margin-top:30px}
+  .part-divider .pp{font-family:var(--serif);font-style:italic;color:var(--amber);letter-spacing:.22em;font-size:18px}
+  .part-divider .pt{font-family:var(--serif);font-size:34px;color:var(--teal-deep);margin-top:10px;line-height:1.35}
+  .part-tag{display:inline-block;font-family:var(--serif);font-style:italic;color:var(--amber);font-size:15px;letter-spacing:.1em;margin-bottom:6px}
+  h2.sec{font-family:var(--serif);font-size:26px;color:var(--teal-deep);margin:0 0 8px;line-height:1.4;font-weight:700;display:flex;align-items:baseline;gap:14px}
+  h2.sec .no{font-style:italic;color:var(--amber);font-size:21px;flex:none}
+  h3{font-family:var(--serif);font-size:20px;color:var(--teal-deep);margin:34px 0 6px}
+  p{margin:14px 0}
+  .lead{color:var(--ink-soft)}
+  strong{color:var(--teal-deep)}
+  em.term{font-style:normal;font-weight:700;color:var(--amber)}
+  hr.div{border:none;border-top:1px solid var(--rule);margin:52px 0}
+
+  .box{border-radius:13px;padding:20px 24px;margin:24px 0;border:1px solid var(--rule);background:var(--paper-2)}
+  .box .label{font-size:12.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .intuition{background:linear-gradient(180deg,#eef5f1,#e8f1ec);border-color:#bcd8cd}
+  .intuition .label{color:var(--teal)}
+  .experiment{background:linear-gradient(180deg,#fbf2e1,#f7ead2);border-color:#e7cfa3}
+  .experiment .label{color:var(--amber)}
+  .detective{background:#23211c;color:#f1ebdc;border-color:#23211c}
+  .detective .label{color:#e6b25e}
+  .detective strong{color:#f6d99a}
+  .pitfall{background:#fbeeec;border-color:#e7c2bb}
+  .pitfall .label{color:#a8442f}
+  .history{background:linear-gradient(180deg,#f7efe0,#f1e6d0);border-color:#dcc9a3;border-left:5px solid var(--sepia)}
+  .history .label{color:var(--sepia)}
+  .history .who{font-family:var(--serif);font-style:italic;color:#6a4f1f}
+
+  .keyeq{border:1px solid var(--teal);border-left:5px solid var(--teal);
+    background:linear-gradient(180deg,#ffffff,#f3f7f4);border-radius:12px;padding:6px 22px;margin:26px 0;
+    box-shadow:0 14px 30px -26px rgba(15,95,89,.7)}
+  .keyeq .cap{font-size:12.5px;letter-spacing:.16em;color:var(--amber);font-weight:800;text-transform:uppercase;margin:14px 0 -4px}
+
+  .tbl-wrap{overflow-x:auto;margin:22px 0}
+  table{border-collapse:collapse;width:100%;font-size:15.5px;background:var(--paper-2)}
+  caption{caption-side:top;text-align:left;font-size:13px;color:var(--ink-soft);margin-bottom:8px;font-style:italic}
+  th,td{border:1px solid var(--rule);padding:9px 12px;text-align:center}
+  td.field{text-align:left}
+  td.hot{color:var(--amber);font-weight:700}
+  thead th{background:var(--teal-deep);color:#f3ecdd;font-weight:600;letter-spacing:.02em}
+  tbody tr:nth-child(even){background:#f1ead9}
+
+  figure{margin:28px 0;text-align:center}
+  figure svg{max-width:100%;height:auto}
+  figcaption{font-size:13.5px;color:var(--ink-soft);margin-top:10px;font-style:italic}
+  .figcard{border:1px solid var(--rule);border-radius:13px;background:var(--paper-2);padding:18px}
+
+  ol.steps{counter-reset:s;list-style:none;padding:0;margin:22px 0}
+  ol.steps>li{position:relative;padding:4px 0 4px 52px;margin:18px 0}
+  ol.steps>li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:2px;width:34px;height:34px;border-radius:50%;
+    background:var(--teal);color:#fff;font-family:var(--serif);font-style:italic;display:flex;align-items:center;justify-content:center;font-size:17px}
+  ol.steps>li b{color:var(--teal-deep)}
+
+  .timeline{border-left:3px solid var(--rule);margin:24px 0 24px 8px;padding-left:22px}
+  .timeline .t{position:relative;margin:16px 0}
+  .timeline .t::before{content:"";position:absolute;left:-30px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 3px var(--paper)}
+  .timeline .yr{font-family:var(--serif);font-style:italic;color:var(--amber);font-weight:700;margin-right:8px}
+
+  footer{margin-top:80px;border-top:1px solid var(--rule);padding-top:24px;color:var(--ink-soft);font-size:14px;text-align:center}
+
+  @page{ size:A4; margin:14mm 14mm 16mm; }
+  @media print{
+    body{background:#fff;font-size:12.2pt;line-height:1.78}
+    .wrap{max-width:100%;padding:0}
+    .hero,.box,.keyeq,nav.toc,table,.figcard{box-shadow:none}
+    .hero{break-after:page}
+    #preface{break-after:page}
+    .orb{display:none}
+    .part-divider{break-before:page;break-after:page;break-inside:avoid;display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:235mm;margin:0;padding:0}
+    .part-divider + section{margin-top:0}
+    .coda{break-inside:avoid;margin-top:36px}
+    #reading{break-before:page}
+    h2.sec,h3{break-after:avoid}
+    figure,.keyeq,.box,table,.tbl-wrap{break-inside:avoid}
+    nav.toc{break-after:page}
+    a{color:inherit}
+  }
+
+  /* language switcher */
+  .lang-sw{position:absolute;top:18px;right:20px;font-size:13px;
+    font-family:var(--cjk);display:flex;gap:8px;align-items:center}
+  .lang-sw a{color:var(--teal);text-decoration:none;
+    border:1px solid var(--teal);border-radius:5px;padding:2px 9px}
+  .lang-sw a:hover{background:var(--teal);color:#fff}
+  .lang-sw strong{color:var(--ink-soft)}
+
+
+  .dl-bar{border:1px solid var(--rule);border-radius:12px;
+    background:var(--paper-2);margin:40px 0 0;padding:14px 20px}
+  .dl-bar-inner{display:flex;align-items:center;gap:16px}
+  .dl-icon{width:32px;height:32px;flex-shrink:0;color:var(--teal)}
+  .dl-info{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+  .dl-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ink-soft);font-weight:700}
+  .dl-title{font-size:14px;color:var(--ink);
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .dl-btn{display:inline-flex;align-items:center;gap:6px;flex-shrink:0;
+    padding:8px 18px;border-radius:8px;border:1.5px solid var(--teal);
+    background:transparent;color:var(--teal);
+    font-size:14px;font-weight:700;text-decoration:none;transition:background .15s,color .15s}
+  .dl-btn:hover{background:var(--teal);color:#fff}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="orb"></div>
+    <div class="eyebrow">一則貫穿三百年的數學故事</div>
+    <h1>自然界的 <span class="e">e</span>，生活中的 <span class="e">i</span></h1>
+    <p class="h1sub">虛幻的符號，其實很真實！</p>
+    <div class="coverart">
+      <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="對數螺線：e 與 i 合一">
+        <circle cx="150" cy="150" r="120" fill="none" stroke="#e3d7bd" stroke-width="1"/>
+        <line x1="22" y1="150" x2="278" y2="150" stroke="#e3d7bd" stroke-width="1"/>
+        <line x1="150" y1="22" x2="150" y2="278" stroke="#e3d7bd" stroke-width="1"/>
+        <polyline points="159.5,150.0 159.6,149.4 159.6,148.8 159.6,148.3 159.5,147.7 159.5,147.1 159.3,146.5 159.2,145.9 159.0,145.3 158.7,144.8 158.5,144.2 158.2,143.7 157.8,143.1 157.5,142.6 157.1,142.1 156.6,141.6 156.2,141.2 155.7,140.8 155.1,140.4 154.6,140.0 154.0,139.7 153.4,139.4 152.8,139.1 152.1,138.9 151.5,138.7 150.8,138.5 150.1,138.4 149.4,138.3 148.7,138.3 148.0,138.3 147.3,138.4 146.6,138.5 145.8,138.6 145.1,138.8 144.4,139.0 143.7,139.3 143.0,139.6 142.4,140.0 141.7,140.4 141.1,140.8 140.5,141.3 139.9,141.8 139.4,142.4 138.8,143.0 138.4,143.6 137.9,144.3 137.5,145.0 137.1,145.7 136.8,146.5 136.5,147.2 136.2,148.0 136.0,148.9 135.9,149.7 135.8,150.5 135.7,151.4 135.7,152.3 135.8,153.2 135.9,154.0 136.1,154.9 136.3,155.8 136.6,156.6 136.9,157.5 137.3,158.3 137.7,159.1 138.2,159.9 138.7,160.7 139.3,161.5 139.9,162.2 140.6,162.8 141.3,163.5 142.1,164.1 142.9,164.7 143.7,165.2 144.6,165.6 145.5,166.1 146.5,166.4 147.4,166.7 148.4,167.0 149.4,167.2 150.5,167.3 151.5,167.4 152.6,167.4 153.7,167.3 154.7,167.2 155.8,167.0 156.8,166.8 157.9,166.5 158.9,166.1 160.0,165.6 161.0,165.1 161.9,164.5 162.9,163.9 163.8,163.2 164.7,162.4 165.5,161.6 166.3,160.8 167.1,159.8 167.7,158.9 168.4,157.8 169.0,156.8 169.5,155.7 169.9,154.5 170.3,153.3 170.6,152.1 170.9,150.9 171.1,149.6 171.2,148.4 171.2,147.1 171.1,145.8 171.0,144.5 170.8,143.2 170.5,141.9 170.1,140.6 169.7,139.3 169.1,138.1 168.5,136.9 167.9,135.7 167.1,134.5 166.2,133.4 165.3,132.3 164.4,131.3 163.3,130.3 162.2,129.4 161.0,128.5 159.8,127.7 158.5,127.0 157.2,126.4 155.8,125.8 154.3,125.3 152.9,124.9 151.4,124.6 149.8,124.4 148.3,124.2 146.7,124.2 145.1,124.2 143.6,124.4 142.0,124.6 140.4,124.9 138.8,125.4 137.3,125.9 135.7,126.5 134.2,127.3 132.8,128.1 131.4,129.0 130.0,130.0 128.7,131.1 127.4,132.3 126.2,133.5 125.1,134.9 124.0,136.3 123.0,137.8 122.1,139.4 121.3,141.0 120.6,142.7 120.0,144.4 119.5,146.2 119.1,148.0 118.8,149.9 118.6,151.7 118.5,153.6 118.6,155.6 118.7,157.5 119.0,159.4 119.4,161.4 119.9,163.3 120.5,165.2 121.3,167.0 122.1,168.9 123.1,170.7 124.2,172.4 125.4,174.1 126.7,175.7 128.1,177.3 129.7,178.8 131.3,180.2 133.0,181.5 134.8,182.7 136.7,183.8 138.6,184.8 140.7,185.7 142.8,186.4 144.9,187.1 147.2,187.6 149.4,188.0 151.7,188.3 154.0,188.4 156.4,188.3 158.7,188.2 161.1,187.9 163.4,187.4 165.8,186.8 168.1,186.1 170.4,185.2 172.6,184.2 174.8,183.0 176.9,181.7 179.0,180.3 181.0,178.7 182.9,177.0 184.7,175.1 186.5,173.2 188.1,171.1 189.6,168.9 190.9,166.7 192.2,164.3 193.3,161.8 194.3,159.3 195.1,156.6 195.7,154.0 196.2,151.2 196.6,148.4 196.8,145.6 196.8,142.8 196.6,139.9 196.2,137.0 195.7,134.2 195.0,131.3 194.2,128.5 193.1,125.7 191.9,122.9 190.5,120.2 188.9,117.6 187.2,115.1 185.3,112.6 183.3,110.3 181.1,108.0 178.7,105.9 176.2,103.9 173.6,102.1 170.8,100.4 167.9,98.8 164.9,97.5 161.9,96.3 158.7,95.2 155.4,94.4 152.1,93.7 148.7,93.3 145.3,93.0 141.8,93.0 138.3,93.2 134.8,93.5 131.3,94.1 127.8,94.9 124.4,96.0 121.0,97.2 117.6,98.6 114.3,100.3 111.1,102.2 108.0,104.2 105.0,106.5 102.1,109.0 99.3,111.6 96.7,114.5 94.3,117.5 92.0,120.7 89.9,124.0 88.0,127.5 86.2,131.1 84.7,134.9 83.4,138.7 82.4,142.7 81.5,146.7 81.0,150.8 80.6,155.0 80.5,159.2 80.7,163.5 81.1,167.7 81.8,172.0 82.7,176.3 83.9,180.5 85.3,184.7 87.1,188.8 89.0,192.8 91.3,196.7 93.8,200.5 96.5,204.2 99.5,207.8 102.7,211.2 106.1,214.4 109.7,217.4 113.6,220.2 117.6,222.8 121.8,225.2 126.2,227.3 130.7,229.2 135.4,230.9 140.2,232.2 145.1,233.3 150.1,234.0 155.2,234.5 160.3,234.7 165.5,234.6 170.7,234.1 175.9,233.4 181.1,232.3 186.2,230.9 191.3,229.1 196.4,227.1 201.3,224.8 206.1,222.1 210.8,219.1 215.3,215.8 219.7,212.3 223.8,208.4 227.8,204.3 231.5,199.9 235.0,195.3 238.2,190.4 241.2,185.3 243.8,180.0 246.2,174.5 248.2,168.8 249.9,163.0 251.3,157.1 252.3,151.0 252.9,144.8 253.2,138.6 253.1,132.2 252.7,125.9 251.8,119.6 250.5,113.2 248.9,107.0 246.9,100.7 244.5,94.6 241.7,88.6 238.5,82.7 234.9,76.9 231.0,71.4 226.7,66.0 222.1,60.9 217.1,56.1 211.8,51.5 206.2,47.2 200.3,43.2 194.2,39.5 187.8,36.2" fill="none" stroke="#0f5f59" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="187.8" cy="36.2" r="5.5" fill="#b1701f"/>
+        <text x="262" y="143" font-size="20" fill="#b1701f" font-style="italic" font-family="var(--serif)">e</text>
+        <text x="158" y="40" font-size="20" fill="#b1701f" font-style="italic" font-family="var(--serif)">i</text>
+        <text x="150" y="166" text-anchor="middle" font-size="12" fill="#9a917e" font-style="italic" font-family="var(--serif)">e<tspan font-size="8" dy="-5">iθ</tspan></text>
+      </svg>
+    </div>
+    <p class="sub">有兩個符號，幾乎每個人在課堂上都見過，卻幾乎沒人真正認識它們：一個是 \(e\)，一個是 \(i\)。它們被當成抽象、難懂、甚至「虛幻」的東西。但其實，\(e\) 藏在每一次放射衰變、每一杯變涼的咖啡、每一群繁殖的細菌裡;\(i\) 則藏在你手中正在運作的每一支手機、每一次無線傳訊裡。這本小書不從定義出發，而從<strong>大自然的真實現象</strong>出發，帶你一步一步、不跳任何一步地，親手把這兩個「虛幻的符號」推導出來——最後你會發現，它們一點都不虛幻，而是這個世界最真實的語言。</p>
+    <div class="byline">
+      何恭之　醫師
+    </div>
+  </header>
+
+  <section id="preface" class="preface">
+    <span class="part-tag">緣起</span>
+    <h2 class="sec">一個孩子的問題</h2>
+    <p>那天，念小六的兒子問我：「爸，人類為什麼要發明虛數?它既然在真實世界裡不存在，那發明它要幹嘛?」</p>
+    <p>我給了一個標準答案：「有了虛數，工程計算會比較方便，所以推動了科技。」話一出口我就知道——這回答「很虛」。孩子的好奇沒被點亮，他只禮貌地「喔」了一聲。</p>
+    <p>於是我去翻講虛數 \(i\) 的科普書，這才發現：要把 \(i\) 講清楚，非先講 \(e\) 不可;可是 \(e\) 對孩子更難。而我對 \(e\) 的認識，也大多停在「放射衰變要用它」「它能讓微積分變簡單」——身為核子醫學科醫師，我甚至一直沒意識到，\(e\) 不只管放射衰變，它其實是大自然的<strong>通則</strong>，隨處可見;念博士時，也只把 MRI 的 \(k\) 空間「用 \(i\) 帶入相位」當成一種計算上的方便。</p>
+    <p>問題其實不在於我不懂，而在於我懂的都是<strong>零碎的片段</strong>——一塊放射、一塊影像、一塊公式——卻從沒把它們串成一個能講給孩子聽的<strong>完整故事</strong>。我又找了好些科普書，總覺得不是太深，就是只講半邊;沒有一本能從頭到尾、一步不跳地，把這兩個符號為什麼存在、從哪裡來、又如何運轉這個世界，好好說給一個願意動腦的人聽。既然找不到，那就自己整理一本。</p>
+    <p>這本小書，就是我替那個問題寫的答案。我希望它能幫到充滿好奇的<strong>中小學生</strong>、在課綱裡迷惘的<strong>高中生</strong>、對科學史有興趣的<strong>大學生</strong>，以及——像我這樣，想把零碎的理解，終於拼成一幅完整圖像的<strong>大人</strong>。如果讀完它，你能笑著回答孩子那個問題，這本書就值得了。</p>
+    <p style="text-align:right;font-family:var(--serif);font-style:italic;color:var(--sepia);margin-top:16px;line-height:1.65">
+      — 何恭之　醫師<br>
+      台灣．長庚紀念醫院　核子醫學科<br>
+      <span style="font-size:13px">Kung-Chu Ho, MD, PhD<br>Department of Nuclear Medicine, Chang Gung Memorial Hospital, Taiwan</span>
+    </p>
+  </section>
+
+  <nav class="toc">
+    <h2>目次</h2>
+    <ul>
+      <li class="part">卷首</li>
+      <li><a href="#preface">緣起：一個孩子的問題</a><span class="pg">2</span></li>
+      <li class="part">序章</li>
+      <li><a href="#intro">兩個被誤會的符號</a><span class="pg">4</span></li>
+      <li class="part">第一部 · 大自然的密語：自然界的 e</li>
+      <li><span class="nm">1.1</span><a href="#s1">十二個現象，一條法則</a><span class="pg">6</span></li>
+      <li><span class="nm">1.2</span><a href="#s2">萬物濃縮成一行方程式</a><span class="pg">7</span></li>
+      <li><span class="nm">1.3</span><a href="#s3">變化率到底是什麼</a><span class="pg">8</span></li>
+      <li><span class="nm">1.4</span><a href="#s4">偵探任務：斜率＝高度</a><span class="pg">10</span></li>
+      <li><span class="nm">1.5</span><a href="#s5">指數導數的關鍵推導</a><span class="pg">11</span></li>
+      <li><span class="nm">1.6</span><a href="#s6">費曼的數值實驗</a><span class="pg">12</span></li>
+      <li><span class="nm">1.7</span><a href="#s7">e 的誕生與對數的真面目</a><span class="pg">13</span></li>
+      <li><span class="nm">1.8</span><a href="#s8">反推 e：白努利的複利</a><span class="pg">15</span></li>
+      <li><span class="nm">1.9</span><a href="#s9">自然界的 e：現象逐一看清</a><span class="pg">17</span></li>
+      <li class="part">第二部 · 當數學長出 i 翅膀</li>
+      <li><span class="nm">2.1</span><a href="#s10">虛數的身世與複數平面</a><span class="pg">21</span></li>
+      <li><span class="nm">2.2</span><a href="#s11">把 k 換成 i</a><span class="pg">22</span></li>
+      <li><span class="nm">2.3</span><a href="#s12">兩種解：指數 vs 三角</a><span class="pg">24</span></li>
+      <li><span class="nm">2.4</span><a href="#s13">sin、cos 的導數</a><span class="pg">25</span></li>
+      <li><span class="nm">2.5</span><a href="#s14">歐拉公式的嚴格證明</a><span class="pg">26</span></li>
+      <li><span class="nm">2.6</span><a href="#s15">歐拉恆等式與兩個分身</a><span class="pg">27</span></li>
+      <li class="part">第三部 · 用數學運轉世界：生活中的 i</li>
+      <li><span class="nm">3.1</span><a href="#s16">工具：相量與旋轉箭頭</a><span class="pg">29</span></li>
+      <li><span class="nm">3.2</span><a href="#s17">交流電：阻抗是複數</a><span class="pg">30</span></li>
+      <li><span class="nm">3.3</span><a href="#s18">振動與穩定：複數根</a><span class="pg">31</span></li>
+      <li><span class="nm">3.4</span><a href="#s19">傅立葉與壓縮</a><span class="pg">32</span></li>
+      <li><span class="nm">3.5</span><a href="#s20">手機傳訊（完整詳解）</a><span class="pg">33</span></li>
+      <li><span class="nm">3.6</span><a href="#s21">醫學影像：k 空間</a><span class="pg">34</span></li>
+      <li><span class="nm">3.7</span><a href="#s22">量子力學：自然裡的 i</a><span class="pg">35</span></li>
+      <li class="part">終章 · 結語</li>
+      <li><a href="#finale">終章：不知不覺的融合</a><span class="pg">36</span></li>
+      <li><a href="#end">結語與科技時間軸</a><span class="pg">38</span></li>
+      <li><a href="#reading">站在巨人肩上：延伸閱讀</a><span class="pg">42</span></li>
+    </ul>
+  </nav>
+
+  <!-- PDF 下載列 -->
+  <div class="dl-bar">
+    <div class="dl-bar-inner">
+      <svg class="dl-icon" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.8"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="12" y1="18" x2="12" y2="12"/>
+        <polyline points="9 15 12 18 15 15"/>
+      </svg>
+      <div class="dl-info">
+        <span class="dl-label">全文下載</span>
+        <span class="dl-title">自然界的 e，生活中的 i — 虛幻的符號，其實很真實</span>
+      </div>
+      <a class="dl-btn" href="e-in-Nature_i-in-Life_ZH.pdf" download
+         title="下載 PDF">
+        PDF
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor"
+             stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+             width="13" height="13">
+          <line x1="8" y1="2" x2="8" y2="11"/>
+          <polyline points="4 8 8 12 12 8"/>
+          <line x1="2" y1="14" x2="14" y2="14"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+
+
+  <!-- ===================== 序章 ===================== -->
+  <section id="intro">
+    <span class="part-tag">序章</span>
+    <h2 class="sec">兩個被誤會的符號</h2>
+    <p>數學裡有兩個符號，名聲很差。</p>
+    <p>一個是 \(e\)，常被叫做「自然常數」，約等於 \(2.718\)。多數人對它的記憶，是某個要背起來、考完就忘的奇怪數字。另一個更慘——它叫 \(i\)，「虛數」。光是「虛」這個字，就讓人覺得它是假的、是數學家憑空捏造出來、現實中根本不存在的東西。</p>
+    <p>但這是天大的誤會。</p>
+    <p>事實上，\(e\) 一直安靜地待在大自然的每一個角落：一塊鈾礦的衰變、一杯咖啡的變涼、一群細菌的繁殖、一筆存款的利息——它們全都聽 \(e\) 的指揮。而 \(i\)，那個「虛幻」的符號，此刻正在你口袋裡的手機中高速運轉，沒有它，你連一則訊息都傳不出去。</p>
+    <p>這本小書，要替這兩個被誤會的符號平反。我們不從課本的定義開始(那正是讓大家害怕的元凶)，而是從<strong>大自然的真實現象</strong>出發，像偵探一樣，一步一步、<strong>不跳任何一步</strong>地，親手把 \(e\) 與 \(i\) 推導出來，再看它們如何運轉整個現代世界。走到最後，你會親眼確認那句話：</p>
+    <div class="box intuition">
+      <div class="label">▸ 這本書要證明的一件事</div>
+      <p style="margin:0;font-size:19px"><strong>「自然界的 \(e\)，生活中的 \(i\)——這些看似虛幻的符號，其實無比真實。」</strong></p>
+    </div>
+    <div class="box intuition">
+      <div class="label">▸ 這本書怎麼讀</div>
+      <p style="margin:0">貫穿全書的是<strong>故事</strong>(還帶點數學史);需要你停下來細看的是<strong>數學式</strong>。每一條式子都由前一行接續而來，<strong>沒有任何一步是跳過去的</strong>——只要前一行看懂了，下一行你一定推得出來。看不懂時，回到上一個方框，缺的那塊一定在那裡。你完全不需要先學過微積分，只要願意一步步跟著算。</p>
+    </div>
+  </section>
+
+  <!-- ===================== Part 1 ===================== -->
+  <div class="part-divider"><div class="pp">第 一 部</div><div class="pt">大自然的密語：自然界的 <span style="font-style:italic;color:var(--amber)">e</span></div></div>
+
+  <section id="s1">
+    <h2 class="sec"><span class="no">§1.1</span>十二個現象，一條法則</h2>
+    <p class="lead">先別管數學。我們先當觀察家，看看物理、生物、化學、經濟裡這些「八竿子打不著」的現象，藏著什麼共同點。</p>
+    <p>觀察的重點不是「現在的數值多少」，而是<strong>「現在的狀態」如何決定「下一刻的變化」</strong>。把這視角套到下面十二個現象，一句白話就貫穿全部：</p>
+    <div class="box intuition">
+      <div class="label">▸ 宇宙真理（白話版）</div>
+      <p style="margin:0;font-size:19px"><strong>「一個系統現在擁有得越多，它變化得就越快。」</strong></p>
+    </div>
+    <div class="tbl-wrap">
+    <table>
+      <caption>表 1｜十二個現象與它們的數學式（\(y_0\) 為初始值，\(k,r,\alpha\) 為比例常數）</caption>
+      <thead><tr><th>領域</th><th>現象</th><th>數學式</th></tr></thead>
+      <tbody>
+        <tr><td class="field">量子物理</td><td class="field">放射性衰變</td><td>\(N(t)=N_0e^{-kt}\)</td></tr>
+        <tr><td class="field">流行病學</td><td class="field">疫情初期擴散</td><td>\(I(t)=I_0e^{kt}\)</td></tr>
+        <tr><td class="field">藥理學</td><td class="field">血中藥物代謝</td><td>\(C(t)=C_0e^{-kt}\)</td></tr>
+        <tr><td class="field">光學 / 海洋</td><td class="field">光線穿水衰減</td><td>\(I(d)=I_0e^{-\alpha d}\)</td></tr>
+        <tr><td class="field">熱力學</td><td class="field">牛頓冷卻（咖啡降溫）</td><td>\(\Delta T(t)=\Delta T_0\,e^{-kt}\)</td></tr>
+        <tr><td class="field">地球科學</td><td class="field">大氣壓力隨高度</td><td>\(P(h)=P_0e^{-\frac{Mgh}{RT}}\)</td></tr>
+        <tr><td class="field">微生物學</td><td class="field">細菌分裂繁殖</td><td>\(N(t)=N_0e^{rt}\)</td></tr>
+        <tr><td class="field">電子學</td><td class="field">電容放電</td><td>\(V(t)=V_0e^{-t/RC}\)</td></tr>
+        <tr><td class="field">波動物理</td><td class="field">聲波 / 地震波衰減</td><td>\(A(x)=A_0e^{-\alpha x}\)</td></tr>
+        <tr><td class="field">化學動力學</td><td class="field">一階反應</td><td>\([A]_t=[A]_0\,e^{-kt}\)</td></tr>
+        <tr><td class="field">金融 / 理財</td><td class="field">連續複利下的本金成長</td><td>\(A(t)=A_0\,e^{rt}\)</td></tr>
+        <tr><td class="field">生態學</td><td class="field">無限制人口增長</td><td>\(P(t)=P_0e^{rt}\)</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>看出來了嗎?這十二個現象，全長同一個樣子：某個量乘上 \(e\) 的次方。同一個 \(e\)、同一個結構，反覆出現在量子物理、生命科學、化學、地科、金融乃至社會學這些毫不相干的領域。這不是巧合——它在強烈暗示：這些現象底層共用同一條方程式。下一節，我們把它寫出來。</p>
+  </section>
+
+  <hr class="div">
+
+  <section id="s2">
+    <h2 class="sec"><span class="no">§1.2</span>把萬物濃縮成一行方程式</h2>
+    <p>用 \(y\) 代表某現象此刻的「總量／濃度／強度」，\(t\) 代表時間，\(\dfrac{dy}{dt}\) 代表「\(y\) 隨 \(t\) 的瞬間變化率」(這符號的精確意義 §1.3 講清楚，先當它是「變化速度」)。「變化速度與現有總量成正比」寫成符號就是：</p>
+    <div class="keyeq">
+      <div class="cap">大自然的核心方程式（主方程）</div>
+      $$\frac{dy}{dt}=k\,y$$
+    </div>
+    <p>\(k\) 由物理條件決定：\(k\gt 0\) 是越長越快(細菌、疫情)，\(k\lt 0\) 是越剩越少(衰變、冷卻)。這叫<em class="term">微分方程</em>——方程式裡含有變化率。它的白話是：「系統下一瞬間往哪走、走多快，完全且唯一由它此刻累積了多少決定。」整個第一部，就在回答一個問題：<strong>到底什麼樣的函數 \(y=f(t)\)，會滿足「自己的變化率等於自己的 \(k\) 倍」?</strong></p>
+    <div class="box history">
+      <div class="label">◷ 歷史現場：一套符號的勝利</div>
+      <p style="margin:0"><span class="who">牛頓 vs 萊布尼茲，十七世紀末</span>　\(\dfrac{dy}{dt}\) 這個優雅的符號，出自微積分共同發明人之一的萊布尼茲(Leibniz)。他與牛頓(Newton)幾乎同時、卻各自獨立創立了微積分，隨後兩派人馬為了「誰先發明」隔海論戰數十年，是科學史上最著名的優先權之爭。牛頓的記號笨重(用點表示變化率)，萊布尼茲的 \(\dfrac{dy}{dt}\) 卻把「微小的 \(y\) 變化除以微小的 \(t\) 變化」這個想法直接寫在臉上。結果是：雖然英國因為力挺牛頓而沿用了牛頓記號、數學發展反而落後歐陸近百年，<strong>萊布尼茲的符號最終勝出，沿用至今三百年不變</strong>——它讓「變化」第一次有了可以書寫的語言。</p>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section id="s3">
+    <h2 class="sec"><span class="no">§1.3</span>變化率到底是什麼</h2>
+    <p class="lead">這節是全書地基。弄懂它，後面所有推導都會變簡單。</p>
+    <h3>從「平均速度」到「瞬間速度」</h3>
+    <p>設某量是時間的函數 \(f(t)\)。在 \(t\) 到 \(t+h\) 這段「長度為 \(h\) 的時間」內，它從 \(f(t)\) 變成 \(f(t+h)\)。這段時間的<strong>平均變化率</strong>就是「變化量 ÷ 時間長度」：</p>
+    $$\text{平均變化率}=\frac{f(t+h)-f(t)}{h}$$
+    <p>但這只是「一段時間的平均」。我們要的是「就在 \(t\) 這一瞬間」的速度。辦法是把時間窗 \(h\) 不斷縮小、縮到趨近 0。這個「讓 \(h\) 無限趨近 0」寫成 \(\displaystyle\lim_{h\to 0}\)。於是瞬間變化率定義為：</p>
+    <div class="keyeq">
+      <div class="cap">導數（瞬間變化率）的定義</div>
+      $$f'(t)=\frac{dy}{dt}=\lim_{h\to 0}\frac{f(t+h)-f(t)}{h}$$
+    </div>
+    <p>這個 \(f'(t)\) 叫 \(f\) 的<em class="term">導數</em>，有兩個一模一樣的意思：<strong>變化的觀點</strong>是瞬間變化速度;<strong>幾何的觀點</strong>是函數圖形在該點<strong>切線的斜率</strong>。下圖說明為何兩者相同：</p>
+    <figure class="figcard">
+      <svg viewBox="0 0 620 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="割線趨近切線">
+        <line x1="60" y1="250" x2="590" y2="250" stroke="#b9ad94" stroke-width="1.5"/>
+        <line x1="80" y1="30" x2="80" y2="270" stroke="#b9ad94" stroke-width="1.5"/>
+        <text x="595" y="255" font-size="13" fill="#6b6453" font-style="italic">t</text>
+        <text x="64" y="28" font-size="13" fill="#6b6453" font-style="italic">y</text>
+        <path d="M90,245 Q300,235 430,150 T560,55" fill="none" stroke="#0f5f59" stroke-width="3"/>
+        <line x1="250" y1="206" x2="520" y2="78" stroke="#b1701f" stroke-width="2" stroke-dasharray="6 5" opacity=".75"/>
+        <line x1="170" y1="255" x2="360" y2="180" stroke="#b1701f" stroke-width="2.5"/>
+        <circle cx="250" cy="206" r="5.5" fill="#23211c"/><text x="232" y="198" font-size="13">P</text>
+        <circle cx="520" cy="78" r="5.5" fill="#23211c"/><text x="528" y="74" font-size="13">Q</text>
+        <line x1="250" y1="262" x2="520" y2="262" stroke="#6b6453" stroke-width="1"/>
+        <text x="375" y="280" font-size="13" fill="#6b6453" text-anchor="middle">時間窗 h（讓它 → 0，Q 滑向 P）</text>
+        <text x="208" y="160" font-size="12.5" fill="#b1701f">割線</text>
+        <text x="300" y="220" font-size="12.5" fill="#b1701f">切線</text>
+      </svg>
+      <figcaption>連接 P、Q 的割線斜率是那段時間的平均變化率;當 \(h\to 0\)，Q 滑向 P，割線變成 P 點的切線——切線斜率正是瞬間變化率 \(f'\)。</figcaption>
+    </figure>
+    <h3>動手算一次：用數字感受極限</h3>
+    <p>仿照費曼「親手算」的精神，拿 \(f(t)=t^2\) 在 \(t=3\) 試試，把 \(h\) 越縮越小：</p>
+    <div class="tbl-wrap">
+    <table>
+      <caption>表 2｜\(f(t)=t^2\) 在 \(t=3\) 的平均變化率（\(f(3)=9\)）</caption>
+      <thead><tr><th>\(h\)</th><th>\((3+h)^2\)</th><th>\(\dfrac{(3+h)^2-9}{h}\)</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>16</td><td>7</td></tr>
+        <tr><td>0.1</td><td>9.61</td><td>6.1</td></tr>
+        <tr><td>0.01</td><td>9.0601</td><td>6.01</td></tr>
+        <tr><td>0.001</td><td>9.006001</td><td>6.001</td></tr>
+        <tr><td>→ 0</td><td>→ 9</td><td class="hot">→ 6</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>數字收斂到 \(6=2\times3\)。下一節我們會用純代數證明 \(f'(t)=2t\);這張表只是先讓你親眼看見極限真的會收斂。</p>
+  </section>
+
+  <hr class="div">
+
+  <section id="s4">
+    <h2 class="sec"><span class="no">§1.4</span>偵探任務：找一個「斜率＝高度」的函數</h2>
+    <p>回到主方程，先把 \(k=1\) 設成最簡單，要找的函數就滿足 \(f'(x)=f(x)\)。幾何上：這函數圖形上<strong>任何一點的切線斜率，都恰好等於那一點的高度（\(y\) 值）</strong>。高度 100 處斜率就是 100。</p>
+    <figure class="figcard">
+      <svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="斜率等於高度">
+        <line x1="50" y1="210" x2="570" y2="210" stroke="#b9ad94" stroke-width="1.5"/>
+        <line x1="70" y1="20" x2="70" y2="228" stroke="#b9ad94" stroke-width="1.5"/>
+        <path d="M80,206 Q280,198 400,130 T540,30" fill="none" stroke="#0f5f59" stroke-width="3"/>
+        <line x1="320" y1="210" x2="320" y2="172" stroke="#b1701f" stroke-width="2"/>
+        <circle cx="320" cy="172" r="5" fill="#23211c"/>
+        <text x="300" y="230" font-size="12.5" fill="#b1701f" text-anchor="middle">高度 = y</text>
+        <line x1="250" y1="200" x2="392" y2="143" stroke="#b1701f" stroke-width="2.5"/>
+        <text x="400" y="148" font-size="12.5" fill="#b1701f">切線斜率 = y</text>
+      </svg>
+      <figcaption>我們要找的「完美函數」：每一點，切線的陡峭程度都剛好等於該點的高度。</figcaption>
+    </figure>
+    <p>沒有現成答案，就像偵探把候選函數一個個抓來審問。</p>
+    <h3>嫌疑犯一：多項式（不在場，無罪）</h3>
+    <p>審 \(f(x)=x^2\)。用定義硬算：</p>
+    $$f'(x)=\lim_{h\to 0}\frac{(x+h)^2-x^2}{h}=\lim_{h\to 0}\frac{2xh+h^2}{h}=\lim_{h\to 0}(2x+h)=2x$$
+    <p>(驗證了表 2。)但 \(f'(x)=2x\neq x^2=f(x)\)。每微分一次，最高次數就掉一階，多項式註定「越微分越矮」，不可能微分後還等於自己。整族出局。</p>
+    <h3>嫌疑犯二：三角函數（差一步）</h3>
+    <p>審 \(f(x)=\sin x\)。其導數 \(f'(x)=\cos x\)(§2.4 會嚴格證出)。\(\cos x\) 是把 \(\sin x\) 平移 90°，數值處處對不上：\(\dfrac{d}{dx}\sin x=\cos x\neq\sin x\)。不合格，但先記著——第二部它會華麗回歸。</p>
+    <h3>嫌疑犯三：指數函數（最大嫌疑）</h3>
+    <p>審 \(f(x)=a^x\)。它有個和主方程氣味相同的靈魂：<strong>每往前走固定的一步，整個數值就乘上固定的倍數</strong>(例如 \(2^x\) 每 \(+1\) 就翻倍)。「現在越大、下一步增加的絕對量也越大」——這正是 \(\dfrac{dy}{dt}\propto y\)。直覺對了，下一節把它抓進審訊室。</p>
+  </section>
+
+  <hr class="div">
+
+  <section id="s5">
+    <h2 class="sec"><span class="no">§1.5</span>指數函數導數的關鍵推導</h2>
+    <p>把 \(f(x)=a^x\) 代進導數定義：</p>
+    $$f'(x)=\lim_{h\to 0}\frac{a^{x+h}-a^{x}}{h}$$
+    <p><strong>第一步——用指數律拆開。</strong>\(a^{x+h}=a^{x}\cdot a^{h}\)，提出公因式 \(a^x\)：</p>
+    $$f'(x)=\lim_{h\to 0}\frac{a^{x}\!\left(a^{h}-1\right)}{h}$$
+    <p><strong>第二步——把與 \(h\) 無關的搬出極限。</strong>極限是對 \(h\to0\) 取的，而 \(a^x\) 裡完全沒有 \(h\)，所以它對極限只是常數，可以提出去：</p>
+    <div class="keyeq">
+      <div class="cap">指數函數導數的通式</div>
+      $$f'(x)=a^{x}\cdot\underbrace{\lim_{h\to 0}\frac{a^{h}-1}{h}}_{\textstyle L(a)}$$
+    </div>
+    <div class="box intuition">
+      <div class="label">▸ 偵探的重大發現</div>
+      <p style="margin:0">任何指數函數 \(a^x\) 的導數，<strong>都等於它自己再乘上一個常數 \(L(a)\)</strong>，即 \(f'(x)=L(a)\cdot f(x)\)。所以指數函數<strong>天生滿足 \(\dfrac{dy}{dx}\propto y\)</strong>——它正是主方程的解!只剩一個問題：那個比例常數 \(L(a)\) 等於多少?</p>
+    </div>
+    <p>把它單獨命名 \(L(a)=\displaystyle\lim_{h\to0}\frac{a^h-1}{h}\)。它只跟底數 \(a\) 有關。我們的任務變得超具體：<strong>找一個底數 \(a\) 使 \(L(a)=1\)</strong>，那時 \(f'(x)=1\cdot a^x=a^x=f(x)\)，破案!</p>
+  </section>
+
+  <hr class="div">
+
+  <section id="s6">
+    <h2 class="sec"><span class="no">§1.6</span>費曼的數值實驗</h2>
+    <p>\(L(a)\) 沒辦法一眼看出，那就動手算，把 \(h\) 一格格縮小看它收斂到哪。</p>
+    <div class="tbl-wrap">
+    <table>
+      <caption>表 3｜\(L(2)\) 與 \(L(3)\) 的數值收斂</caption>
+      <thead><tr><th>\(h\)</th><th>\(\dfrac{2^h-1}{h}\)</th><th>\(\dfrac{3^h-1}{h}\)</th></tr></thead>
+      <tbody>
+        <tr><td>0.1</td><td>0.7177</td><td>1.1612</td></tr>
+        <tr><td>0.01</td><td>0.6956</td><td>1.1047</td></tr>
+        <tr><td>0.001</td><td>0.6934</td><td>1.0992</td></tr>
+        <tr><td>→ 0</td><td class="hot">→ 0.6931（&lt;1）</td><td class="hot">→ 1.0986（&gt;1）</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>\(L(2)\approx0.69\lt1\)(\(2^x\) 斜率「不夠陡」)，\(L(3)\approx1.10\gt1\)(\(3^x\) 斜率「太陡」)。\(L(a)\) 隨 \(a\) 由小變大、從小於 1 連續爬到大於 1。根據<em class="term">中間值定理</em>(一條連續的線要從 0.69 爬到 1.10，途中必然剛好經過 1)，在 2 與 3 之間<strong>必定存在唯一一個底數使 \(L(a)=1\)</strong>。我們就叫它 \(e\)。</p>
+    <figure class="figcard">
+      <svg viewBox="0 0 600 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="中間值定理">
+        <line x1="60" y1="190" x2="560" y2="190" stroke="#b9ad94" stroke-width="1.5"/>
+        <line x1="90" y1="25" x2="90" y2="208" stroke="#b9ad94" stroke-width="1.5"/>
+        <text x="565" y="195" font-size="13" fill="#6b6453" font-style="italic">a</text>
+        <text x="60" y="24" font-size="13" fill="#6b6453">L(a)</text>
+        <line x1="90" y1="112" x2="560" y2="112" stroke="#b1701f" stroke-width="1.5" stroke-dasharray="6 5"/>
+        <text x="64" y="116" font-size="12" fill="#b1701f">1</text>
+        <path d="M120,175 Q260,155 330,112 T540,52" fill="none" stroke="#0f5f59" stroke-width="3"/>
+        <circle cx="230" cy="142" r="5" fill="#23211c"/><text x="218" y="162" font-size="12">a=2</text>
+        <circle cx="400" cy="86" r="5" fill="#23211c"/><text x="392" y="78" font-size="12">a=3</text>
+        <circle cx="330" cy="112" r="6" fill="#b1701f"/><text x="320" y="100" font-size="13" fill="#b1701f" font-style="italic">a = e</text>
+      </svg>
+      <figcaption>\(L(a)\) 從 \(a=2\)（虛線下）連續爬到 \(a=3\)（虛線上），必在中間某處穿過 \(L=1\)。穿過的那一點就叫 \(e\)。</figcaption>
+    </figure>
+  </section>
+
+  <hr class="div">
+
+  <section id="s7">
+    <h2 class="sec"><span class="no">§1.7</span>e 的誕生，與對數的真面目</h2>
+    <p>把那個完美底數正式命名為 \(e\)，它的<strong>定義</strong>就是「使 \(L=1\) 的底數」：</p>
+    <div class="keyeq">
+      <div class="cap">自然常數 e 的定義性質</div>
+      $$L(e)=\lim_{h\to 0}\frac{e^{h}-1}{h}=1$$
+    </div>
+    <p>把 \(L(e)=1\) 代回 §1.5 通式，奇蹟發生：</p>
+    <div class="keyeq">
+      <div class="cap">微積分裡最重要的一條等式</div>
+      $$\frac{d}{dx}\,e^{x}=e^{x}\cdot L(e)=e^{x}\cdot 1=e^{x}$$
+    </div>
+    <p>找到了!\(y=e^x\) 就是「微分後等於自己」的完美函數，是「斜率永遠等於高度」的唯一函數，是微分這個動作底下唯一不動的「定點」。</p>
+
+    <h3>附帶的大收穫：對數的真面目</h3>
+    <p>我們替 \(e\) 量身打造了 \(L(e)=1\)，那對別的底數 \(a\)，\(L(a)\) 是什麼?要回答，得先把「對數」說清楚：所謂 \(a\) 的<strong>自然對數 \(\ln a\)</strong>，意思就是「要把 \(e\) 的幾次方才會得到 \(a\)」，即 \(e^{\ln a}=a\)。換句話說，\(\ln\) 是 \(e^x\) 的反向操作。有了它，把任何底數改寫成以 \(e\) 為底：\(a^{h}=\left(e^{\ln a}\right)^{h}=e^{\,h\ln a}\)。代進 \(L(a)\)：</p>
+    $$L(a)=\lim_{h\to 0}\frac{a^{h}-1}{h}=\lim_{h\to 0}\frac{e^{\,h\ln a}-1}{h}$$
+    <p>令 \(u=h\ln a\)(當 \(h\to0\) 時 \(u\to0\)，且 \(h=\dfrac{u}{\ln a}\))：</p>
+    $$L(a)=\lim_{u\to 0}\frac{e^{u}-1}{\,u/\ln a\,}=\ln a\cdot\lim_{u\to 0}\frac{e^{u}-1}{u}=\ln a\cdot 1=\ln a$$
+    <p>那個一路糾纏我們的神祕常數 \(L(a)\)，真面目竟然就是對數：</p>
+    <div class="keyeq">
+      <div class="cap">指數、對數、微積分，在這一行碰頭</div>
+      $$\frac{d}{dx}\,a^{x}=a^{x}\,\ln a\qquad\Big(\text{即 }L(a)=\ln a\Big)$$
+    </div>
+    <p>\(\ln a\) 不是憑空發明的符號，它就是「以 \(a\) 為底的指數函數，相對於自己的成長率」。拿這把尺回驗表 3：\(\ln2\approx0.69\)、\(\ln3\approx1.10\)，而 \(\ln e=1\)——\(e\) 之所以特別，正因它的成長率剛好是 1，不快不慢。</p>
+    <div class="box history">
+      <div class="label">◷ 歷史現場：對數的血緣，是如何被看清的</div>
+      <p style="margin:0 0 10px"><span class="who">納皮爾，1614</span>　對數其實比微積分更早出生。蘇格蘭貴族納皮爾(John Napier)花了二十年造對數表，目的很實際：當年天文與航海要把巨大數字相乘，慢又易錯;對數能把「乘法變加法」，計算量瞬間銳減，據說讓天文學家「壽命延長了一倍」。但他完全不知道，自己摸到的東西骨子裡竟是「指數的反操作」、是「成長率」。</p>
+      <p style="margin:0 0 8px"><span class="who">這層血緣後來是怎麼被看清的?分三步：</span></p>
+      <p style="margin:0 0 8px">① <strong>1647，聖文森的純幾何證明。</strong>比利時耶穌會數學家聖文森(Grégoire de Saint-Vincent)在《幾何著作》中，用類似阿基米德的窮竭法嚴格證明：雙曲線 \(y=\tfrac1x\) 底下，當橫座標成<strong>等比數列</strong>時，對應的面積<strong>相等</strong>。但他只當它是一項幾何成就，<strong>沒有</strong>把它和當時已問世的對數連起來。</p>
+      <p style="margin:0 0 8px">② <strong>1649，薩拉薩搭起橋樑。</strong>兩年後，他的學生薩拉薩(de Sarasa)為回應梅森(Mersenne)的挑戰，看穿這片面積具有「把乘法變加法」的性質——面積 \((1\!\to\!ab)=\) 面積 \((1\!\to\!a)+\) 面積 \((1\!\to\!b)\)。對數第一次從航海計算工具，<strong>昇華</strong>為與「面積、累積、變化」掛鉤的分析對象。</p>
+      <p style="margin:0 0 8px">③ <strong>1668，墨卡托的命名與級數。</strong>墨卡托(Mercator)在《對數技術》(Logarithmotechnia)中，給出了 \(\ln(1+x)=x-\tfrac{x^2}{2}+\tfrac{x^3}{3}-\cdots\) 的無窮級數(今稱墨卡托級數)，讓對數能用代數快速計算;他並首度使用<strong>「自然對數」</strong>一詞，專指以 \(e\) 為隱含底數、與雙曲線面積對應的對數。</p>
+      <p style="margin:0">④ <strong>十八世紀，歐拉收網。</strong>歐拉(Euler)把一切串起來：他證明那條曲線下的面積，正是以 \(e\) 為底的對數;也就是 \(\ln\) 是 \(e^x\) 的反操作，且 \(\dfrac{d}{dx}\ln x=\dfrac1x\)。納皮爾埋下的種子，整整過了一百多年，才被認出它與 \(e\) 是同一棵樹——正是我們上面三行推出的 \(L(a)=\ln a\)。</p>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section id="s8">
+    <h2 class="sec"><span class="no">§1.8</span>反推 e 的數值：白努利的複利</h2>
+    <p>我們知道 \(e\) 卡在 2、3 之間，卻還不知它的數值。從定義性質出發：當 \(h\) 很小，\(\dfrac{e^h-1}{h}\approx1\)。</p>
+    <p><strong>第一步</strong>把分母乘過去：\(e^{h}-1\approx h\)。<strong>第二步</strong>移項：\(e^{h}\approx 1+h\)。<strong>第三步</strong>兩邊取 \(\tfrac1h\) 次方，把指數上的 \(h\) 消掉(左邊 \(\left(e^h\right)^{1/h}=e\))：</p>
+    $$e\approx (1+h)^{\frac{1}{h}}\quad\xrightarrow{\;\text{加上極限}\;}\quad e=\lim_{h\to 0}(1+h)^{\frac{1}{h}}$$
+    <p><strong>第四步</strong>換個眼熟的長相：令 \(n=\dfrac1h\)，當 \(h\to0^+\) 則 \(n\to\infty\)，且 \(h=\dfrac1n\)：</p>
+    <div class="keyeq">
+      <div class="cap">e 的極限定義 ＝ 連續複利公式</div>
+      $$e=\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^{n}$$
+    </div>
+    <div class="tbl-wrap">
+    <table>
+      <caption>表 4｜\(\left(1+\tfrac1n\right)^n\) 的收斂</caption>
+      <thead><tr><th>\(n\)</th><th>1</th><th>2</th><th>10</th><th>100</th><th>1000</th><th>→ ∞</th></tr></thead>
+      <tbody><tr><td>值</td><td>2</td><td>2.25</td><td>2.5937</td><td>2.7048</td><td>2.7169</td><td class="hot">2.71828…</td></tr></tbody>
+    </table>
+    </div>
+    <div class="box history">
+      <div class="label">◷ 歷史現場：一個算不出來的數，如何被馴服</div>
+      <p style="margin:0 0 10px"><span class="who">白努利，1683</span>　這條極限最早是雅各布·白努利(Jacob Bernoulli)研究「連續複利」時撞見的：本金 1 元、年利率 100%、一年複利 \(n\) 次，當 \(n\to\infty\)，本利和會趨近一個固定數字。他算得出它卡在 2 與 3 之間，卻<strong>算不出它到底是多少</strong>，只能擱著。</p>
+      <p style="margin:0 0 10px"><span class="who">歐拉，十八世紀</span>　半世紀後，歐拉(Leonhard Euler)接手，做了三件事，把這個數徹底馴服：</p>
+      <p style="margin:0 0 8px">① <strong>給它名字。</strong>歐拉在一封信裡用字母 \(e\) 稱呼它(可能取 exponential 的字首)，這個記號從此通用。</p>
+      <p style="margin:0 0 8px">② <strong>算出它的值。</strong>他不靠龜速的 \((1+\tfrac1n)^n\)，而改用收斂飛快的級數 \(e=1+\tfrac1{1!}+\tfrac1{2!}+\tfrac1{3!}+\cdots\)，一口氣算到小數點後十幾位：\(2.718281828\ldots\)</p>
+      <p style="margin:0">③ <strong>看穿它的本性。</strong>歐拉證明 \(e\) 是<strong>無理數</strong>(小數永不循環);一百多年後埃爾米特(Hermite, 1873)更證明它是<strong>超越數</strong>(不是任何整係數方程式的根)。所以 \(e\) 既是大自然「連續變化」的語言，也是金融「連續複利」的極限——同一個數，兩個世界，一個來源。</p>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section id="s9">
+    <h2 class="sec"><span class="no">§1.9</span>自然界的 e：把現象一個個看清楚</h2>
+    <p>§1.7 解的是最單純的 \(k=1\)。真實世界的 \(k\) 可以是任何數，要處理一般的 \(\dfrac{dy}{dt}=ky\)。先補一個結果：對 \(e^{kt}\) 微分。</p>
+    $$\frac{d}{dt}e^{kt}=\lim_{h\to0}\frac{e^{kt}(e^{kh}-1)}{h}=e^{kt}\lim_{h\to0}\frac{e^{kh}-1}{h}\;\xrightarrow{\,u=kh\,}\;e^{kt}\cdot k\cdot 1=k\,e^{kt}$$
+    <p>於是宣稱解是 \(y=y_0e^{kt}\)(代 \(t=0\) 得 \(y_0\))。微分驗證 \(\dfrac{dy}{dt}=y_0\cdot ke^{kt}=k\,y\ \checkmark\)。</p>
+    <div class="keyeq">
+      <div class="cap">第一部的萬能鑰匙</div>
+      $$\frac{dy}{dt}=k\,y\quad\Longrightarrow\quad y=y_0\,e^{kt}$$
+    </div>
+    <p>現在，回頭把 §1.1 表格裡那些現象<strong>一個一個看清楚</strong>。你會發現它們不是十二個各自獨立的公式，而是同一把鑰匙開的十二道門。「自然界的 \(e\)」這句話，從這裡開始變得具體。</p>
+
+    <h3>衰減家族（越剩越少）</h3>
+    <p style="color:var(--ink-soft);font-size:15px">小提醒：這裡沿用物理慣例，把<strong>衰減常數 \(k\) 取正值</strong>、在式子裡<strong>顯式加上負號</strong>(如 \(-kN\))。它對應的，正是 §1.2 通則 \(\dot y=ky\) 中 \(k<0\) 的衰減情形——只是把負號提到了前面，代入通解時 \(N=N_0e^{-kt}\)(指數上的 \(k\) 已是正值)。</p>
+    <p><strong>放射性衰變。</strong>單一原子核何時衰變純屬隨機，但宏觀樣本裡，每單位時間衰變的核數正比於現有核數 \(N\)：</p>
+    $$\frac{dN}{dt}=-kN\;\Longrightarrow\;N=N_0e^{-kt}$$
+    <p><strong>牛頓冷卻(你的那杯咖啡)。</strong>咖啡降溫的速度，不是固定的，而是正比於它和室溫的<strong>溫差</strong> \(\Delta T\)：剛端上來最燙、降得最快，越接近室溫越慢。</p>
+    $$\frac{d(\Delta T)}{dt}=-k\,\Delta T\;\Longrightarrow\;\Delta T=\Delta T_0\,e^{-kt}$$
+    <p>(法醫就是反過來用它：量屍體剩下的溫差，回推死亡時間。)</p>
+    <p><strong>藥物代謝。</strong>肝腎每分鐘過濾固定體積的血液，所以排出的藥量正比於血中濃度 \(C\)：</p>
+    $$\frac{dC}{dt}=-kC\;\Longrightarrow\;C=C_0e^{-kt}$$
+    <p><strong>光線穿透(比爾–朗伯定律)。</strong>這個的「時間」換成「深度」\(x\)：光每往下一公尺，被吸收的量正比於當下還剩的光強 \(I\)，於是深海迅速陷入漆黑：</p>
+    $$\frac{dI}{dx}=-\alpha I\;\Longrightarrow\;I=I_0e^{-\alpha x}$$
+    <p><strong>電容放電。</strong>電容存的電荷越多、電壓 \(V\) 越高，放電電流就越大，於是電壓正比於自己地往下掉：</p>
+    $$\frac{dV}{dt}=-\frac{1}{RC}\,V\;\Longrightarrow\;V=V_0e^{-t/RC}$$
+
+    <h3>成長家族（\(k\gt 0\)：越多越快）</h3>
+    <p><strong>細菌分裂。</strong>養分無限時，每個細菌都會分裂，所以新生數正比於現有總數 \(N\)：</p>
+    $$\frac{dN}{dt}=rN\;\Longrightarrow\;N=N_0e^{rt}$$
+    <p><strong>疫情初期。</strong>免疫力尚未建立時，每個感染者以固定機率傳染他人，現存感染數 \(I\) 越多、每日新增越多——這就是初期的指數爆發：</p>
+    $$\frac{dI}{dt}=kI\;\Longrightarrow\;I=I_0e^{kt}$$
+    <p><strong>連續複利(白努利的那筆錢)。</strong>利息正比於本金 \(A\)，而利息又滾入本金：這正是 §1.8 逼出 \(e\) 的那條式子的真身。</p>
+    $$\frac{dA}{dt}=rA\;\Longrightarrow\;A=A_0e^{rt}$$
+    <p><strong>馬爾薩斯人口。</strong>沒有資源限制時，每個健康個體都是繁衍單位，淨增長正比於總人口 \(P\)：</p>
+    $$\frac{dP}{dt}=rP\;\Longrightarrow\;P=P_0e^{rt}$$
+
+    <div class="box intuition">
+      <div class="label">▸ 看清楚了嗎?</div>
+      <p style="margin:0">咖啡、鈾礦、細菌、深海的光、你的存款——表面毫無關係，骨架卻完全相同：<strong>變化率 \(=k\times\) 現有量</strong>，解一律是 \(y_0e^{kt}\)。差別只在 \(k\) 的正負(生或滅)與大小(快或慢)。這就是「自然界的 \(e\)」：它不是課本裡要背的怪數字，而是大自然描述「變化」時，唯一會用的字母。</p>
+    </div>
+
+    <h3>對數的回馬槍：半衰期與倍增時間</h3>
+    <p>有了這些解，自然會問：衰變到剩一半要多久?設 \(N=\tfrac12N_0\)：</p>
+    $$N_0e^{-kt_{1/2}}=\tfrac12N_0\;\Longrightarrow\;e^{-kt_{1/2}}=\tfrac12$$
+    <p>\(t\) 被困在指數上，這正是對數的天職——兩邊取 \(\ln\)(因 \(\ln e^{x}=x\))：</p>
+    $$-k\,t_{1/2}=\ln\tfrac12=-\ln2\;\Longrightarrow\;\boxed{\,t_{1/2}=\dfrac{\ln 2}{k}\,}$$
+    <p>對稱地，成長家族的「倍增時間」(細菌翻倍、本金翻倍、人口翻倍)是 \(t_{\text{double}}=\dfrac{\ln 2}{r}\)。這就是為什麼 \(\ln2\approx0.693\) 出現在每一本講放射性定年、藥物半衰期、甚至理財「72 法則」的書裡。短短一條推導，同時動用了指數(現象)、微積分(解出 \(e^{-kt}\))、對數(把時間從指數上拉下來)——在真實問題裡，它們本來就綁在一起用。</p>
+  </section>
+
+  <!-- ===================== Part 2 ===================== -->
+  <div class="part-divider"><div class="pp">第 二 部</div><div class="pt">當數學長出 <span style="font-style:italic;color:var(--amber)">i</span> 翅膀</div><div style="font-family:var(--serif);font-style:italic;color:var(--ink-soft);font-size:15px;margin-top:4px">就是這個 i，把 e 變成了歐拉公式</div></div>
+
+  <section id="s10">
+    <h2 class="sec"><span class="no">§2.1</span>虛數的身世與複數平面</h2>
+    <p>第一部處理「單向增長／衰減」。但大自然還有一大類現象是<strong>「來回振盪」</strong>：彈簧、交流電壓、光波、量子波函數……要描寫振盪，得把數系從一條實數線，擴展成一整個<em class="term">複數平面</em>。</p>
+    <div class="box history">
+      <div class="label">◷ 歷史現場：一個被鄙視的數，花了快三百年翻身</div>
+      <p style="margin:0 0 10px"><span class="who">卡丹諾 1545 → 邦貝利 1572 → 笛卡兒 1637</span>　義大利人卡丹諾(Cardano)解三次方程時，被迫在算式中途寫下「負數的平方根」——當時看來純屬荒謬，他自己也稱之為「詭辯」。邦貝利(Bombelli)硬著頭皮替它訂出運算規則，發現只要中途容忍它，最後竟能算出正確的實數答案。但笛卡兒(Descartes)仍嫌它虛無縹緲，輕蔑地稱之為<strong>「虛數」(imaginary)</strong>——這個帶貶意的名字一用就是幾百年，害後世無數學生以為它是「假的」。</p>
+      <p style="margin:0 0 8px"><span class="who">那它後來是怎麼「變成真的」的?關鍵是兩件事：</span></p>
+      <p style="margin:0 0 8px">① <strong>1799–1831，給它一個「住的地方」。</strong>威塞爾(Wessel)、阿爾岡(Argand)、特別是高斯(Gauss)指出：如果把實數畫成一條橫線，那 \(i\) 就住在<strong>垂直的那個方向</strong>。乘以 \(i\) 不是魔術，而是「旋轉 90°」(下圖)。一旦有了這張<strong>複數平面</strong>，\(i\) 就和地圖上的「往北一步」一樣具體。高斯感嘆：要是當初把這些數叫做<strong>「側向數」</strong>而非「虛數」，根本不會有人覺得它神祕。</p>
+      <p style="margin:0">② <strong>1833–1837，把它從哲學變成代數。</strong>漢米爾頓(Hamilton)更進一步：他在 1833 年向愛爾蘭皇家科學院提出，乾脆把複數<strong>定義</strong>成一對實數 \((a,b)\)，並規定它們怎麼加、怎麼乘(乘法律給出 \((0,1)\times(0,1)=(-1,0)\)，這正是 \(i^2=-1\));1835 年受康德啟發、寫成〈作為純粹時間科學的代數〉，1837 年正式發表完整理論。如此一來，\(i\) 完全不需要「相信它存在」——它只是一組講好規則的實數對而已。神祕感至此徹底蒸發。下面，我們就來看高斯說的「側向」是什麼意思。</p>
+    </div>
+    <h3>虛數單位與複數平面</h3>
+    <p>實數裡沒有數的平方是負數，於是定義新數 \(i\)：</p>
+    $$i=\sqrt{-1}\qquad\text{亦即}\qquad i^{2}=-1$$
+    <p>這個 \(i^2=-1\) 待會是引爆所有奇蹟的雷管，務必記牢。一個複數寫成 \(z=x+iy\)，畫成平面上的點 \((x,y)\)：橫軸是實部、縱軸是虛部。每個複數都是一個<strong>位置向量</strong>。</p>
+    <h3>最關鍵的一招：乘以 i ＝ 逆時針轉 90°</h3>
+    <p>檢查「乘以 \(i\)」對向量做了什麼。拿橫軸上的 \(1\) 連乘 \(i\)：</p>
+    $$1\;\xrightarrow{\times i}\;i\;\xrightarrow{\times i}\;i^{2}=-1\;\xrightarrow{\times i}\;-i\;\xrightarrow{\times i}\;-i^{2}=1$$
+    <figure class="figcard">
+      <svg viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="乘以i等於旋轉90度">
+        <defs><marker id="rot1" markerWidth="9" markerHeight="9" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#b1701f"/></marker></defs>
+        <line x1="40" y1="150" x2="340" y2="150" stroke="#b9ad94" stroke-width="1.5"/>
+        <line x1="190" y1="30" x2="190" y2="270" stroke="#b9ad94" stroke-width="1.5"/>
+        <text x="330" y="168" font-size="12" fill="#6b6453">實</text>
+        <text x="198" y="42" font-size="12" fill="#6b6453">虛</text>
+        <g stroke="#0f5f59" stroke-width="2.5" fill="none">
+          <line x1="190" y1="150" x2="300" y2="150"/><line x1="190" y1="150" x2="190" y2="50"/>
+          <line x1="190" y1="150" x2="80" y2="150"/><line x1="190" y1="150" x2="190" y2="250"/>
+        </g>
+        <circle cx="300" cy="150" r="4" fill="#23211c"/><text x="300" y="142" font-size="13">1</text>
+        <circle cx="190" cy="50" r="4" fill="#b1701f"/><text x="198" y="52" font-size="13" fill="#b1701f" font-style="italic">i</text>
+        <circle cx="80" cy="150" r="4" fill="#23211c"/><text x="60" y="142" font-size="13">−1</text>
+        <circle cx="190" cy="250" r="4" fill="#23211c"/><text x="198" y="262" font-size="13">−i</text>
+        <path d="M278,124 A42 42 0 0 0 214 70" fill="none" stroke="#b1701f" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#rot1)"/>
+        <text x="236" y="96" font-size="12" fill="#b1701f">×i：轉90°</text>
+      </svg>
+      <figcaption>乘以實數是「拉長／縮短」;乘以虛數 \(i\) 則是把向量<strong>逆時針旋轉 90°</strong>。虛數的本質，就是「旋轉」。</figcaption>
+    </figure>
+  </section>
+
+  <hr class="div">
+
+  <section id="s11">
+    <h2 class="sec"><span class="no">§2.2</span>把 k 換成 i：一條方程式的震撼</h2>
+    <p>做一件大膽的事：把主方程 \(\dfrac{dy}{dt}=ky\) 裡的實數 \(k\) 換成純虛數 \(i\)：</p>
+    <div class="keyeq"><div class="cap">振盪世界的主方程</div>$$\frac{dy}{dt}=i\,y$$</div>
+    <p>逐字翻譯(\(y\) 現在是複數平面上的動點)：</p>
+    <ol class="steps">
+      <li>\(y\) 是動點此刻的<b>位置向量</b>。</li>
+      <li>\(\dfrac{dy}{dt}\) 是它的<b>速度向量</b>。</li>
+      <li>方程式說：速度 \(=i\times\) 位置，而乘 \(i\) 就是轉 90°，所以<strong>速度永遠垂直於位置</strong>。</li>
+    </ol>
+    <p>「速度永遠垂直於位置」的運動，物理裡你見過——綁繩甩石頭：位置是繩子方向，速度沿圓的切線，恰好垂直。這就是<strong>等速圓周運動</strong>。</p>
+    <figure class="figcard">
+      <svg viewBox="0 0 360 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="速度垂直於位置">
+        <defs><marker id="vel" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#b1701f"/></marker></defs>
+        <line x1="30" y1="150" x2="330" y2="150" stroke="#b9ad94" stroke-width="1.2"/>
+        <line x1="180" y1="20" x2="180" y2="290" stroke="#b9ad94" stroke-width="1.2"/>
+        <circle cx="180" cy="150" r="105" fill="none" stroke="#cdbf9f" stroke-width="1.5" stroke-dasharray="3 4"/>
+        <line x1="180" y1="150" x2="248" y2="70" stroke="#0f5f59" stroke-width="2.6"/>
+        <circle cx="248" cy="70" r="5" fill="#23211c"/>
+        <text x="248" y="52" text-anchor="middle" font-size="13" fill="#0f5f59">位置 y</text>
+        <line x1="248" y1="70" x2="306" y2="119" stroke="#b1701f" stroke-width="2.6" marker-end="url(#vel)"/>
+        <text x="314" y="126" font-size="13" fill="#b1701f">速度</text>
+        <polyline points="258,78 250,88 240,80" fill="none" stroke="#0f5f59" stroke-width="1.3"/>
+        <circle cx="285" cy="150" r="4.5" fill="#23211c"/><text x="285" y="170" text-anchor="middle" font-size="12">(1,0)</text>
+      </svg>
+      <figcaption>\(\dfrac{dy}{dt}=iy\) 描述的，正是半徑固定、速度永遠垂直於位置的等速圓周運動。</figcaption>
+    </figure>
+  </section>
+
+  <hr class="div">
+
+  <section id="s12">
+    <h2 class="sec"><span class="no">§2.3</span>兩種解：指數 vs 三角</h2>
+    <p>同一個運動 \(\dfrac{dy}{dt}=iy\)，讓動點從橫軸上的 \(1\) 出發(初始條件 \(y(0)=1\))，用兩套工具描述。</p>
+    <p><strong>工具一｜代數：</strong>由 §1.9，\(\dfrac{dy}{dt}=ky\) 的解是 \(y=y_0e^{kt}\)。這規則不在乎 \(k\) 是實是虛，照搬：\(k=i,\;y_0=1\)，得 \(y_{\text{代數}}(t)=e^{it}\)。</p>
+    <p><strong>工具二｜幾何：</strong>由 §2.2，這是從 \((1,0)\) 出發、角速度 1 的單位圓運動;經過時間 \(t\)，動點在實部投影 \(\cos t\)、虛部投影 \(\sin t\)，故 \(y_{\text{幾何}}(t)=\cos t+i\sin t\)。</p>
+    <p>同一個運動、同一初始條件，兩套工具理當描述同一東西：</p>
+    $$e^{it}\;\overset{?}{=}\;\cos t+i\sin t$$
+    <div class="box pitfall">
+      <div class="label">✕ 「理當相等」不是證明</div>
+      <p style="margin:0">直覺再強也不算數學證明。§2.4 補上唯一缺的工具(sin、cos 的導數)，§2.5 就用微積分把這個等號一行不漏地證出來。</p>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section id="s13">
+    <h2 class="sec"><span class="no">§2.4</span>sin、cos 的導數（幾何證明）</h2>
+    <p>用 §2.2 的圓周運動把它們<strong>看出來</strong>。動點位置 \(\big(\cos t,\sin t\big)\)，角速度 1。速度向量：大小 \(=\) 半徑 × 角速度 \(=1\);方向 \(=\) 把位置向量逆時針轉 90°。而「把 \((x,y)\) 轉 90°」得 \((-y,x)\)(檢查：右方 \((1,0)\) 轉 90° 應朝正上方 \((0,1)\)，套公式 \((-0,1)=(0,1)\) ✓)。代入位置：</p>
+    $$\text{速度}=\big(-\sin t,\ \cos t\big)=\left(\frac{d}{dt}\cos t,\ \frac{d}{dt}\sin t\right)$$
+    <p>逐分量比對(橫對橫、縱對縱)：</p>
+    <div class="keyeq"><div class="cap">三角函數的導數（不用背，是推出來的）</div>
+      $$\frac{d}{dt}\cos t=-\sin t,\qquad \frac{d}{dt}\sin t=\cos t$$
+    </div>
+    <p>順手把三角解微分一次，§2.5 直接用：</p>
+    $$\frac{d}{dt}\big(\cos t+i\sin t\big)=-\sin t+i\cos t$$
+  </section>
+
+  <hr class="div">
+
+  <section id="s14">
+    <h2 class="sec"><span class="no">§2.5</span>歐拉公式的嚴格證明</h2>
+    <p class="lead">用微積分最漂亮的一招——「證明導數恆為零」。策略：造一個檢驗函數，證它從頭到尾都是常數 1。</p>
+    <p><strong>第一步：建構檢驗函數。</strong>假設 \(e^{it}=\cos t+i\sin t\) 成立，兩邊同乘 \(e^{-it}\)(左邊變 1)，右邊就該等於 1。故定義：</p>
+    $$f(t)=e^{-it}\big(\cos t+i\sin t\big),\qquad\text{目標：證 }f(t)\equiv 1.$$
+    <p><strong>第二步：用乘法律 \((uv)'=u'v+uv'\) 求 \(f'\)。</strong>令 \(u=e^{-it}\)、\(v=\cos t+i\sin t\)。由 §1.9(取 \(k=-i\))與 §2.4：</p>
+    $$u'=-i\,e^{-it},\qquad v'=-\sin t+i\cos t$$
+    $$f'(t)=\big(-i\,e^{-it}\big)\big(\cos t+i\sin t\big)+e^{-it}\big(-\sin t+i\cos t\big)$$
+    <p><strong>第三步：提公因式 \(e^{-it}\)，展開，引爆 \(i^2=-1\)。</strong></p>
+    $$f'(t)=e^{-it}\Big[\,-i\cos t-i^{2}\sin t-\sin t+i\cos t\,\Big]$$
+    <p>因 \(-i^2\sin t=+\sin t\)：</p>
+    $$f'(t)=e^{-it}\Big[\,\underbrace{(-i\cos t+i\cos t)}_{0}+\underbrace{(\sin t-\sin t)}_{0}\,\Big]=e^{-it}\cdot 0=0$$
+    <p><strong>第四步：收尾。</strong>導數恆為零 \(\Rightarrow f(t)=C\)(常數)。代 \(t=0\)(用 \(e^0=1,\cos0=1,\sin0=0\))：</p>
+    $$f(0)=e^{0}(1+i\cdot0)=1\;\Longrightarrow\;C=1\;\Longrightarrow\;e^{-it}\big(\cos t+i\sin t\big)=1$$
+    <p>兩邊同乘 \(e^{it}\)，歐拉公式撥雲見日：</p>
+    <div class="keyeq"><div class="cap">★ 歐拉公式</div>$$e^{it}=\cos t+i\sin t$$</div>
+    <div class="box history">
+      <div class="label">◷ 歷史現場：最美公式的誕生與爭議</div>
+      <p style="margin:0 0 10px"><span class="who">柯茨 1714 → 歐拉 1748</span>　其實英國人柯茨(Roger Cotes)早在 1714 年就摸到了等價的關係(寫成對數形式)，可惜英年早逝，沒能發揚。牛頓嘆道：「要是柯茨還活著，我們會知道得更多。」真正把它寫成今天這個漂亮樣子、並大力推廣的，是歐拉(Euler)在 1748 年的《無窮分析引論》。他一筆把「指數」與「三角」這兩個看似毫不相干的世界連通。</p>
+      <p style="margin:0">後人對 \(e^{i\pi}+1=0\) 又敬又畏：十九世紀數學家皮爾斯(Benjamin Peirce)在課堂上證完它，對學生說這式子「完全違反直覺、我們無法理解它的意思，但既然證明了，就必須承認它是真理」。物理學家費曼則乾脆稱歐拉公式是「我們的珍寶、全數學最非凡的一條式子」。而你剛剛，不是用背的，是一行不漏地<strong>親手把這顆珍寶推導出來的</strong>。</p>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section id="s15">
+    <h2 class="sec"><span class="no">§2.6</span>歐拉恆等式，與它的兩個分身</h2>
+    <p>歐拉公式對任何 \(t\) 成立。取 \(t=\pi\)(用 \(\cos\pi=-1,\sin\pi=0\))：</p>
+    $$e^{i\pi}=\cos\pi+i\sin\pi=-1\;\Longrightarrow\;\boxed{\,e^{i\pi}+1=0\,}$$
+    <p>一行裡，數學五大常數 \(e,i,\pi,1,0\) 同台。但對第三部更重要的，是歐拉公式的兩個「分身」。把 \(t\) 換成 \(-t\)(\(\cos\) 偶函數、\(\sin\) 奇函數)：</p>
+    $$e^{-it}=\cos t-i\sin t$$
+    <p>把這條與 \(e^{it}=\cos t+i\sin t\) 相加、相減：</p>
+    <div class="keyeq"><div class="cap">兩個分身：把三角函數翻譯成指數</div>
+      $$\cos t=\frac{e^{it}+e^{-it}}{2},\qquad \sin t=\frac{e^{it}-e^{-it}}{2i}$$
+    </div>
+    <p>這兩條式子是第三部所有應用的<strong>萬能翻譯機</strong>：任何 \(\sin\)、\(\cos\)(任何振盪)都能改寫成 \(e^{\pm it}\)。而指數運算比三角運算簡單太多——這就是工程師「凡振盪必用複數」的根本理由。</p>
+  </section>
+
+  <!-- ===================== Part 3 ===================== -->
+  <div class="part-divider"><div class="pp">第 三 部</div><div class="pt">用數學運轉世界：生活中的 <span style="font-style:italic;color:var(--amber)">i</span></div></div>
+
+  <section id="s16">
+    <h2 class="sec"><span class="no">§3.1</span>工具：相量，振盪是旋轉箭頭的影子</h2>
+    <div class="box intuition">
+      <div class="label">▸ 第三部怎麼讀</div>
+      <p style="margin:0">複數的應用多到寫不完。我們只挑一個你<strong>無時無刻在用、卻最不知所以然</strong>的例子——<strong>手機傳訊（§3.5）</strong>——做完整的數學詳解;其餘的應用(交流電、振動、傅立葉、影像、量子)只給出<strong>代表性的式子</strong>，點到為止，讓你看見「它確實是用複數寫的」就好，以免離題。先備好它們共同的武器：相量。</p>
+    </div>
+    <p>生活中最常見的——聲音、光、電、振動——本質都是<strong>來回振盪</strong>。歐拉公式給了看待振盪的新視角：一個上下振盪的波，是一支在複數平面上等速旋轉的箭頭 \(e^{i\omega t}\)，投射在實軸上的影子：</p>
+    $$\cos\omega t=\operatorname{Re}\!\big(e^{i\omega t}\big)$$
+    <figure class="figcard">
+      <svg viewBox="0 0 640 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="旋轉箭頭投影出餘弦波">
+        <circle cx="115" cy="140" r="78" fill="none" stroke="#cdbf9f" stroke-width="1.5" stroke-dasharray="3 4"/>
+        <line x1="30" y1="140" x2="205" y2="140" stroke="#b9ad94" stroke-width="1.2"/>
+        <line x1="115" y1="55" x2="115" y2="225" stroke="#b9ad94" stroke-width="1.2"/>
+        <line x1="115" y1="140" x2="179" y2="95" stroke="#0f5f59" stroke-width="3"/>
+        <polygon points="179,95 169,97 175,105" fill="#0f5f59"/>
+        <circle cx="179" cy="95" r="4" fill="#23211c"/>
+        <text x="150" y="80" font-size="13" fill="#0f5f59" font-style="italic">e^(iωt)</text>
+        <line x1="179" y1="95" x2="179" y2="140" stroke="#b1701f" stroke-width="1.6" stroke-dasharray="4 4"/>
+        <circle cx="179" cy="140" r="4.5" fill="#b1701f"/><text x="150" y="160" font-size="12" fill="#b1701f">影子</text>
+        <line x1="179" y1="140" x2="250" y2="140" stroke="#cdbf9f" stroke-width="1" stroke-dasharray="2 5"/>
+        <line x1="240" y1="140" x2="618" y2="140" stroke="#b9ad94" stroke-width="1.2"/>
+        <polygon points="618,140 609,136 609,144" fill="#b9ad94"/><text x="600" y="160" font-size="12" fill="#6b6453">時間 →</text>
+        <polyline points="250.0,88.0 253.0,88.4 256.0,89.6 259.0,91.7 262.0,94.4 265.0,97.9 268.0,102.1 271.0,106.9 274.0,112.1 277.0,117.9 280.0,123.9 283.0,130.3 286.0,136.7 289.0,143.3 292.0,149.7 295.0,156.1 298.0,162.1 301.0,167.9 304.0,173.1 307.0,177.9 310.0,182.1 313.0,185.6 316.0,188.3 319.0,190.4 322.0,191.6 325.0,192.0 328.0,191.6 331.0,190.4 334.0,188.3 337.0,185.6 340.0,182.1 343.0,177.9 346.0,173.1 349.0,167.9 352.0,162.1 355.0,156.1 358.0,149.7 361.0,143.3 364.0,136.7 367.0,130.3 370.0,123.9 373.0,117.9 376.0,112.1 379.0,106.9 382.0,102.1 385.0,97.9 388.0,94.4 391.0,91.7 394.0,89.6 397.0,88.4 400.0,88.0 403.0,88.4 406.0,89.6 409.0,91.7 412.0,94.4 415.0,97.9 418.0,102.1 421.0,106.9 424.0,112.1 427.0,117.9 430.0,123.9 433.0,130.3 436.0,136.7 439.0,143.3 442.0,149.7 445.0,156.1 448.0,162.1 451.0,167.9 454.0,173.1 457.0,177.9 460.0,182.1 463.0,185.6 466.0,188.3 469.0,190.4 472.0,191.6 475.0,192.0 478.0,191.6 481.0,190.4 484.0,188.3 487.0,185.6 490.0,182.1 493.0,177.9 496.0,173.1 499.0,167.9 502.0,162.1 505.0,156.1 508.0,149.7 511.0,143.3 514.0,136.7 517.0,130.3 520.0,123.9 523.0,117.9 526.0,112.1 529.0,106.9 532.0,102.1 535.0,97.9 538.0,94.4 541.0,91.7 544.0,89.6 547.0,88.4 550.0,88.0 553.0,88.4 556.0,89.6 559.0,91.7 562.0,94.4 565.0,97.9 568.0,102.1 571.0,106.9 574.0,112.1 577.0,117.9 580.0,123.9 583.0,130.3 586.0,136.7 589.0,143.3 592.0,149.7 595.0,156.1 598.0,162.1 601.0,167.9 604.0,173.1 607.0,177.9 610.0,182.1" fill="none" stroke="#0f5f59" stroke-width="2.6"/>
+        <text x="430" y="78" font-size="13" fill="#0f5f59" font-style="italic">cos(ωt)</text>
+      </svg>
+      <figcaption>箭頭 \(e^{i\omega t}\) 轉一圈，影子來回擺一次，描出餘弦波。「旋轉」與「振盪」是同一件事的兩個視角。</figcaption>
+    </figure>
+    <p>為何要多此一舉畫箭頭?因為真實的波還帶兩個資訊：多強(振幅 \(A\))、現在轉到哪(相位 \(\phi\))。複數一個數就打包這兩件事：</p>
+    <div class="keyeq"><div class="cap">相量（phasor）：振幅與相位裝進一個複數</div>
+      $$A\cos(\omega t+\phi)=\operatorname{Re}\!\Big(\underbrace{Ae^{i\phi}}_{\text{相量}}\cdot e^{i\omega t}\Big)$$
+    </div>
+    <p>這個複數 \(Ae^{i\phi}\) 就叫<em class="term">相量</em>。它配上 §2.6 的兩個分身公式，是底下每一個應用的共同武器：把難算的振盪(三角、微分)，全部換成好算的複數(指數、代數)。</p>
+  </section>
+
+  <hr class="div">
+
+  <section id="s17">
+    <h2 class="sec"><span class="no">§3.2</span>交流電：阻抗，原來是一個複數</h2>
+    <p>你家插座是交流電(AC)，電壓像 \(\cos(\omega t)\) 般每秒振盪 50–60 次。電路裡的電容、電感，電流與電壓<strong>差了 90° 相位</strong>——而 §2.1 說過，差 90° 就是「乘 \(i\)」。於是工程師把元件對交流電的「阻力」直接寫成複數，叫<em class="term">阻抗 \(Z\)</em>：</p>
+    $$Z_R=R,\qquad Z_L=i\omega L,\qquad Z_C=\frac{1}{i\omega C}$$
+    <p>電容、電感的阻抗是純虛數，那個 \(i\) 正是 90° 相位差的數學身分。串聯時阻抗相加，交流電路便回到國中的歐姆定律 \(V=IZ\)：</p>
+    $$Z=R+i\!\left(\omega L-\frac{1}{\omega C}\right)$$
+    <p>當虛部歸零(\(\omega L=\tfrac{1}{\omega C}\))，電路對該頻率反應最強，得<strong>共振頻率</strong> \(\omega_0=\dfrac{1}{\sqrt{LC}}\)——收音機選台、手機挑頻段，就是調 \(L,C\) 讓 \(\omega_0\) 對準想要的電台。<strong>沒有複數，就沒有你牆上的插座。</strong></p>
+    <div class="box history">
+      <div class="label">◷ 歷史現場：把交流電馴服的人</div>
+      <p style="margin:0"><span class="who">史坦麥茲，1893</span>　十九世紀末的「電流大戰」中，愛迪生力推直流電(DC)，特斯拉與西屋押注交流電(AC)。交流電效率高、能遠距輸送，卻有個致命傷：電壓電流不斷振盪、又有惱人的相位差，計算起來要解一大堆微分方程，工程師幾乎算不動，差點因此被淘汰。身材矮小、背部畸形卻才華驚人的德裔移民史坦麥茲(Charles Steinmetz)，在這時提出用<strong>複數相量</strong>來代表交流量：電壓、電流、阻抗全部寫成複數，微分方程瞬間變成上面那種簡單的代數 \(V=IZ\)。交流電從此「可以用筆算了」，整個現代電網才得以鋪設到全世界。一個被嫌「虛幻」的 \(i\)，反而成了點亮全世界電燈的關鍵。</p>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section id="s18">
+    <h2 class="sec"><span class="no">§3.3</span>振動與穩定：複數根決定生死</h2>
+    <p>這是第一部「生滅」與第二部「振盪」的<strong>大會合</strong>。汽車避震、地震中的大樓、撥動的吉他弦，都遵守同一條「彈簧 + 阻尼」方程式 \(m\ddot{x}+c\dot{x}+kx=0\)。承襲第一部的直覺猜 \(x=e^{\lambda t}\)，代入得特徵方程，解出兩個根：</p>
+    $$m\lambda^{2}+c\lambda+k=0\;\Longrightarrow\;\lambda=\frac{-c\pm\sqrt{c^{2}-4mk}}{2m}$$
+    <p>關鍵在根號裡：當阻尼不大(現實中大多如此)，根號內是負數，<strong>複數登場</strong>，根成了 \(\lambda=-\gamma\pm i\omega_d\)。代回 \(x=e^{\lambda t}\) 並用歐拉公式拆開：</p>
+    <div class="keyeq"><div class="cap">阻尼振盪：第一部 × 第二部</div>
+      $$x(t)=e^{-\gamma t}\big(\underbrace{\cos\omega_d t}_{\text{振盪}}+\cdots\big),\quad\text{即 }e^{(a+bi)t}\text{ 的真實化身}$$
+    </div>
+    <p>複數根的<strong>實部</strong>變成 \(e^{-\gamma t}\)，控制「越擺越小」的衰減包絡;<strong>虛部</strong> \(\omega_d\) 控制擺動頻率。撥一下漸弱的吉他弦、過減速丘後慢慢不抖的避震，畫出來就是：</p>
+    <figure class="figcard">
+      <svg viewBox="0 0 640 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="阻尼振盪">
+        <line x1="55" y1="148" x2="610" y2="148" stroke="#b9ad94" stroke-width="1.2"/>
+        <line x1="72" y1="40" x2="72" y2="240" stroke="#b9ad94" stroke-width="1.2"/>
+        <polyline points="72.0,64.0 75.0,65.2 78.0,66.4 81.0,67.5 84.0,68.7 87.0,69.8 90.0,70.9 93.0,72.0 96.0,73.1 99.0,74.1 102.0,75.2 105.0,76.2 108.0,77.2 111.0,78.2 114.0,79.2 117.0,80.2 120.0,81.2 123.0,82.1 126.0,83.0 129.0,84.0 132.0,84.9 135.0,85.8 138.0,86.7 141.0,87.5 144.0,88.4 147.0,89.2 150.0,90.1 153.0,90.9 156.0,91.7 159.0,92.5 162.0,93.3 165.0,94.1 168.0,94.8 171.0,95.6 174.0,96.3 177.0,97.1 180.0,97.8 183.0,98.5 186.0,99.2 189.0,99.9 192.0,100.6 195.0,101.2 198.0,101.9 201.0,102.6 204.0,103.2 207.0,103.8 210.0,104.5 213.0,105.1 216.0,105.7 219.0,106.3 222.0,106.9 225.0,107.5 228.0,108.0 231.0,108.6 234.0,109.2 237.0,109.7 240.0,110.3 243.0,110.8 246.0,111.3 249.0,111.8 252.0,112.4 255.0,112.9 258.0,113.4 261.0,113.8 264.0,114.3 267.0,114.8 270.0,115.3 273.0,115.7 276.0,116.2 279.0,116.7 282.0,117.1 285.0,117.5 288.0,118.0 291.0,118.4 294.0,118.8 297.0,119.2 300.0,119.6 303.0,120.0 306.0,120.4 309.0,120.8 312.0,121.2 315.0,121.6 318.0,122.0 321.0,122.3 324.0,122.7 327.0,123.1 330.0,123.4 333.0,123.8 336.0,124.1 339.0,124.4 342.0,124.8 345.0,125.1 348.0,125.4 351.0,125.8 354.0,126.1 357.0,126.4 360.0,126.7 363.0,127.0 366.0,127.3 369.0,127.6 372.0,127.9 375.0,128.2 378.0,128.4 381.0,128.7 384.0,129.0 387.0,129.3 390.0,129.5 393.0,129.8 396.0,130.0 399.0,130.3 402.0,130.5 405.0,130.8 408.0,131.0 411.0,131.3 414.0,131.5 417.0,131.8 420.0,132.0 423.0,132.2 426.0,132.4 429.0,132.7 432.0,132.9 435.0,133.1 438.0,133.3 441.0,133.5 444.0,133.7 447.0,133.9 450.0,134.1 453.0,134.3 456.0,134.5 459.0,134.7 462.0,134.9 465.0,135.1 468.0,135.3 471.0,135.4 474.0,135.6 477.0,135.8 480.0,136.0 483.0,136.1 486.0,136.3 489.0,136.5 492.0,136.6 495.0,136.8 498.0,137.0 501.0,137.1 504.0,137.3 507.0,137.4 510.0,137.6 513.0,137.7 516.0,137.9 519.0,138.0 522.0,138.1 525.0,138.3 528.0,138.4 531.0,138.6 534.0,138.7 537.0,138.8 540.0,139.0 543.0,139.1 546.0,139.2 549.0,139.3 552.0,139.5 555.0,139.6 558.0,139.7 561.0,139.8 564.0,139.9 567.0,140.0 570.0,140.2 573.0,140.3 576.0,140.4 579.0,140.5 582.0,140.6 585.0,140.7 588.0,140.8" fill="none" stroke="#b1701f" stroke-width="1.6" stroke-dasharray="5 5" opacity=".85"/>
+        <polyline points="72.0,232.0 75.0,230.8 78.0,229.6 81.0,228.5 84.0,227.3 87.0,226.2 90.0,225.1 93.0,224.0 96.0,222.9 99.0,221.9 102.0,220.8 105.0,219.8 108.0,218.8 111.0,217.8 114.0,216.8 117.0,215.8 120.0,214.8 123.0,213.9 126.0,213.0 129.0,212.0 132.0,211.1 135.0,210.2 138.0,209.3 141.0,208.5 144.0,207.6 147.0,206.8 150.0,205.9 153.0,205.1 156.0,204.3 159.0,203.5 162.0,202.7 165.0,201.9 168.0,201.2 171.0,200.4 174.0,199.7 177.0,198.9 180.0,198.2 183.0,197.5 186.0,196.8 189.0,196.1 192.0,195.4 195.0,194.8 198.0,194.1 201.0,193.4 204.0,192.8 207.0,192.2 210.0,191.5 213.0,190.9 216.0,190.3 219.0,189.7 222.0,189.1 225.0,188.5 228.0,188.0 231.0,187.4 234.0,186.8 237.0,186.3 240.0,185.7 243.0,185.2 246.0,184.7 249.0,184.2 252.0,183.6 255.0,183.1 258.0,182.6 261.0,182.2 264.0,181.7 267.0,181.2 270.0,180.7 273.0,180.3 276.0,179.8 279.0,179.3 282.0,178.9 285.0,178.5 288.0,178.0 291.0,177.6 294.0,177.2 297.0,176.8 300.0,176.4 303.0,176.0 306.0,175.6 309.0,175.2 312.0,174.8 315.0,174.4 318.0,174.0 321.0,173.7 324.0,173.3 327.0,172.9 330.0,172.6 333.0,172.2 336.0,171.9 339.0,171.6 342.0,171.2 345.0,170.9 348.0,170.6 351.0,170.2 354.0,169.9 357.0,169.6 360.0,169.3 363.0,169.0 366.0,168.7 369.0,168.4 372.0,168.1 375.0,167.8 378.0,167.6 381.0,167.3 384.0,167.0 387.0,166.7 390.0,166.5 393.0,166.2 396.0,166.0 399.0,165.7 402.0,165.5 405.0,165.2 408.0,165.0 411.0,164.7 414.0,164.5 417.0,164.2 420.0,164.0 423.0,163.8 426.0,163.6 429.0,163.3 432.0,163.1 435.0,162.9 438.0,162.7 441.0,162.5 444.0,162.3 447.0,162.1 450.0,161.9 453.0,161.7 456.0,161.5 459.0,161.3 462.0,161.1 465.0,160.9 468.0,160.7 471.0,160.6 474.0,160.4 477.0,160.2 480.0,160.0 483.0,159.9 486.0,159.7 489.0,159.5 492.0,159.4 495.0,159.2 498.0,159.0 501.0,158.9 504.0,158.7 507.0,158.6 510.0,158.4 513.0,158.3 516.0,158.1 519.0,158.0 522.0,157.9 525.0,157.7 528.0,157.6 531.0,157.4 534.0,157.3 537.0,157.2 540.0,157.0 543.0,156.9 546.0,156.8 549.0,156.7 552.0,156.5 555.0,156.4 558.0,156.3 561.0,156.2 564.0,156.1 567.0,156.0 570.0,155.8 573.0,155.7 576.0,155.6 579.0,155.5 582.0,155.4 585.0,155.3 588.0,155.2" fill="none" stroke="#b1701f" stroke-width="1.6" stroke-dasharray="5 5" opacity=".85"/>
+        <polyline points="72.0,64.0 75.0,66.2 78.0,70.3 81.0,76.2 84.0,83.6 87.0,92.4 90.0,102.3 93.0,113.0 96.0,124.2 99.0,135.7 102.0,147.2 105.0,158.4 108.0,169.0 111.0,178.8 114.0,187.6 117.0,195.2 120.0,201.4 123.0,206.1 126.0,209.4 129.0,211.0 132.0,211.1 135.0,209.7 138.0,206.8 141.0,202.5 144.0,197.1 147.0,190.7 150.0,183.4 153.0,175.4 156.0,167.0 159.0,158.4 162.0,149.8 165.0,141.3 168.0,133.3 171.0,125.9 174.0,119.2 177.0,113.4 180.0,108.5 183.0,104.8 186.0,102.2 189.0,100.8 192.0,100.6 195.0,101.5 198.0,103.6 201.0,106.6 204.0,110.5 207.0,115.3 210.0,120.7 213.0,126.6 216.0,132.9 219.0,139.3 222.0,145.8 225.0,152.1 228.0,158.2 231.0,163.8 234.0,169.0 237.0,173.4 240.0,177.1 243.0,180.1 246.0,182.1 249.0,183.3 252.0,183.6 255.0,183.0 258.0,181.6 261.0,179.4 264.0,176.5 267.0,173.1 270.0,169.1 273.0,164.7 276.0,160.0 279.0,155.2 282.0,150.3 285.0,145.6 288.0,141.0 291.0,136.7 294.0,132.8 297.0,129.4 300.0,126.5 303.0,124.2 306.0,122.6 309.0,121.6 312.0,121.3 315.0,121.7 318.0,122.6 321.0,124.2 324.0,126.3 327.0,128.8 330.0,131.8 333.0,135.0 336.0,138.5 339.0,142.1 342.0,145.7 345.0,149.3 348.0,152.8 351.0,156.1 354.0,159.0 357.0,161.6 360.0,163.9 363.0,165.6 366.0,166.9 369.0,167.7 372.0,168.0 375.0,167.8 378.0,167.2 381.0,166.0 384.0,164.5 387.0,162.7 390.0,160.5 393.0,158.1 396.0,155.5 399.0,152.8 402.0,150.1 405.0,147.4 408.0,144.7 411.0,142.3 414.0,140.0 417.0,138.0 420.0,136.3 423.0,134.9 426.0,133.9 429.0,133.3 432.0,133.0 435.0,133.1 438.0,133.5 441.0,134.3 444.0,135.4 447.0,136.8 450.0,138.4 453.0,140.2 456.0,142.1 459.0,144.1 462.0,146.2 465.0,148.2 468.0,150.2 471.0,152.0 474.0,153.8 477.0,155.3 480.0,156.6 483.0,157.7 486.0,158.5 489.0,159.0 492.0,159.2 495.0,159.2 498.0,158.9 501.0,158.3 504.0,157.6 507.0,156.6 510.0,155.4 513.0,154.1 516.0,152.6 519.0,151.1 522.0,149.6 525.0,148.1 528.0,146.6 531.0,145.2 534.0,143.9 537.0,142.7 540.0,141.7 543.0,140.9 546.0,140.2 549.0,139.8 552.0,139.6 555.0,139.6 558.0,139.8 561.0,140.2 564.0,140.7 567.0,141.5 570.0,142.3 573.0,143.3 576.0,144.4 579.0,145.5 582.0,146.6 585.0,147.8 588.0,148.9" fill="none" stroke="#0f5f59" stroke-width="2.6"/>
+        <text x="118" y="58" font-size="12.5" fill="#b1701f" font-style="italic">包絡 ±e^(−γt)</text>
+        <text x="438" y="135" font-size="13" fill="#0f5f59" font-style="italic">e^(−γt)·cos(ω_d t)</text>
+      </svg>
+      <figcaption>阻尼振盪：振盪被一個逐漸縮小的包絡 \(e^{-\gamma t}\) 包住，越擺越小，最後平息。</figcaption>
+    </figure>
+    <div class="box intuition">
+      <div class="label">▸ 工程的安全閥：只看複數根的「實部」是正是負</div>
+      <p style="margin:0">把 \(\lambda\) 寫成一般的 \(a+bi\)，解就是 \(e^{at}(\cos bt+i\sin bt)\)。一個結構安不安全，全看實部 \(a\)：<br>
+      ・\(a\lt0\)：振動自己衰減平息 → <strong>安全</strong>(好避震、抗震大樓、穩定的自動駕駛)。<br>
+      ・\(a\gt0\)：振動越搖越大直到解體 → <strong>災難</strong>。1940 年塔科馬海峽大橋在強風中越搖越烈而垮塌，正是風持續灌入能量、讓等效阻尼變負、\(a\) 變正的活教材。工程師設計橋、飛機、控制系統，做的事就是在複數平面上盯著這個 \(a\) 的正負來判斷生死。</p>
+    </div>
+  </section>
+
+  <hr class="div">
+
+  <section id="s19">
+    <h2 class="sec"><span class="no">§3.4</span>傅立葉與壓縮：MP3、JPEG 的數學</h2>
+    <p>傅立葉發現一件不可思議的事：<strong>任何訊號，都能寫成一堆旋轉箭頭 \(e^{in\omega_0 t}\) 的疊加</strong>，每個箭頭配一個複數係數 \(c_n\)(大小是該頻率的強度、幅角是相位)：</p>
+    $$f(t)=\sum_{n}c_n\,e^{in\omega_0 t}$$
+    <p>電腦用的是離散版(DFT)，把 \(N\) 個取樣 \(x_n\) 換成 \(N\) 個複數 \(X_k\)：</p>
+    <div class="keyeq"><div class="cap">離散傅立葉轉換（你手機每秒跑幾百萬次）</div>
+      $$X_k=\sum_{n=0}^{N-1}x_n\,e^{-i\,2\pi kn/N}$$
+    </div>
+    <p>每個 \(X_k\) 是複數。<strong>壓縮的祕密就藏在這裡：</strong>絕大多數 \(|X_k|\) 很小(人耳聽不到、人眼看不出)，把它們設為 0、只存少數大的，再逆轉換還原——<strong>MP3</strong> 丟掉聽不見的頻率、<strong>JPEG</strong> 丟掉眼睛不敏感的高頻，檔案瞬間小十倍。傅立葉(1822)當年主張「任何函數都能拆成正弦波」時連拉格朗日都不信;一百多年後庫利與圖基的快速演算法(FFT，1965)，成了整場數位革命的引擎。</p>
+  </section>
+
+  <hr class="div">
+
+  <section id="s20">
+    <h2 class="sec"><span class="no">§3.5</span>手機傳訊：把資料寫進一個複數〔完整詳解〕</h2>
+    <p>這是本書唯一做完整詳解的應用——因為它是你<strong>幾乎每分每秒都在用、卻最少人知道所以然</strong>的東西。你傳出的每一則訊息、每一張照片，都被改寫成複數平面上的點再發射出去。我們把這件事，從頭到尾用數學走一遍。</p>
+    <h3>第一步：把資料變成一個複數</h3>
+    <p>要傳的 0/1 資料，先被編碼成一個複數符號(symbol)：</p>
+    $$s=I+iQ=A\,e^{i\phi}\qquad(I:\text{同相分量 in-phase},\ Q:\text{正交分量 quadrature})$$
+    <p>它可以看成「實部 \(I\) 加虛部 \(Q\)」，也可以看成「長度 \(A\)、角度 \(\phi\)」——這就是 §3.1 的相量。資料，就藏在這個複數落在哪裡。</p>
+    <h3>第二步：載到電波上送出去</h3>
+    <p>把符號 \(s\) 乘上頻率為 \(\omega\) 的旋轉箭頭 \(e^{i\omega t}\)，取實部，就是真正發射出去的電波：</p>
+    $$x(t)=\operatorname{Re}\!\big(s\,e^{i\omega t}\big)=\operatorname{Re}\!\big[(I+iQ)(\cos\omega t+i\sin\omega t)\big]=I\cos\omega t-Q\sin\omega t$$
+    <p>展開後看得一清二楚：你<strong>同時送出兩個相差 90° 的載波</strong>——一個餘弦(權重 \(I\))、一個正弦(權重 \(Q\))。它們正是複數平面的實軸與虛軸，靠「差 90°」(也就是 §2.1 的乘 \(i\))彼此不干擾，於是一條電波能同時挑兩份資料。</p>
+    <h3>第三步：接收端把資料解回來</h3>
+    <p>收訊端把收到的 \(x(t)\) 分別乘上 \(\cos\omega t\) 與 \(\sin\omega t\) 再平均(積分)。因為 \(\cos\) 與 \(\sin\) 正交(平均後互相抵銷)，剛好把 \(I\)、\(Q\) 乾淨地分開取回：</p>
+    $$\langle x(t)\cos\omega t\rangle=\tfrac{1}{2}I,\qquad \langle x(t)\sin\omega t\rangle=-\tfrac{1}{2}Q$$
+    <p>於是 \(s=I+iQ\) 完整還原，你的訊息也就讀出來了。</p>
+    <h3>第四步：星座圖——資料的密度就是速度</h3>
+    <p>把所有「允許的 \(s\)」畫在複數平面上，叫<em class="term">星座圖</em>。例如 QPSK 用四個點 \(\dfrac{\pm1\pm i}{\sqrt2}\)，每點代表 2 個位元。一般地，若星座圖有 \(M\) 個點，每個符號能載的位元數是：</p>
+    <div class="keyeq"><div class="cap">點越密，傳得越快</div>
+      $$\text{每符號位元數}=\log_2 M$$
+    </div>
+    <p>所以 16-QAM 載 4 位元、256-QAM 載 8 位元。<strong>4G、5G、WiFi 一代比一代快，本質上就是在複數平面上塞進更多、更密的點。</strong>你的手機晶片每秒鐘做上億次這種複數的旋轉與相加——你看一支影片、傳一張照片，背後就是歐拉公式在替你高速運轉。下次覺得「理所當然」時，記得：它一點都不理所當然，它是 \(e\) 與 \(i\) 在工作。</p>
+  </section>
+
+  <hr class="div">
+
+  <section id="s21">
+    <h2 class="sec"><span class="no">§3.6</span>醫學影像：MRI 的照片是「複數」算出來的</h2>
+    <p>這個應用離放射科最近。MRI 掃描時，機器收到的原始訊號<strong>不是影像，而是一堆複數</strong>。氫核的進動頻率正比於它所在的<strong>磁場強度</strong>(拉莫關係 \(\omega=\gamma B\));MRI 施加沿空間變化的<strong>梯度磁場</strong>，使位置 \(x\) 的氫核因而以正比於 \(x\) 的頻率進動。量到的總訊號就是各位置貢獻的疊加——而它恰好是組織密度 \(\rho(x)\) 的傅立葉轉換(\(k\) 為空間頻率)：</p>
+    <div class="keyeq"><div class="cap">測到的訊號 ＝ 影像的傅立葉轉換</div>
+      $$s(k)=\int \rho(x)\,e^{-i\,2\pi k x}\,dx$$
+    </div>
+    <p>所以機器收集到的那堆複數(放在所謂的 \(k\) 空間)，是人體影像的頻率版本;醫師看到的清晰切面，是電腦對它做<strong>逆傅立葉轉換</strong> \(\rho(x)=\int s(k)e^{i2\pi kx}dk\) 還原出來的。CT、PET 的重建也活在頻率域。放射科與核醫每天判讀的影像，<strong>底層語言就是複數與歐拉公式</strong>。</p>
+  </section>
+
+  <hr class="div">
+
+  <section id="s22">
+    <h2 class="sec"><span class="no">§3.7</span>量子力學：藏在自然最深處的 i</h2>
+    <p>第一部我們把 \(k\) 換成 \(i\) 得到「旋轉」。沒想到，大自然在最微觀處，真的就用這條規則運作。量子力學核心的薛丁格方程式，把 \(i\) 刻在最前面;描述粒子的波函數 \(\psi\) 本身就是複數：</p>
+    $$i\hbar\,\frac{\partial \psi}{\partial t}=\hat{H}\psi\qquad\xrightarrow{\ \text{定態}\ }\qquad \psi(t)=\psi_0\,e^{-i\,E t/\hbar}$$
+    <p>定態解就是 §2.2 的純相位旋轉——把含時薛丁格方程式對能量為 \(E\) 的定態移項，正得 \(\dot\psi=-i\dfrac{E}{\hbar}\psi\)(和第一部主方程式 \(\dot y=ky\) 同一個樣子，只是比例常數變成純虛數 \(-i\dfrac{E}{\hbar}\)，於是旋轉而非生滅)。因為旋轉不改變長度，機率守恆 \(|\psi|^2=|\psi_0|^2\);而不同相位疊加時出現的交叉項 \(2\operatorname{Re}(\psi_1^{*}\psi_2)\)，會隨相位差時亮時暗——這就是干涉條紋。</p>
+    <div class="box detective">
+      <div class="label">◆ 後果有多大</div>
+      <p style="margin:0">電晶體、半導體、雷射、LED、太陽能板，全建立在量子力學上。你手機裡幾百億顆電晶體、房間的 LED 燈、光纖的雷射，之所以能存在，是因為人類學會了<strong>用複數描述大自然</strong>。\(i\) 不是裝飾——它是自然在最深處書寫自己的字母。</p>
+    </div>
+  </section>
+
+  <!-- ===================== 終章 ===================== -->
+  <div class="part-divider"><div class="pp">終 章</div><div class="pt">不知不覺，你已經融會貫通</div></div>
+
+  <section id="finale">
+    <h2 class="sec"><span class="no"></span>你是否發現，它們早已合而為一？</h2>
+    <p class="lead">這趟旅程到了尾聲。我想請你停下來，回頭看一眼自己走過的路——你是否發現，我們已經在<strong>「不知不覺」</strong>當中，把幾個原本各自獨立的東西，悄悄融合成了一個完整的概念?</p>
+    <p>一路上，我們從來沒有刻意去「上一堂三角函數課」「上一堂對數課」。可是：</p>
+    <ul>
+      <li>為了找「自己的變化率等於自己」的那個函數，我們<strong>用了求變化率</strong>——那是<strong>微積分</strong>。</li>
+      <li>那個函數逼出了 \(e\)，順手又掉出一個「成長率」\(\ln a\)——那是<strong>對數與指數</strong>。</li>
+      <li>把成長率換成 \(i\)，直線的生滅當場轉成圓周旋轉——那是<strong>虛數</strong>。</li>
+      <li>而旋轉投影到實軸的影子，正是 \(\cos\)、\(\sin\)——那是<strong>三角函數</strong>。</li>
+    </ul>
+    <p>三角、對數、虛數、微積分——在課本裡是四個分開的單元、四張考卷。可是在這趟故事裡，你<strong>從頭到尾只在學一件事</strong>，它們自己就長在一起了。而且它們最後全收進同一行你親手證出來的式子裡：</p>
+    <div class="keyeq"><div class="cap">一行之中，老朋友們都在</div>$$e^{i\theta}=\cos\theta+i\sin\theta$$</div>
+    <p>輕輕讀它一遍：那個 \(e\)，是<strong>自然界的成長</strong>(指數與對數);那個 \(i\)，是<strong>旋轉</strong>(虛數);右邊的 \(\cos\theta\)、\(\sin\theta\)，是<strong>旋轉留下的影子</strong>(三角函數)。</p>
+    <div class="box intuition">
+      <div class="label">▸ 那微積分在哪裡?</div>
+      <p style="margin:0">你可能會問：這行式子裡好像沒有微積分?說得對——<strong>微積分不是式子裡的「一個符號」，它是寫下這個等號的「那隻手」</strong>。是微分(§2.5 那個「導數恆為零」的證明)，才讓左右兩邊真正畫上等號。它不是被連起來的東西之一，而是<strong>把其他三者連起來的那個動作</strong>。這也是為什麼，它不該是並列的第四個單元。</p>
+    </div>
+
+    <h3>而它們真正的價值，從來不在考卷上</h3>
+    <p>這些「老朋友」被發明出來、被人類珍惜的理由，不是為了讓你解題，而是為了解決第三部那些真實的問題。把它們各自扛起的活攤開來看：</p>
+    <div class="tbl-wrap">
+    <table>
+      <caption>表 5｜這些「課本單元」，在真實世界扛的活</caption>
+      <thead><tr><th>它在課本叫</th><th>它真正的身分</th><th>它在現實世界做的事（章節）</th></tr></thead>
+      <tbody>
+        <tr><td class="field">三角函數</td><td class="field">旋轉在實軸的影子</td><td class="field">交流電波形、通訊載波、傅立葉(§3.2、§3.4、§3.5)</td></tr>
+        <tr><td class="field">對數 / 指數</td><td class="field">成長率 \(\ln a\) 與其反操作</td><td class="field">衰變與半衰期、振動衰減、訊號(§1.9、§3.3)</td></tr>
+        <tr><td class="field">虛數</td><td class="field">「旋轉 90°」這個動作</td><td class="field">阻抗、穩定性、手機 QAM、量子相位(§3.2、§3.3、§3.5、§3.7)</td></tr>
+        <tr><td class="field">微積分</td><td class="field">串起一切的動詞(求變化率)</td><td class="field">每一條方程式都靠它解；全書</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>所以，當你或你身邊的人再次覺得某個單元「背這個到底要幹嘛」，答案就在最後一欄：它在替你家的電、你手裡的手機、醫院的儀器、宇宙最深處的粒子工作。那些看似虛幻、只為考試而存在的符號，其實一直在這個世界的底層，安靜而真實地運轉著。</p>
+
+  </section>
+
+  <hr class="div">
+
+  <section id="end">
+    <span class="part-tag">結語</span>
+    <h2 class="sec">給每一位讀者的核心總結</h2>
+    <ol class="steps">
+      <li><b>變化的真理。</b> 大自然最底層的邏輯是「變化速度取決於當下總量」，即 \(\dfrac{dy}{dt}=ky\)，解一律是 \(y=y_0e^{kt}\)。</li>
+      <li><b>e 的真正身世。</b> 為了找 \(f'=f\) 的完美函數，我們算出每個指數的導數都是 \(a^x\ln a\)，逼出使 \(\ln e=1\) 的唯一底數 \(e\approx2.71828\)。它是連續變化的天生語言。</li>
+      <li><b>從生滅到圓滿。</b> 把 \(k\) 換成 \(i\)，\(e^{kt}\) 化身為歐拉公式 \(e^{it}=\cos t+i\sin t\);再放寬成 \(k=a+bi\)，\(e^{(a+bi)t}=e^{at}(\cos bt+i\sin bt)\)——生滅與振盪合為一體，正是 §3.3 那條彈簧方程式的解。</li>
+      <li><b>虛數一點都不虛。</b> 它描述的是最真實的東西：相位、旋轉、波。沒有它就沒有電網、手機、MRI、電腦與 LED。</li>
+      <li><b>數學從不分科。</b> 三角、對數、虛數、微積分，在課本裡是四個考試單元，在這趟旅程裡是同一件事——最後通通寫進 \(e^{i\theta}=\cos\theta+i\sin\theta\) 這一行。</li>
+    </ol>
+
+    <h3>上半場：三百年的接力，把 e 與 i 想清楚</h3>
+    <div class="timeline">
+      <div class="t"><span class="yr">1545</span>卡丹諾解三次方程，被迫寫下「負數的平方根」，自稱是「詭辯」。</div>
+      <div class="t"><span class="yr">1614</span>納皮爾發表對數，把乘法變加法，替天文計算省力。</div>
+      <div class="t"><span class="yr">1637</span>笛卡兒輕蔑地把 \(\sqrt{-1}\) 稱作「虛數」。</div>
+      <div class="t"><span class="yr">1647/1649</span>聖文森與薩拉薩接力：聖文森發現 \(y=\tfrac1x\) 曲線等比區間面積相等(純幾何);薩拉薩點明這具有對數性質——對數第一次和「累積、變化」掛鉤。</div>
+      <div class="t"><span class="yr">1683</span>白努利研究連續複利，撞見 \(\left(1+\tfrac1n\right)^n\) 的極限，卻算不出它的值。</div>
+      <div class="t"><span class="yr">1748</span>歐拉為這個常數定名 \(e\)、算出它的值，並寫下歐拉公式 \(e^{it}=\cos t+i\sin t\)。</div>
+      <div class="t"><span class="yr">1799–1831</span>威塞爾、阿爾岡、高斯給虛數一個「家」——複數平面，洗刷它的虛名。</div>
+      <div class="t"><span class="yr">1822</span>傅立葉主張：任何訊號都能拆成一堆 \(e^{i\omega t}\) 之和。</div>
+      <div class="t"><span class="yr">1843</span>漢米爾頓把複數推廣成四元數，用來描述三維旋轉(日後遊戲、太空船都靠它)。</div>
+    </div>
+
+    <h3>下半場：e 與 i 如何點燃科技大爆發</h3>
+    <p>想清楚之後，這兩個「虛幻的符號」就開始改寫世界。注意：你手機的訊號傳遞，其實早在<strong>無線電時代</strong>就奠基了——而那一切，都從一條用複數寫成的電磁波方程式開始。</p>
+    <div class="timeline">
+      <div class="t"><span class="yr">1865</span><strong>馬克士威</strong>用方程式預言電磁波的存在——波的解，正是 \(e^{i(kx-\omega t)}\) 這種複數形式。</div>
+      <div class="t"><span class="yr">1887</span><strong>赫茲</strong>在實驗室真的產生並接收到電磁波，無線電就此誕生。</div>
+      <div class="t"><span class="yr">1893</span>史坦麥茲用複數相量馴服交流電 → 現代電網。</div>
+      <div class="t"><span class="yr">1901</span><strong>馬可尼</strong>讓無線電報橫越大西洋——人類第一次「無線傳訊」。</div>
+      <div class="t"><span class="yr">1920s–30s</span>AM、FM 廣播普及;訊號的調變、濾波，全靠相量與傅立葉。</div>
+      <div class="t"><span class="yr">1940s</span>雷達在二戰成形——用相位差測距離與速度。</div>
+      <div class="t"><span class="yr">1947</span>電晶體問世(靠量子力學，而量子的核心是帶 \(i\) 的薛丁格方程式)。</div>
+      <div class="t"><span class="yr">1948</span>夏農創立資訊論，奠定一切數位通訊的數學基礎。</div>
+      <div class="t"><span class="yr">1965</span>庫利與圖基的 FFT 演算法，讓傅立葉能即時計算，點燃數位革命。</div>
+      <div class="t"><span class="yr">1970s</span>CT、MRI 問世——影像由 \(k\) 空間的複數逆傅立葉重建而成。</div>
+      <div class="t"><span class="yr">1980s</span>第一代(1G)類比行動電話上市。</div>
+      <div class="t"><span class="yr">1990s</span>2G 數位手機、JPEG(1992)、MP3(1993)——資料被編進複數、用傅立葉壓縮。</div>
+      <div class="t"><span class="yr">2010s–今</span>4G／5G 用 OFDM＋QAM，把資料塞進複數平面上成千上萬個點;你此刻滑的這支手機，每秒做上億次複數運算。</div>
+    </div>
+    <p>從一個被鄙視的怪數、一個只為考試而背的常數，到電網、無線電、手機、醫學影像、整個數位世界——這就是 \(e\) 與 \(i\) 的故事。下次看到咖啡變涼、聽見低音傳得更遠、滑手機看影片，或撞見 \(e^{i\pi}+1=0\)，你會知道：那些看似虛幻的符號，其實無比真實，而且一直在你身邊安靜地工作著。</p>
+  </section>
+
+  <section id="coda" class="coda">
+        <figure class="figcard">
+          <svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="兩個世界，一條公式">
+            <defs><marker id="fa" markerWidth="9" markerHeight="9" refX="5" refY="3" orient="auto"><path d="M0,0 L5,3 L0,6 Z" fill="#c3b896"/></marker></defs>
+            <!-- 左：自然界的 e -->
+            <text x="120" y="40" text-anchor="middle" font-size="16" fill="#0a423e">自然界的 <tspan font-style="italic" fill="#b1701f">e</tspan></text>
+            <text x="120" y="59" text-anchor="middle" font-size="11.5" fill="#9a917e">成長與衰減</text>
+            <line x1="55" y1="78" x2="55" y2="172" stroke="#cdbf9f" stroke-width="1.2"/>
+            <line x1="50" y1="150" x2="248" y2="150" stroke="#cdbf9f" stroke-width="1.2"/>
+            <polyline points="55.0,148.7 58.0,148.6 61.0,148.5 64.0,148.4 67.0,148.3 70.0,148.2 73.0,148.1 76.0,148.0 79.0,147.8 82.0,147.7 85.0,147.5 88.0,147.3 91.0,147.2 94.0,147.0 97.0,146.7 100.0,146.5 103.0,146.3 106.0,146.0 109.0,145.8 112.0,145.5 115.0,145.1 118.0,144.8 121.0,144.5 124.0,144.1 127.0,143.7 130.0,143.2 133.0,142.8 136.0,142.3 139.0,141.7 142.0,141.2 145.0,140.5 148.0,139.9 151.0,139.2 154.0,138.4 157.0,137.7 160.0,136.8 163.0,135.9 166.0,134.9 169.0,133.9 172.0,132.8 175.0,131.6 178.0,130.3 181.0,129.0 184.0,127.5 187.0,125.9 190.0,124.3 193.0,122.5 196.0,120.6 199.0,118.6 202.0,116.4 205.0,114.1 208.0,111.6 211.0,109.0 214.0,106.2 217.0,103.2 220.0,99.9 223.0,96.5 226.0,92.8 229.0,88.8 232.0,84.6 235.0,80.1 238.0,75.3" fill="none" stroke="#1c8079" stroke-width="2.4"/>
+            <polyline points="55.0,74.0 58.0,78.6 61.0,82.9 64.0,87.0 67.0,90.8 70.0,94.4 73.0,97.8 76.0,100.9 79.0,103.9 82.0,106.7 85.0,109.3 88.0,111.8 91.0,114.1 94.0,116.3 97.0,118.3 100.0,120.2 103.0,122.0 106.0,123.7 109.0,125.3 112.0,126.8 115.0,128.2 118.0,129.5 121.0,130.8 124.0,131.9 127.0,133.0 130.0,134.1 133.0,135.0 136.0,135.9 139.0,136.8 142.0,137.6 145.0,138.3 148.0,139.1 151.0,139.7 154.0,140.3 157.0,140.9 160.0,141.5 163.0,142.0 166.0,142.5 169.0,142.9 172.0,143.4 175.0,143.8 178.0,144.1 181.0,144.5 184.0,144.8 187.0,145.1 190.0,145.4 193.0,145.7 196.0,146.0 199.0,146.2 202.0,146.4 205.0,146.7 208.0,146.9 211.0,147.1 214.0,147.2 217.0,147.4 220.0,147.6 223.0,147.7 226.0,147.8 229.0,148.0 232.0,148.1 235.0,148.2 238.0,148.3" fill="none" stroke="#86bcae" stroke-width="2.4"/>
+            <!-- 中：歐拉公式（圓） -->
+            <text x="340" y="62" text-anchor="middle" font-size="13" fill="#0f5f59" font-style="italic">e<tspan font-size="9" dy="-5">iθ</tspan></text>
+            <circle cx="340" cy="150" r="58" fill="none" stroke="#0f5f59" stroke-width="2"/>
+            <line x1="278" y1="150" x2="402" y2="150" stroke="#e3d7bd" stroke-width="1"/>
+            <line x1="340" y1="88" x2="340" y2="212" stroke="#e3d7bd" stroke-width="1"/>
+            <line x1="340" y1="150" x2="381" y2="109" stroke="#b1701f" stroke-width="2.6"/>
+            <circle cx="381" cy="109" r="4.5" fill="#b1701f"/>
+            <line x1="381" y1="109" x2="381" y2="150" stroke="#b1701f" stroke-width="1" stroke-dasharray="3 3"/>
+            <!-- 右：生活中的 i -->
+            <text x="545" y="40" text-anchor="middle" font-size="16" fill="#0a423e">生活中的 <tspan font-style="italic" fill="#b1701f">i</tspan></text>
+            <text x="545" y="59" text-anchor="middle" font-size="11.5" fill="#9a917e">旋轉 · 振盪 · 波</text>
+            <line x1="432" y1="150" x2="652" y2="150" stroke="#cdbf9f" stroke-width="1.2"/>
+            <polyline points="440.0,150.0 443.0,142.7 446.0,135.6 449.0,128.9 452.0,123.1 455.0,118.1 458.0,114.2 461.0,111.5 464.0,110.2 467.0,110.2 470.0,111.5 473.0,114.2 476.0,118.1 479.0,123.1 482.0,128.9 485.0,135.6 488.0,142.7 491.0,150.0 494.0,157.3 497.0,164.4 500.0,171.1 503.0,176.9 506.0,181.9 509.0,185.8 512.0,188.5 515.0,189.8 518.0,189.8 521.0,188.5 524.0,185.8 527.0,181.9 530.0,176.9 533.0,171.1 536.0,164.4 539.0,157.3 542.0,150.0 545.0,142.7 548.0,135.6 551.0,128.9 554.0,123.1 557.0,118.1 560.0,114.2 563.0,111.5 566.0,110.2 569.0,110.2 572.0,111.5 575.0,114.2 578.0,118.1 581.0,123.1 584.0,128.9 587.0,135.6 590.0,142.7 593.0,150.0 596.0,157.3 599.0,164.4 602.0,171.1 605.0,176.9 608.0,181.9 611.0,185.8 614.0,188.5 617.0,189.8 620.0,189.8 623.0,188.5 626.0,185.8 629.0,181.9 632.0,176.9 635.0,171.1 638.0,164.4 641.0,157.3 644.0,150.0" fill="none" stroke="#b1701f" stroke-width="2.4"/>
+            <!-- 連接箭頭 -->
+            <path d="M252,118 C266,120 270,140 276,144" fill="none" stroke="#c3b896" stroke-width="1.6" marker-end="url(#fa)"/>
+            <path d="M404,144 C414,140 420,150 430,150" fill="none" stroke="#c3b896" stroke-width="1.6" marker-end="url(#fa)"/>
+            <!-- 公式與標語 -->
+            <text x="340" y="258" text-anchor="middle" font-size="22" fill="#23211c" font-style="italic">e<tspan font-size="14" dy="-9">iθ</tspan><tspan dy="9" font-size="22"> = cos θ + i sin θ</tspan></text>
+            <text x="340" y="296" text-anchor="middle" font-size="13.5" fill="#6b6453">看似虛幻的符號，其實是同一個世界、同一條公式。</text>
+          </svg>
+          <figcaption>左邊的 <span style="font-style:italic">e</span> 是大自然的成長與衰減;右邊的 <span style="font-style:italic">i</span> 是旋轉、振盪與波。中間那個圓——歐拉公式——把兩個世界接成同一個。</figcaption>
+        </figure>
+    <p class="theend">—— 完 ——</p>
+  </section>
+
+  <hr class="div">
+
+  <section id="reading">
+    <span class="part-tag">延伸閱讀</span>
+    <h2 class="sec">站在巨人的肩膀上</h2>
+    <p class="lead">這本小書站在許多前人的肩膀上。如果你讀完意猶未盡，下面這幾部作品，是同一條路上更深、更廣的風景，特此致敬，也推薦給你。</p>
+    <ul class="reading">
+      <li><span class="bk">Eli Maor，《e： The Story of a Number》</span>(Princeton University Press, 1994)。以歷史為主軸、寫給數學底子不深讀者的 \(e\) 傳記，從對數、極限一路講到微積分與微分方程，把整段故事掛在一串歷史人物身上。談 \(e\) 的歷史，這是經典。</li>
+      <li><span class="bk">Paul J. Nahin，《An Imaginary Tale： The Story of √−1》</span>(1998) 與其續集 <span class="bk">《Dr. Euler's Fabulous Formula》</span>(2006)。前者細說虛數 \(i\) 的身世;後者沿著歷史，把歐拉公式的應用一路帶到傅立葉與工程電子學。作者本人是電機工程教授——和本書「醫師寫數學」的跨界精神相通。(數學程度需求略高，約大一、二。)</li>
+      <li><span class="bk">J. Callahan 等，《Calculus in Context》</span>(The Five College Calculus Project，免費開放教材)。美國五所名校在 NSF 支持下編寫，以「動力系統／微分方程」為主軸來發展微積分，第一章就從傳染病擴散的建模講起——與本書「微分方程先行」的精神最接近的機構級教材。</li>
+      <li><span class="bk">Kalid Azad，BetterExplained</span>(betterexplained.com)。直覺優先的數學講解網站，對 \(e\)、\(i\)、歐拉公式的詮釋(「虛數一點都不虛」「歐拉公式是繞圈的兩種方式」)與本書的精神高度共鳴。</li>
+      <li><span class="bk">影片補充</span>：YouTube 上的 <span class="bk">3Blue1Brown</span>(以視覺直覺聞名)與 <span class="bk">Welch Labs《Imaginary Numbers Are Real》</span>,都是把 \(e\)、\(i\) 講得既美又清楚的好作品。</li>
+    </ul>
+    <p>本書與它們的不同，不在題材，而在設計：把 \(e\)、\(i\)、歐拉公式與現代應用，<strong>壓進一本不預設微積分、每一步都不跳的小書</strong>，並從十二個自然現象出發、織入歷史。若說有一點微薄的新意，便在於此。</p>
+  </section>
+
+
+<footer style="margin-top:60px;padding:24px 0 12px;border-top:1px solid var(--rule);
+  font-size:13px;color:var(--ink-soft);text-align:center;line-height:1.8">
+  <p><strong>何恭之醫師</strong>　長庚紀念醫院 核子醫學科，台灣</p>
+  <p>本書採用
+    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank"
+       rel="noopener" style="color:var(--teal)">
+      Creative Commons CC BY 4.0 授權</a>
+    — 免費閱讀、轉載與改作，請標注出處。
+  </p>
+</footer>
+</div>
+</body>
+</html>
