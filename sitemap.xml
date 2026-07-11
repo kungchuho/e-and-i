@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- 英文首頁 (index.html) -->
+  <url>
+    <loc>https://kungchuho.github.io/e-and-i/</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kungchuho.github.io/e-and-i/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://kungchuho.github.io/e-and-i/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kungchuho.github.io/e-and-i/"/>
+  </url>
+
+  <!-- 中文頁 (zh.html) -->
+  <url>
+    <loc>https://kungchuho.github.io/e-and-i/zh.html</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kungchuho.github.io/e-and-i/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://kungchuho.github.io/e-and-i/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kungchuho.github.io/e-and-i/"/>
+  </url>
+
+  <!-- 如果還有其他頁面 (例如 PDF 下載頁、目錄頁),照上面格式再加一段 <url>...</url> 即可 -->
+
+</urlset>
